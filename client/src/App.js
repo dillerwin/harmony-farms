@@ -1,5 +1,4 @@
 import "./App.css";
-
 //Import BrowserRouter, Route, and Routes from react-router-dom to be used in component
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //Imports the Home component
