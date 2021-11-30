@@ -1,6 +1,5 @@
 import "./App.css";
-import HeroImage from "./components/Hero";
-import IntroImages from "./components/IntroImages";
+
 //Import BrowserRouter, Route, and Routes from react-router-dom to be used in component
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //Imports the Home component
@@ -13,14 +12,6 @@ function App() {
   //Returns various routes within BrowserRouter
   return (
     <>
-      <HeroImage />
-      <IntroImages />
-      {/* <div className="App">
-        <form method="post" action="/test">
-          <input name="test" type="text"></input>
-        </form>
-      </div> */}
-
       <div className="App">
         {/* BrowserRouter is used for client side routing with URL segments*/}
         <BrowserRouter>
