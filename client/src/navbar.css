@@ -1,0 +1,77 @@
+/* importing a font closely resembling the fortuna farms one */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* trying out this variable setting stuff for the nav */
+:root {
+    --ff-primary: 'Quicksand', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 750;
+
+    --clr-white: rgb(247,247,247);
+    --clr-drkgrn: rgb(102,128,106);
+    --clr-lightgrn: rgb(180,198,166);
+    --clr-orange: rgb(255,194,134);
+    --clr-yellow: rgb(255,241,175);
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.75rem;
+}
+
+/* universal selectors */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: var(--ff-primary);
+    text-decoration-color: var(--clr-drkgrn);
+    background-color: var(--clr-white);
+}
+
+/* setting the navbar box properties */
+/* I did a grid so that the items in nav bar are in a grid and their links take up the space left over by the header. Can change to a flexbox if better for mobile responsiveness */
+
+.App .Navbar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.App .Navbar h2 {
+    padding: 0.25rem 0.75rem;
+    font-size: var(--fs-h2);
+    color: var(--clr-drkgrn);
+    background-color: var(--clr-white);
+    position: relative;
+}
+
+.App .Navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    /* default value */
+    list-style: none;
+}
+
+/* to seperate the list items in navbar */
+.App .Navbar ul li {
+    margin: 0rem 0.50rem;
+    font-size: var(--fs-h2);
+}
+
+.App .Navbar ul li:hover {
+    margin: 0rem 0.50rem;
+    font-size: var(--fs-h2);
+    letter-spacing: 0.2em;
+    text-decoration: underline rgb(180,198,166);
+}
+
+
+@keyframes 
+
+
