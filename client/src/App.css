@@ -6,8 +6,8 @@
 
 :root {
   --ff-primary: Georgia, "Times New Roman", Times, serif;
-  --ff-primary-test: 'Rokkitt', serif;
-  --ff-secondary: 'Roboto Condensed', sans-serif;
+  --ff-primary-test: "Rokkitt", serif;
+  --ff-secondary: "Roboto Condensed", sans-serif;
 
   --fw-reg: 300;
   --fw-bold: 900;
@@ -41,6 +41,7 @@
 #hero-image {
   width: 100%;
   height: 40vh;
+  min-height: 300px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("./img/farm-landscape.jpg");
   background-position: center;
@@ -62,6 +63,7 @@
   background-color: rgb(255, 241, 175, 0.7);
   padding: 0.5em;
   border-radius: 10px;
+  width: 80vw;
 }
 
 /* media query for hero image text */
@@ -71,15 +73,19 @@
     width: 80%;
     max-height: 185px;
   }
+
+  #intro-image-container {
+    flex-wrap: wrap;
+  }
 }
 
 /* styling for intro images */
 #intro-image-container {
   width: 100%;
-  height: 45vh;
+  max-height: fit-content;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 0.5em;
 }
 
 .outside-image {
@@ -87,17 +93,23 @@
   align-self: center;
 }
 
-.intro-image {
-  margin: 1em;
+.center-container {
+  display: flex;
+  align-self: center;
+}
 
+.intro-image {
+  margin: 0.5em;
   max-width: 1fr;
-  min-width: 250px;
+  min-width: 150px;
   max-height: 300px;
   border-radius: 10px;
 }
 
 .middle-image {
-  max-height: 400px;
+  max-height: 350px;
+  display: flex;
+  align-self: center;
 }
 /* ---About Page CSS--- */
 
@@ -161,57 +173,56 @@
 
 /* ---Mobile Responsive--- */
 @media screen and (min-width: 375px) and (max-width: 810px) {
-/* ---About Page CSS--- */
+  /* ---About Page CSS--- */
 
-/* About page wrapper */
-#about-wrapper {
-  display: flex;
-  flex-direction: column;
-}
+  /* About page wrapper */
+  #about-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-/* About page heading wrapper */
-#about-heading-wrapper {
-  margin-top: 4rem;
-}
+  /* About page heading wrapper */
+  #about-heading-wrapper {
+    margin-top: 4rem;
+  }
 
-/* About page header */
-#about-heading {
-  display: flex;
-  justify-content: center;
-  font-size: 2.5rem;
-  letter-spacing: 0.03em;
-}
+  /* About page header */
+  #about-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    letter-spacing: 0.03em;
+  }
 
-/* About emojis in heading */
-.emoji-style {
-  font-weight: 100;
-  font-size: 1rem;
-  letter-spacing: .5rem;
-  margin-top: .6rem;
-}
+  /* About emojis in heading */
+  .emoji-style {
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    margin-top: 0.6rem;
+  }
 
-/* About wrapper around image and description text */
-#about-img-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-top: 0.1rem;
-}
+  /* About wrapper around image and description text */
+  #about-img-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0.1rem;
+  }
 
-/* About page main image */
-#about-img {
-  max-width: 350px;
-  border-radius: 1rem;
-  border: 8px solid var(--clr-light-green);
-}
+  /* About page main image */
+  #about-img {
+    max-width: 350px;
+    border-radius: 1rem;
+    border: 8px solid var(--clr-light-green);
+  }
 
-/* About page description */
-#about-desc {
-  max-width: 350px;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  margin-top: -1.5rem;
+  /* About page description */
+  #about-desc {
+    max-width: 350px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: -1.5rem;
+  }
 }
-}
-

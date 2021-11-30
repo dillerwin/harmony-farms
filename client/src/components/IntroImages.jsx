@@ -11,7 +11,7 @@ function IntroImages() {
         />
 
         <img
-          className="intro-image middle-image"
+          className=" intro-image middle-image"
           src={require("../img/farm-goats.jpg").default}
         />
 
