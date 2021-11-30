@@ -6,7 +6,7 @@ function IntroImages() {
     <>
       <div id="intro-image-container">
         <img
-          className="intro-image outside-image"
+          className="intro-image outside-image outside-image-left"
           src={require("../img/farm-chickens.jpg").default}
         />
 
@@ -16,7 +16,7 @@ function IntroImages() {
         />
 
         <img
-          className="intro-image outside-image"
+          className="intro-image outside-image outside-image-right"
           src={require("../img/farm-pigs.jpg").default}
         />
       </div>
