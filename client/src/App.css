@@ -41,6 +41,8 @@
     --fs-body: 1.125rem;
   }
 }
+/* --- Navbar styling --- */
+
 
 /* ---styles for hero image--- */
 #hero-image {
@@ -532,4 +534,33 @@
     margin-top: -1.5rem;
     font-size: 1.1rem;
   }
+}
+
+/* Styles for donate page */
+
+.donate-header,
+.cash-donation-header {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  color: var(--clr-drk-green);
+  text-align: center;
+  margin: 0.5em 0.5em;
+}
+
+.donate-header::after,
+.donate-text::after {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 1px;
+  margin: 0.75em auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
+.donate-text {
+  font-family: var(--ff-secondary);
+  font-size: 1em;
+  text-align: center;
+  margin: 0 0.5em 1em;
 }
