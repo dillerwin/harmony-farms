@@ -1,8 +1,15 @@
 import React from "react";
-import {Link, Switch, Route} from 'react-router-dom';
-import './navbar.css';
+import {Link} from 'react-router-dom';
+// import '../navbar.css';
+import Home from "./Home.jsx";
+import About from "./About.jsx";
+import Animals from "./Animals.jsx";
+import WellnessCenter from "./WellnessCenter.jsx";
+import Support from "./Support.jsx";
+import Volunteer from "./Volunteer.jsx";
+import ContactUs from "./Contact.jsx";
 
-function Navbar () {
+function Navbar() {
     return(
         <div className="App">
             <nav className="Navbar">
@@ -12,7 +19,7 @@ function Navbar () {
                         <Link to= "/" component={Home}>Home</Link>
                     </li>
                     <li>
-                        <Link to= "/about" component={AboutUs}>About</Link>
+                        <Link to= "/about" component={About}>About</Link>
                     </li>
                     <li>
                         <Link to= "/animals" component={Animals}>Our Animals</Link>
@@ -31,36 +38,8 @@ function Navbar () {
                     </li>
                 </ul>
             </nav>
-
-            <Switch>
-                <Route exact path = "/">
-                    <h2>Home</h2>
-                </Route>
-                <Route exact path = "/about">
-                    <h2>About</h2>
-                </Route>
-                <Route exact path = "/animals">
-                    <h2>Our Animals</h2>
-                </Route>
-                <Route exact path = "/wellness-center">
-                    <h2>Wellness Center</h2>
-                </Route>
-                <Route exact path = "/Support">
-                    <h2>Support</h2>
-                </Route>
-                <Route exact path = "/volunteer">
-                    <h2>Volunteer</h2>
-                </Route>
-                <Route exact path = "/shop">
-                    <h2>Shop</h2>
-                </Route>
-                <Route exact path = "/contact-us">
-                    <h2>Contact Us</h2>
-                </Route>
-            </Switch>
-
         </div>
     );
 }
 
-export default function Navbar();
+export default Navbar;

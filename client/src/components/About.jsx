@@ -4,10 +4,13 @@ import React from "react";
 import placeholder from "../img/about-placeholder.jpg";
 //Imports About Hero Component into page
 import AboutHero from "./AboutHero.jsx";
+//Imports About Hero Component into page
+import NavBar from "./Navbar.jsx";
 
 function About() {
   return (
     <div id="about">
+      <NavBar />
       <AboutHero />
       {/* Wrapper around entire content of page */}
       <div id="about-wrapper">
