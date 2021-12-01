@@ -1,7 +1,12 @@
 import React from "react";
 //import {Link} from 'react';
-import {Link} from 'react'
-//import './navbar.css';
+import { Link } from 'react-router-dom';
+import About from "./About";
+import Animals from "./Animals";
+import Contact from "./Contact";
+import Home from "./Home";
+import WellnessCenter from "./WellnessCenter";
+//'./app.css';
 
 function Navbar() {
     return(
@@ -9,15 +14,22 @@ function Navbar() {
 
             <div className="leftSide">
             <div className="links">
-                <a href="/home">Home</a>
-                <a href="/about">About Us</a>
-                <a href="/animals">Our Animals</a>
-                <a href="/wellness-center">Wellness Center</a>
-                <a href="/contact-us"></a>
+                <ol>
+
+                <a><Link to="/" component={Home}>Home</Link></a>&nbsp;
+
+                <a><Link to="/about" component={About}>About Us</Link></a>
+
+               <a> <Link to="/animals" component={Animals}>Our Animals</Link></a>
+
+               <a> <Link to="/wellness-center" component={WellnessCenter}>Wellness Center</Link></a>
+
+               <a> <Link to="/contact-us" component ={Contact}></Link></a>
+               </ol>
             </div>
             </div>
             <div className="rightSide">
-                <button>DONATE</button>
+                <button className="button">DONATE</button>
             </div>
    
         </div>

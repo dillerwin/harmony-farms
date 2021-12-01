@@ -45,15 +45,15 @@
 
 /* --- Navbar styling --- */
 .Navbar {
-  background-color: var(--clr-white);
+  background-color: var(--clr-drk-green);
   width: 100%;
-  height: 80px;
+  height: 90px;
   font-family: var(--ff-primary);
   display: flex;
 }
 
 .Navbar .leftSide {
-  flex: 50%;
+  flex: 70%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -63,11 +63,11 @@
   max-height: 80px;
 }
 
-.Navbar .leftSide .links {
+.links {
   text-decoration: none;
-  color: var(--clr-drk-green);
+  color: var(--clr-yellow);
   font-size: 22px;
-  margin-left: 15px;
+  margin-left: 60px;
 }
 /* right side of navbar */
 
