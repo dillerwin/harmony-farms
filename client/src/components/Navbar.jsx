@@ -3,7 +3,7 @@ import React from "react";
 import {Navbar, Nav, NavDropdown} from 'react'
 //import './navbar.css';
 
-function Navbar () {
+function Navbar() {
     return(
         <div className="App">
             <Navbar>
@@ -44,7 +44,7 @@ export default Navbar();
                         <Link to= "/" component={Home}>Home</Link>
                     </li>
                     <li>
-                        <Link to= "/about" component={AboutUs}>About</Link>
+                        <Link to= "/about" component={About}>About</Link>
                     </li>
                     <li>
                         <Link to= "/animals" component={Animals}>Our Animals</Link>
@@ -56,4 +56,13 @@ export default Navbar();
                         <Link to= "/contact-us" component= {ContactUs}>Contact Us</Link>
                     </li>
                 </ul>
+<<<<<<< HEAD
             </nav> */
+=======
+            </nav>
+        </div>
+    );
+}
+
+export default Navbar;
+>>>>>>> 15f6d03e4cf76c95194376ebc79dc4271c57773a
