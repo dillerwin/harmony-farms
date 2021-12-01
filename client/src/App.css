@@ -20,6 +20,7 @@
   --clr-orange: rgb(255, 194, 134);
   --cly-yellow: rgb(255, 241, 175);
   --clr-text: #303030;
+  --clr-white: rgb(247, 247, 247);
 
   /* Font sizes */
   --fs-h1: 3rem;
@@ -41,7 +42,34 @@
     --fs-body: 1.125rem;
   }
 }
+
 /* --- Navbar styling --- */
+.Navbar {
+  background-color: var(--clr-white);
+  width: 100%;
+  height: 80px;
+  font-family: var(--ff-primary);
+  display: flex;
+}
+
+.Navbar .leftSide {
+  flex: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Navbar .leftSide .links {
+  max-height: 80px;
+}
+
+.Navbar .leftSide .links {
+  text-decoration: none;
+  color: var(--clr-drk-green);
+  font-size: 22px;
+  margin-left: 15px;
+}
+/* right side of navbar */
 
 /* ---styles for hero image--- */
 #hero-image {
@@ -564,7 +592,9 @@
   margin: 0 0.5em 1em;
 }
 
-.donate-text::after {
+.donate-text::after,
+.money-button-container::after,
+.line-break::after {
   content: "";
   display: block;
   width: 4rem;
@@ -590,3 +620,10 @@
   margin: 0.5em 1em;
   font-size: 1.1em;
 }
+
+.line-break {
+  display: flex;
+  flex-direction: column;
+}
+
+@med;

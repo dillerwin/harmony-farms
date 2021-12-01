@@ -20,12 +20,17 @@ import Volunteer from "./components/Volunteer.jsx";
 //Imports the Contact component
 import Contact from "./components/Contact.jsx";
 
+import Navbar from "./components/Navbar";
 //Function for the main app
 function App() {
   //Returns various routes within BrowserRouter
   return (
     <>
       <div className="App">
+        <div className="Navbar">
+          {" "}
+          <Navbar />{" "}
+        </div>
         {/* BrowserRouter is used for client side routing with URL segments*/}
         <BrowserRouter>
           {/* Routes contains all of the routes */}
