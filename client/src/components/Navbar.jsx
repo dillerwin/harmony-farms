@@ -56,13 +56,4 @@ export default Navbar();
                         <Link to= "/contact-us" component= {ContactUs}>Contact Us</Link>
                     </li>
                 </ul>
-<<<<<<< HEAD
             </nav> */
-=======
-            </nav>
-        </div>
-    );
-}
-
-export default Navbar;
->>>>>>> 15f6d03e4cf76c95194376ebc79dc4271c57773a

@@ -5,9 +5,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home.jsx";
 //Imports the About component
 import About from "./components/About.jsx";
-<<<<<<< HEAD
+
 import Navbar from "./components/Navbar";
-=======
+
+//Imports the Donate component
+import Donate from "./components/Donate";
+
 //Imports the Animals component
 import Animals from "./components/Animals.jsx";
 //Imports the Wellness Center component
@@ -18,7 +21,7 @@ import Support from "./components/Support.jsx";
 import Volunteer from "./components/Volunteer.jsx";
 //Imports the Contact component
 import Contact from "./components/Contact.jsx";
->>>>>>> 15f6d03e4cf76c95194376ebc79dc4271c57773a
+
 
 //Function for the main app
 function App() {
@@ -36,6 +39,10 @@ function App() {
             <Route path="/" element={<Home />} />
             {/* Routes to About Component */}
             <Route path="/about" element={<About />} />
+
+            {/* Routes to Donate Component */}
+            <Route path="/donate" element={<Donate />} />
+
             {/* Routes to Animals Component */}
             <Route path="/animals" element={<Animals />} />
             {/* Routes to Wellness Center Component */}
@@ -46,6 +53,7 @@ function App() {
             <Route path="/volunteer" element={<Volunteer />} />
             {/* Routes to Contact Us Component */}
             <Route path="/contact-us" element={<Contact />} />
+
           </Routes>
         </BrowserRouter>
       </div>
