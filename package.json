@@ -10,10 +10,12 @@
     "mongoose": "^6.0.13",
     "react": "^17.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
