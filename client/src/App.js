@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home.jsx";
 //Imports the About component
 import About from "./components/About.jsx";
+import Navbar from "./components/Navbar";
 
 //Function for the main app
 function App() {
