@@ -6,8 +6,6 @@ import Home from "./components/Home.jsx";
 //Imports the About component
 import About from "./components/About.jsx";
 
-import Navbar from "./components/Navbar";
-
 //Imports the Donate component
 import Donate from "./components/Donate";
 
@@ -21,7 +19,6 @@ import Support from "./components/Support.jsx";
 import Volunteer from "./components/Volunteer.jsx";
 //Imports the Contact component
 import Contact from "./components/Contact.jsx";
-
 
 //Function for the main app
 function App() {
@@ -53,7 +50,6 @@ function App() {
             <Route path="/volunteer" element={<Volunteer />} />
             {/* Routes to Contact Us Component */}
             <Route path="/contact-us" element={<Contact />} />
-
           </Routes>
         </BrowserRouter>
       </div>

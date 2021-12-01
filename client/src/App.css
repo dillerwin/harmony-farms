@@ -43,7 +43,6 @@
 }
 /* --- Navbar styling --- */
 
-
 /* ---styles for hero image--- */
 #hero-image {
   width: 100%;
@@ -155,6 +154,7 @@
   text-align: center;
   cursor: pointer;
   font-size: 1.5rem;
+  font-family: var(--ff-primary);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: var(--fw-bold);
@@ -547,8 +547,7 @@
   margin: 0.5em 0.5em;
 }
 
-.donate-header::after,
-.donate-text::after {
+.donate-header::after {
   content: "";
   display: block;
   width: 4em;
@@ -563,4 +562,31 @@
   font-size: 1em;
   text-align: center;
   margin: 0 0.5em 1em;
+}
+
+.donate-text::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
+.money-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.money-text {
+  text-align: center;
+  margin: 0.5em;
+}
+
+.money-button {
+  margin: 0.5em 1em;
+  font-size: 1.1em;
 }
