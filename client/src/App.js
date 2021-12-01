@@ -29,6 +29,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <div className="Navbar"> <Navbar /> </div>
         {/* BrowserRouter is used for client side routing with URL segments*/}
         <BrowserRouter>
           {/* Routes contains all of the routes */}
