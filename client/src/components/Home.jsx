@@ -6,12 +6,11 @@ import QuoteBlockOne from "./QuoteBlockOne";
 import Cards from "./Cards";
 import QuoteBlockTwo from "./QuoteBlockTwo";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroImage />
       <IntroImages />
       <MeetButton />

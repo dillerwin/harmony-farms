@@ -32,32 +32,7 @@ function Navbar () {
                 </ul>
             </nav>
 
-            <Switch>
-                <Route exact path = "/">
-                    <h2>Home</h2>
-                </Route>
-                <Route exact path = "/about">
-                    <h2>About</h2>
-                </Route>
-                <Route exact path = "/animals">
-                    <h2>Our Animals</h2>
-                </Route>
-                <Route exact path = "/wellness-center">
-                    <h2>Wellness Center</h2>
-                </Route>
-                <Route exact path = "/Support">
-                    <h2>Support</h2>
-                </Route>
-                <Route exact path = "/volunteer">
-                    <h2>Volunteer</h2>
-                </Route>
-                <Route exact path = "/shop">
-                    <h2>Shop</h2>
-                </Route>
-                <Route exact path = "/contact-us">
-                    <h2>Contact Us</h2>
-                </Route>
-            </Switch>
+           
 
         </div>
     );
