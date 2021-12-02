@@ -6,7 +6,7 @@ import NavBar from "./Navbar.jsx";
 function Support() {
   return (
     <div id="support">
-      <NavBar />
+      {/* <NavBar /> */}
      <h1>This is the Support page</h1>
     </div>
   );

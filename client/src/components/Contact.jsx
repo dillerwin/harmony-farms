@@ -6,7 +6,7 @@ import NavBar from "./Navbar.jsx";
 function Contact() {
   return (
     <div id="contact">
-      <NavBar />
+      {/* <NavBar /> */}
      <h1>This is the contact us page</h1>
     </div>
   );

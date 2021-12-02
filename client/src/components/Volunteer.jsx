@@ -6,7 +6,7 @@ import NavBar from "./Navbar.jsx";
 function Volunteer() {
   return (
     <div id="volunteer">
-      <NavBar />
+      {/* <NavBar /> */}
      <h1>This is the Volunteer page</h1>
     </div>
   );

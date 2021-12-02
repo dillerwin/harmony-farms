@@ -10,7 +10,7 @@ import NavBar from "./Navbar.jsx";
 function About() {
   return (
     <div id="about">
-      <NavBar />
+      {/* <NavBar /> */}
       <AboutHero />
       {/* Wrapper around entire content of page */}
       <div id="about-wrapper">

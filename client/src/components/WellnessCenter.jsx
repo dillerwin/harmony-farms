@@ -6,7 +6,7 @@ import NavBar from "./Navbar.jsx";
 function WellnessCenter() {
   return (
     <div id="wellness-center">
-      <NavBar />
+      {/* <NavBar /> */}
      <h1>This is the WellnessCenter page</h1>
     </div>
   );

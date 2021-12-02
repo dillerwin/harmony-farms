@@ -6,7 +6,7 @@ import NavBar from "./Navbar.jsx";
 function Animals() {
   return (
     <div id="animals">
-      <NavBar />
+      {/* <NavBar /> */}
       <h1>This is the Animals page</h1>
     </div>
   );
