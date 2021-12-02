@@ -10,6 +10,9 @@ import Raffle from "./Raffle";
 //'./app.css';
 
 function Navbar() {
+  if (window.location.href.includes("/admin")) {
+    return null;
+  }
   return (
     <div className="Navbar">
       <div className="leftSide">
@@ -27,23 +30,19 @@ function Navbar() {
               </Link>
             </a>
             <a>
-              {" "}
               <Link to="/animals" component={Animals}>
                 Our Animals
               </Link>
             </a>
             <a>
-              {" "}
               <Link to="/wellness-center" component={WellnessCenter}>
                 Wellness Center
               </Link>
             </a>
             <a>
-              {" "}
               <Link to="/contact-us" component={Contact}></Link>
             </a>
             <a>
-              {" "}
               <Link to="/raffle" component={Raffle}>
                 Raffle
               </Link>

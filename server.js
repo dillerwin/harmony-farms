@@ -33,3 +33,51 @@ app.post("/test", async (req, res) => {
   await newTestObj.save();
   res.send("posted");
 });
+
+const animalSchema = new mongoose.Schema({
+  animalName: { type: String },
+  animalDescription: { type: String },
+  imageLink: { type: String },
+});
+
+const Animal = mongoose.model("Animal", animalSchema);
+
+app.post("/animalPost", async (req, res) => {
+  let newObj = new Animal(req.body);
+  await newObj.save();
+  console.log("Animal Added");
+  res.status(200).redirect("/admin/edit");
+});
+
+app.get("/api/animals", async (req, res) => {
+  let animals = await Animal.find({});
+  res.send(animals);
+});
+
+app.post("/delete", async (req, res) => {
+  let target = await Animal.find({ animalName: req.body.animalDelete });
+  console.log(target);
+  let targetId = target[0]._id;
+  await Animal.deleteOne({ _id: targetId });
+  res.redirect("/admin/edit");
+});
+
+app.post("/edit", async (req, res) => {
+  let target = await Animal.find({ animalName: req.body.animalName });
+  let targetId = target[0]._id;
+  console.log(targetId);
+  console.log(req.body.animalDescription);
+  if (req.body.animalDescription !== "") {
+    await Animal.updateOne(
+      { _id: targetId },
+      { $set: { animalDescription: req.body.animalDescription } }
+    );
+  }
+  if (req.body.imageLink !== "") {
+    await Animal.updateOne(
+      { _id: targetId },
+      { $set: { imageLink: req.body.imageLink } }
+    );
+  }
+  res.redirect("/admin/edit");
+});
