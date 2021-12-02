@@ -169,6 +169,7 @@
   border-radius: 10px;
   width: 80vw;
   font-family: var(--ff-primary);
+  letter-spacing: 1.5px;
 }
 
 /* media query for hero image text */
@@ -376,6 +377,7 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
   font-size: var(--fs-h3);
+  color: var(--clr-text);
   letter-spacing: 1.2px;
   text-align: center;
   margin: 0;
@@ -385,6 +387,7 @@
 .card-text {
   font-family: var(--ff-secondary);
   font-weight: 550;
+  color: var(--clr-text);
   text-align: center;
   margin-top: 0;
   max-height: fit-content;
@@ -402,7 +405,7 @@
 
 .card-image {
   max-width: 300px;
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
 }
 
 .merch-image {
@@ -419,6 +422,7 @@
 .container {
   padding: 2px 16px;
   background: var(--clr-light-green);
+  border-top: 1px solid var(--clr-drk-green);
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {

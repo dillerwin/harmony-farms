@@ -1,14 +1,25 @@
 //Imports react into the component
 import React from "react";
-//Imports About Hero Component into page
-import NavBar from "./Navbar.jsx";
+//Imports  Hero Component into page
+import HeroImage from "./Hero";
+import Footer from "./Footer";
 
 function Animals() {
   return (
-    <div id="animals">
-      {/* <NavBar /> */}
-      <h1>This is the Animals page</h1>
-    </div>
+    <>
+      <HeroImage />
+      <div id="donate-header-container">
+        <h1 className="donate-header">Sponsor one of the Animals</h1>
+        <p className="donate-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nulla
+          eum voluptatem, eveniet quidem exercitationem animi totam laborum
+          possimus enim iure ducimus ipsum doloribus dolorem.
+        </p>
+      </div>
+
+      <div id="animal-cards"></div>
+      <Footer />
+    </>
   );
 }
 
