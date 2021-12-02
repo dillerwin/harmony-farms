@@ -358,6 +358,7 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
   font-size: var(--fs-h3);
+  color: var(--clr-text);
   letter-spacing: 1.2px;
   text-align: center;
   margin: 0;
@@ -367,6 +368,7 @@
 .card-text {
   font-family: var(--ff-secondary);
   font-weight: 550;
+  color: var(--clr-text);
   text-align: center;
   margin-top: 0;
   max-height: fit-content;
