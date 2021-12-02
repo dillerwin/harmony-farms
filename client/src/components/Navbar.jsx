@@ -1,32 +1,33 @@
 import React from "react";
 //import {Link} from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import About from "./About";
 import Animals from "./Animals";
 import Contact from "./Contact";
 import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
+import Raffle from "./Raffle";
 //'./app.css';
 
 function Navbar() {
-    return(
-        <div className="Navbar">
+    // return(
+    //     <div className="Navbar">
 
-            {/* <div className="leftSide"> */}
-            <div className="links">
+    //         {/* <div className="leftSide"> */}
+    //         <div className="links">
             
-              <div><a id="home"><Link to="/" component={Home}>Home</Link></a>&nbsp;</div>
+    //           <div><a id="home"><Link to="/" component={Home}>Home</Link></a>&nbsp;</div>
 
-               <div><a id="about"><Link to="/about" component={About}>About</Link></a></div> 
+    //            <div><a id="about"><Link to="/about" component={About}>About</Link></a></div> 
 
-              <div><a id="animals"> <Link to="/animals" component={Animals}>Our Animals</Link></a></div>
+    //           <div><a id="animals"> <Link to="/animals" component={Animals}>Our Animals</Link></a></div>
 
-               <div><a id="wellness-center"> <Link to="/wellness-center" component={WellnessCenter}>Wellness Center</Link></a></div>
+    //            <div><a id="wellness-center"> <Link to="/wellness-center" component={WellnessCenter}>Wellness Center</Link></a></div>
 
-               <div><a id="contact"> <Link to="/contact-us" component ={Contact}></Link></a></div>
+    //            <div><a id="contact"> <Link to="/contact-us" component ={Contact}></Link></a></div>
                
-            </div>
+    //         </div>
 
             {/* <div className="dropdown-menu">
                 <button id="drop-button">Ways to Support Us</button>
@@ -44,12 +45,56 @@ function Navbar() {
             </div> */}
         
             {/* </div>*/}
-            <div className="donate-button-wrapper"> 
+            {/* <div className="donate-button-wrapper"> 
                 <button className="button">DONATE</button>
-            </div>
+            </div> */}
    
+  return (
+    <div className="Navbar">
+      <div className="leftSide">
+        <div className="links">
+          <ol>
+            <a>
+              <Link to="/" component={Home}>
+                Home
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/about" component={About}>
+                About Us
+              </Link>
+            </a>
+            <a>
+              {" "}
+              <Link to="/animals" component={Animals}>
+                Our Animals
+              </Link>
+            </a>
+            <a>
+              {" "}
+              <Link to="/wellness-center" component={WellnessCenter}>
+                Wellness Center
+              </Link>
+            </a>
+            <a>
+              {" "}
+              <Link to="/contact-us" component={Contact}></Link>
+            </a>
+            <a>
+              {" "}
+              <Link to="/raffle" component={Raffle}>
+                Raffle
+              </Link>
+            </a>
+          </ol>
         </div>
-    );
+      </div>
+      <div className="rightSide">
+        <button className="button">DONATE</button>
+      </div>
+    </div>
+  );
 }
 
 export default Navbar;

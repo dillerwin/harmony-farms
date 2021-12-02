@@ -82,6 +82,17 @@
   padding-bottom: 15px;
   /* height: 3.6vh;
   width: 3.0vw; */
+  padding-right: 25px;
+}
+
+.Navbar .rightSide #button:hover {
+  cursor: pointer;
+}
+
+.Navbar .rightSide #button {
+  width: 150px;
+  height: 35px;
+  width: 50px;
   border: 6px;
   border-radius: 8px;
   font-size: 25px;
