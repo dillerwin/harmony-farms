@@ -20,7 +20,7 @@
   --clr-orange: rgb(255, 194, 134);
   --cly-yellow: rgb(255, 241, 175);
   --clr-text: #303030;
-  --clr-white: rgb(247,247,247);
+  --clr-white: rgb(247, 247, 247);
 
   /* Font sizes */
   --fs-h1: 3rem;
@@ -45,16 +45,15 @@
 
 /* --- Navbar styling --- */
 .Navbar {
-  background-color: var(--clr-white);
+  background-color: var(--clr-drk-green);
   width: 100%;
-  height: 80px;
+  height: 90px;
   font-family: var(--ff-primary);
   display: flex;
-  
 }
 
 .Navbar .leftSide {
-  flex: 50%;
+  flex: 70%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -64,34 +63,13 @@
   max-height: 80px;
 }
 
-.Navbar .leftSide .links {
+.links {
   text-decoration: none;
-  color: var(--clr-drk-green);
+  color: var(--clr-yellow);
   font-size: 22px;
-  margin-left: 15px;
+  margin-left: 60px;
 }
 /* right side of navbar */
-
-.Navbar .rightSide {
-  flex: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 25px;
-}
-
-.rightSide button {
-  width: 220px;
-  height: 35px;
-  width: 50px;
-  border: 6px;
-  border-radius: 4px;
-  font-size: 25px;
-  padding-right: 20px;
-  color: var(--clr-white);
-  background-color: var(--clr-drk-green);
-
-}
 
 /* ---styles for hero image--- */
 #hero-image {
@@ -113,6 +91,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--clr-drk-green);
+  text-shadow: 1px 1px var(--clr-text);
 }
 
 .hero-welcome-text {
@@ -204,6 +183,7 @@
   text-align: center;
   cursor: pointer;
   font-size: 1.5rem;
+  font-family: var(--ff-primary);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: var(--fw-bold);
@@ -399,9 +379,51 @@
 
 /* Styles for Footer */
 
-.footer-container {
-  height: 20vh;
+.footer-links {
+  display: flex;
+  justify-content: center;
 }
+
+.social-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.social-icon {
+  margin: 0.5em;
+}
+
+.footer-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1em;
+}
+
+a {
+  margin-left: 0.5em;
+  text-decoration: none;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-drk-green);
+}
+
+/* @media (min-width: 1025px) {
+  .footer-list-container {
+    flex-direction: row;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 1.5em;
+  }
+} */
 
 /* ---About Page CSS--- */
 
@@ -594,17 +616,7 @@
   color: var(--clr-drk-green);
   text-align: center;
   margin: 0.5em 0.5em;
-}
-
-.donate-header::after,
-.donate-text::after {
-  content: "";
-  display: block;
-  width: 4em;
-  height: 1px;
-  margin: 0.75em auto;
-  background: var(--clr-drk-green);
-  opacity: 0.35;
+  text-shadow: 1px 1px var(--clr-text);
 }
 
 .donate-text {
@@ -612,4 +624,93 @@
   font-size: 1em;
   text-align: center;
   margin: 0 0.5em 1em;
+}
+
+#cash-donation-container,
+#donate-goods {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 1em 0;
+}
+
+.donate-text::before,
+.cash-donation-header::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
+.money-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.money-text {
+  text-align: center;
+  margin: 0.5em;
+}
+
+.money-button {
+  margin: 0.5em 1em;
+  font-size: 1.1em;
+  min-width: 325px;
+  max-width: 325px;
+}
+
+.line-break {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 750px) {
+  .money-button-container {
+    flex-direction: row;
+    margin: 2em 0;
+  }
+  .money-button-container::after {
+    display: none;
+  }
+
+  .money-button {
+    min-width: 100px;
+  }
+
+  .donate-card-container {
+    flex-direction: row;
+  }
+
+  .donate-card-container::after {
+    display: none;
+    margin: 2em 0;
+  }
+
+  .donate-text,
+  .money-text {
+    max-width: 75vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+  }
+
+  .donate-text::after {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .donate-text,
+  .money-text {
+    max-width: 55vw;
+  }
+
+  #cash-donation-container,
+  #donate-goods {
+    margin: 2em 0 0 0;
+  }
 }
