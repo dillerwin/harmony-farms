@@ -83,7 +83,7 @@
   padding-right: 25px;
 }
 
-.Navbar .rightSide #button:hover{
+.Navbar .rightSide #button:hover {
   cursor: pointer;
 }
 
@@ -150,6 +150,7 @@
   border-radius: 10px;
   width: 80vw;
   font-family: var(--ff-primary);
+  letter-spacing: 1.5px;
 }
 
 /* media query for hero image text */
@@ -383,7 +384,7 @@
 
 .card-image {
   max-width: 300px;
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
 }
 
 .merch-image {
@@ -400,6 +401,7 @@
 .container {
   padding: 2px 16px;
   background: var(--clr-light-green);
+  border-top: 1px solid var(--clr-drk-green);
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {

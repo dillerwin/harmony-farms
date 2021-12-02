@@ -7,7 +7,7 @@ function DonateCards() {
         <div class="card">
           <img
             className="card-image"
-            src={require("../img/farm-chickens.jpg").default}
+            src={require("../img/harmony-farms-animal-sponsor.png").default}
           />
 
           <div class="container">
@@ -39,7 +39,7 @@ function DonateCards() {
         <div class="card">
           <img
             className="card-image"
-            src={require("../img/farm-chickens.jpg").default}
+            src={require("../img/harmony-farms-raffle-prize.png").default}
           />
           <div class="container">
             <h4 className="card-title">Enter our $5 Friday Raffle</h4>
