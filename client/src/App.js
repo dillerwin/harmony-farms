@@ -18,6 +18,11 @@ import Volunteer from "./components/Volunteer.jsx";
 //Imports the Contact component
 import Contact from "./components/Contact.jsx";
 
+import Navbar from "./components/Navbar";
+
+import Raffle from "./components/Raffle";
+//imports the Raffle component
+
 //Function for the main app
 function App() {
   //Returns various routes within BrowserRouter
@@ -26,6 +31,10 @@ function App() {
       <div className="App">
         {/* BrowserRouter is used for client side routing with URL segments*/}
         <BrowserRouter>
+          <div className="Navbar">
+            {" "}
+            <Navbar />{" "}
+          </div>
           {/* Routes contains all of the routes */}
           <Routes>
             {/* Route is each individual route - utilizes the path and element prop. 
@@ -48,6 +57,8 @@ function App() {
             <Route path="/volunteer" element={<Volunteer />} />
             {/* Routes to Contact Us Component */}
             <Route path="/contact-us" element={<Contact />} />
+            {/* Routes to Raffle Component */}
+            <Route path="/raffle" element={<Raffle />} />
           </Routes>
         </BrowserRouter>
       </div>

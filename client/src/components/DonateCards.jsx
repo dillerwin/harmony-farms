@@ -1,28 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Donate from "./Donate";
 import Raffle from "./Raffle";
+import Animals from "./Animals";
 
-function Cards() {
+function DonateCards() {
   return (
     <>
-      <div className="card-container">
-        <Link to="/donate" component={Donate}>
+      <div className="card-container line-break donate-card-container">
+        <Link to="/animals" component={Animals}>
           <div class="card">
             <img
               className="card-image"
-              src={require("../img/farm-chickens.jpg").default}
+              src={require("../img/harmony-farms-animal-sponsor.png").default}
             />
 
             <div class="container">
-              <h4 className="card-title">Support our Cause</h4>
+              <h4 className="card-title">Sponsor an Animal</h4>
               <p className="card-text">
-                Explore all the ways you can help us further our cause.
+                Help our amimals by being a single time or reoccuring sponsor
               </p>
             </div>
           </div>
         </Link>
-
         <a
           href="https://www.bonfire.com/store/harmony-farm-sanctuary-and-wellness-center/"
           target="_blank"
@@ -42,6 +41,7 @@ function Cards() {
             </div>
           </div>
         </a>
+
         <Link to="/raffle" component={Raffle}>
           <div class="card">
             <img
@@ -63,4 +63,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default DonateCards;
