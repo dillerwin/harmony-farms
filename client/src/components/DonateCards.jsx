@@ -9,6 +9,7 @@ function DonateCards() {
             className="card-image"
             src={require("../img/farm-chickens.jpg").default}
           />
+
           <div class="container">
             <h4 className="card-title">Sponsor an Animal</h4>
             <p className="card-text">
@@ -17,10 +18,15 @@ function DonateCards() {
           </div>
         </div>
         <div class="card">
-          <img
-            className="card-image merch-image"
-            src={require("../img/harmony-farms-store.jpeg").default}
-          />
+          <a
+            href="https://www.bonfire.com/store/harmony-farm-sanctuary-and-wellness-center/"
+            target="_blank"
+          >
+            <img
+              className="card-image merch-image"
+              src={require("../img/harmony-farms-store.jpeg").default}
+            />
+          </a>
           <div class="container">
             <h4 className="card-title"> Farm Merchandise</h4>
             <p className="card-text">

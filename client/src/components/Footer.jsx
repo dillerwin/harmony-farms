@@ -17,12 +17,12 @@ function Footer() {
           <div className="social-icon-container">
             <SocialIcon
               className="social-icon"
-              url="https://www.instagram.com/harmonyfarmsanctuaryvt/"
+              url="https://www.instagram.com/harmonyfarmsanctuaryvt/?hl=en"
               target="_blank"
             />
             <SocialIcon
               className="social-icon"
-              url="https://www.facebook.com/pages/Harmony-Farm-Sanctuary-and-Wellness-Center/108269530879500"
+              url="https://www.facebook.com/harmonyfarmsanctuaryVT"
               target="_blank"
             />
           </div>
