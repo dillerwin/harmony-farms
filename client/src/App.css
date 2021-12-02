@@ -91,6 +91,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--clr-drk-green);
+  text-shadow: 1px 1px var(--clr-text);
 }
 
 .hero-welcome-text {
@@ -378,9 +379,51 @@
 
 /* Styles for Footer */
 
-.footer-container {
-  height: 20vh;
+.footer-links {
+  display: flex;
+  justify-content: center;
 }
+
+.social-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.social-icon {
+  margin: 0.5em;
+}
+
+.footer-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1em;
+}
+
+a {
+  margin-left: 0.5em;
+  text-decoration: none;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-drk-green);
+}
+
+/* @media (min-width: 1025px) {
+  .footer-list-container {
+    flex-direction: row;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 1.5em;
+  }
+} */
 
 /* ---About Page CSS--- */
 
@@ -573,16 +616,7 @@
   color: var(--clr-drk-green);
   text-align: center;
   margin: 0.5em 0.5em;
-}
-
-.donate-header::after {
-  content: "";
-  display: block;
-  width: 4em;
-  height: 1px;
-  margin: 0.75em auto;
-  background: var(--clr-drk-green);
-  opacity: 0.35;
+  text-shadow: 1px 1px var(--clr-text);
 }
 
 .donate-text {
@@ -592,9 +626,14 @@
   margin: 0 0.5em 1em;
 }
 
-.donate-text::after,
-.money-button-container::after,
-.line-break::after {
+#cash-donation-container,
+#donate-goods {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 1em 0;
+}
+
+.donate-text::before,
+.cash-donation-header::after {
   content: "";
   display: block;
   width: 4rem;
@@ -619,6 +658,8 @@
 .money-button {
   margin: 0.5em 1em;
   font-size: 1.1em;
+  min-width: 325px;
+  max-width: 325px;
 }
 
 .line-break {
@@ -626,4 +667,50 @@
   flex-direction: column;
 }
 
-@med;
+@media (min-width: 750px) {
+  .money-button-container {
+    flex-direction: row;
+    margin: 2em 0;
+  }
+  .money-button-container::after {
+    display: none;
+  }
+
+  .money-button {
+    min-width: 100px;
+  }
+
+  .donate-card-container {
+    flex-direction: row;
+  }
+
+  .donate-card-container::after {
+    display: none;
+    margin: 2em 0;
+  }
+
+  .donate-text,
+  .money-text {
+    max-width: 75vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+  }
+
+  .donate-text::after {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .donate-text,
+  .money-text {
+    max-width: 55vw;
+  }
+
+  #cash-donation-container,
+  #donate-goods {
+    margin: 2em 0 0 0;
+  }
+}

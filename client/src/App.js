@@ -27,16 +27,12 @@ function App() {
   return (
     <>
       <div className="App">
-<<<<<<< HEAD
-        <div className="Navbar">
-          {" "}
-          <Navbar />{" "}
-        </div>
-=======
->>>>>>> 682e178314f4488a3f9a9bf32b12c2b1c46be185
         {/* BrowserRouter is used for client side routing with URL segments*/}
         <BrowserRouter>
-        <div className="Navbar"> <Navbar /> </div>
+          <div className="Navbar">
+            {" "}
+            <Navbar />{" "}
+          </div>
           {/* Routes contains all of the routes */}
           <Routes>
             {/* Route is each individual route - utilizes the path and element prop. 

@@ -3,7 +3,7 @@ import React from "react";
 function DonateCards() {
   return (
     <>
-      <div className="card-container line-break">
+      <div className="card-container line-break donate-card-container">
         <div class="card">
           <img
             className="card-image"
