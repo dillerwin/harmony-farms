@@ -30,10 +30,6 @@ function Navbar() {
   //     </div>
   // </div> */}
 
-  // {/* </div>*/}
-  // {/* <div className="donate-button-wrapper">
-  //     <button className="button">DONATE</button>
-  // </div> */}
 
   return (
     <div className="Navbar">
