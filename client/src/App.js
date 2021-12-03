@@ -5,8 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home.jsx";
 //Imports the About component
 import About from "./components/About.jsx";
-//Imports the Donate component
-import Donate from "./components/Donate";
 //Imports the Animals component
 import Animals from "./components/Animals.jsx";
 //Imports the Wellness Center component
@@ -17,14 +15,17 @@ import Support from "./components/Support.jsx";
 import Volunteer from "./components/Volunteer.jsx";
 //Imports the Contact component
 import Contact from "./components/Contact.jsx";
-
+//Imports the NavBar
 import Navbar from "./components/Navbar";
+//imports the Raffle component
+import Raffle from "./components/Raffle";
+//Imports the Services component
+import Services from "./components/Services.jsx";
+//Imports the Donate component
+import Donate from "./components/Donate.jsx";
 
 import ReqAuth from "./admin/ReqAuth";
 import AdminPage from "./admin/AdminPage";
-
-import Raffle from "./components/Raffle";
-//imports the Raffle component
 
 //Function for the main app
 function App() {
@@ -63,6 +64,10 @@ function App() {
             <Route path="/contact-us" element={<Contact />} />
             {/* Routes to Raffle Component */}
             <Route path="/raffle" element={<Raffle />} />
+            {/* Routes to Raffle Component */}
+            <Route path="/services" element={<Services />} />
+            {/* Routes to Raffle Component */}
+            <Route path="/donate" element={<Donate />} />
           </Routes>
         </BrowserRouter>
       </div>

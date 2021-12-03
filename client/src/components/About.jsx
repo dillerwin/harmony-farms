@@ -4,8 +4,8 @@ import React from "react";
 import placeholder from "../img/about-placeholder.jpg";
 //Imports About Hero Component into page
 import AboutHero from "./AboutHero.jsx";
-//Imports About Hero Component into page
-import NavBar from "./Navbar.jsx";
+//Imports Footer Hero Component into page
+import Footer from "./Footer";
 
 function About() {
   return (
@@ -47,6 +47,7 @@ function About() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
