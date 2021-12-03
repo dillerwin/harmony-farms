@@ -802,7 +802,7 @@ a {
   font-size: var(--fs-h2);
   color: var(--clr-drk-green);
   text-align: center;
-  margin: 0.5em 0.5em;
+  margin: 0.4em 0.4em;
   text-shadow: 1px 1px var(--clr-text);
 }
 
@@ -813,12 +813,23 @@ a {
   margin: 0 0.5em 1em;
 }
 
-#winner-container {
+.raffle-donate-container {
+  background-color: rgb(255, 241, 175, 0.7);
+}
+
+.winner-display {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 0.0001em;
+  border-radius: 30px;
+  font-family: var(--ff-primary);
+  letter-spacing: 1.5px;
+}
+
+.winner-name {
+  color: black;
+}
+
+.raffle-images {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
-  background: var(--clr-drk-green);
-  margin-top: 2.5em;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
