@@ -9,10 +9,10 @@ import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
+import VisitUs from './VisitUs';
 import Events from './Events';
-import Services from './Services';
 import DropDown from "./Dropdown";
-//'./app.css';
+//import './app.css';
 
 function Navbar() {
   if (window.location.href.includes("/admin")) {
@@ -54,13 +54,8 @@ function Navbar() {
             </a>
             &nbsp;
             <a>
-              <Link to="/events" component={Events}>
-                Events
-              </Link>
-            </a>
-            <a>
-              <Link to="/services" component={Services}>
-                Services
+              <Link to="/visit-us" component={VisitUs}>
+                Visit Us
               </Link>
             </a>
             &nbsp;
