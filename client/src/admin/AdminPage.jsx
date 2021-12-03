@@ -22,7 +22,7 @@ export default function AdminPage() {
       .then((animals) => {
         let animalList = animals
           .sort(function (alpha, beta) {
-            return alpha - beta;
+            return alpha.animalName - beta.animalName;
           })
           .map((item) => {
             return (
