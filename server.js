@@ -23,7 +23,7 @@ app.use(express.static(staticDir));
 
 app.use(express.urlencoded({ extended: true }));
 
-//creates schema bones for
+//creates schema bones for animal info
 const animalSchema = new mongoose.Schema({
   animalName: { type: String },
   animalDescription: { type: String },

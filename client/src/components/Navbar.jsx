@@ -10,6 +10,8 @@ import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
 import VisitUs from './VisitUs';
+import Events from './Events';
+import DropDown from "./Dropdown";
 //'./app.css';
 
 function Navbar() {
@@ -18,7 +20,7 @@ function Navbar() {
   }
   return (
     <div className="Navbar">
-      <div className="leftSide">
+      <div className="rightSide">
         <div className="links">
           <ol>
             <a>
@@ -66,7 +68,11 @@ function Navbar() {
         </div>
       </div>
       <div className="rightSide">
-        <button className="button"><Link to = "/donate">DONATE</Link></button>
+        <button className="button">
+          <Link to="/donate">DONATE</Link></button>
+      </div>
+      <div className="dropdown-menu-wrapper">
+        <button component={DropDown}></button>
       </div>
     </div>
   );

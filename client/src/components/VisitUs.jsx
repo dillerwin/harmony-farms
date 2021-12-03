@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import VisitUsHero from "./VisitUsHero.jsx";
 // import DonateCards from "./DonateCards";
 import Footer from "./Footer";
-import hipcamp from "../img/hipcamp.jpg";
-import hipcamp2 from "../img/hipcamp2.jpg";
 import hipcamp3 from "../img/hipcamp3.jpg";
+import hipcamp2 from "../img/hipcamp2.jpg";
+import hipcamp1 from "../img/hipcamp1.jpg";
 import farmPigs from "../img/farm-pigs.jpg";
 
 function Services() {
@@ -28,20 +28,20 @@ function Services() {
         <div id="glamping-img-wrapper">
           {/* Image */}
           <img
-            id="hipcamp3-img"
-            src={hipcamp3}
-            alt="Glamping at the Sanctuary"
-          />
-          {/* Image */}
-          <img
             id="hipcamp1-img"
-            src={hipcamp}
+            src={hipcamp1}
             alt="Glamping at the Sanctuary"
           />
           {/* Image */}
           <img
             id="hipcamp2-img"
             src={hipcamp2}
+            alt="Glamping at the Sanctuary"
+          />
+          {/* Image */}
+          <img
+            id="hipcamp3-img"
+            src={hipcamp3}
             alt="Glamping at the Sanctuary"
           />
         </div>
@@ -69,7 +69,7 @@ function Services() {
         </p>
         <div className="money-button-container">
           <Link to="/book-tour">
-            <button className="button money-button"> Book Tour</button>
+            <button className="button money-button">Send Us an Email</button>
           </Link>
         </div>
       </div>
