@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./admin.css";
 
 export default function AdminPage() {
   const [animalList, setAnimalList] = useState("");
@@ -6,7 +7,6 @@ export default function AdminPage() {
   const [animal, setAnimal] = useState("");
 
   function editHandle(event) {
-    console.log(event.target.value);
     setEditView("block");
     setAnimal(event.target.value);
   }
@@ -36,6 +36,7 @@ export default function AdminPage() {
                 <ul>
                   <li>{item.animalDescription} </li>
                   <li>{item.imageLink}</li>
+                  <li>{item.donorBox}</li>
                 </ul>
                 <button
                   onClick={editHandle}
@@ -117,6 +118,14 @@ export default function AdminPage() {
               placeholder="Enter the link to the animal's image"
             />
           </label>
+          <label>
+            <p>Donor Box Link</p>
+            <input
+              type="text"
+              name="donorBox"
+              placeholder="Enter link to animal's donorbox"
+            />
+          </label>
           <button type="submit" name="editSubmit">
             Submit Edit
           </button>
@@ -130,36 +139,59 @@ export default function AdminPage() {
           width: "50vw",
         }}
       >
-        <form action="/animalPost" method="post" style={{ padding: "5px" }}>
-          <label>
-            <p>Animal Name</p>
-            <input
-              type="text"
-              name="animalName"
-              placeholder="Enter the animal's name"
-            />
-          </label>
-          <label>
-            <p>Description</p>
-            <input
-              type="text"
-              name="animalDescription"
-              placeholder="Enter a description"
-            />
-          </label>
-          <label>
-            <p>Image Link</p>
-            <input
-              type="text"
-              name="imageLink"
-              placeholder="Enter link to image of the animal"
-            />
-          </label>
-          <button type="submit" name="submitButton">
-            Submit Animal
-          </button>
-        </form>
-        <div style={{ paddingLeft: "5vw" }}>{animalList}</div>
+        <div>
+          <form
+            className="addAnimalForm"
+            action="/animalPost"
+            method="post"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "absolute",
+              bottom: "30vh",
+              padding: "5px",
+            }}
+          >
+            <label>
+              <p>Animal Name</p>
+              <input
+                type="text"
+                name="animalName"
+                placeholder="Enter the animal's name"
+              />
+            </label>
+            <label>
+              <p>Description</p>
+              <input
+                type="text"
+                name="animalDescription"
+                placeholder="Enter a description"
+              />
+            </label>
+            <label>
+              <p>Image Link</p>
+              <input
+                type="text"
+                name="imageLink"
+                placeholder="Enter link to image of the animal"
+              />
+            </label>
+            <label>
+              <p>Donor Box Link</p>
+              <input
+                type="text"
+                name="donorBox"
+                placeholder="Enter link to animal's donorbox"
+              />
+            </label>
+            <button type="submit" name="submitButton">
+              Submit Animal
+            </button>
+          </form>
+        </div>
+        <div>
+          <div style={{ paddingLeft: "5vw" }}>{animalList}</div>
+        </div>
       </div>
     </div>
   );

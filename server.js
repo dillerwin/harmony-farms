@@ -3,28 +3,32 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-const db = mongoose.connection;
 
 const port = process.env.PORT || 8000;
 const app = express();
 const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 
+//connects to database
 const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.idqix.mongodb.net/harmony-farms`;
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
+//establishes database listening on 8000
 app.listen(port, () => {
   console.log(`Hearing you on port: ${port}`);
 });
 
+//routes to React app
 app.use(express.static(staticDir));
 
 app.use(express.urlencoded({ extended: true }));
 
+//creates schema bones for
 const animalSchema = new mongoose.Schema({
   animalName: { type: String },
   animalDescription: { type: String },
   imageLink: { type: String },
+  donorBox: { type: String },
 });
 
 const Animal = mongoose.model("Animal", animalSchema);
@@ -64,6 +68,12 @@ app.post("/edit", async (req, res) => {
     await Animal.updateOne(
       { _id: targetId },
       { $set: { imageLink: req.body.imageLink } }
+    );
+  }
+  if (req.body.donorBox !== "") {
+    await Animal.updateOne(
+      { _id: targetId },
+      { $set: { donorBox: req.body.donorBox } }
     );
   }
   res.redirect("/admin/edit");
