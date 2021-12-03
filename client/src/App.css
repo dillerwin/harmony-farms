@@ -100,12 +100,32 @@
   /* color: var(--clr-drk-green); */
 }
 
-.Navbar .button:hover{
+.Navbar .button:hover {
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #f7708b, #e75b70, #d64656, #c3313b, #af1a21);
+  background-image: linear-gradient(
+    to bottom,
+    #f7708b,
+    #e75b70,
+    #d64656,
+    #c3313b,
+    #af1a21
+  );
 }
 
 /* Dropdown Menu Styling */
+<<<<<<< HEAD
+/* .Navbar .dropdown-menu .li a {
+  text-decoration: none;
+}
+
+.Navbar .dropdown-menu {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto
+} */
+=======
+>>>>>>> e9566343b647f53c3c45f281c16eab9f61d7d541
 
 /* Media responsiveness for Navbar */
 @media screen and (min-width: 810px) and (max-width: 1024px) {
@@ -768,4 +788,52 @@ a {
   #donate-goods {
     margin: 2em 0 0 0;
   }
+}
+
+/* Raffle page styling */
+
+.raffle-header::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+.raffle-header {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  color: var(--clr-drk-green);
+  text-align: center;
+  margin: 0.4em 0.4em;
+  text-shadow: 1px 1px var(--clr-text);
+}
+
+.raffle-text {
+  font-family: var(--ff-secondary);
+  font-size: 1em;
+  text-align: center;
+  margin: 0 0.5em 1em;
+}
+
+.raffle-donate-container {
+  background-color: rgb(255, 241, 175, 0.7);
+}
+
+.winner-display {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 0.0001em;
+  border-radius: 30px;
+  font-family: var(--ff-primary);
+  letter-spacing: 1.5px;
+}
+
+.winner-name {
+  color: black;
+}
+
+.raffle-images {
+  display: flex;
+  justify-content: space-around;
 }
