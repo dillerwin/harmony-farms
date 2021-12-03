@@ -16,7 +16,8 @@ function Navbar() {
   if (window.location.href.includes("/admin")) {
     return null;
   }
-  
+
+
 
   // {/* <div className="dropdown-menu">
   //     <button id="drop-button">Ways to Support Us</button>
@@ -64,7 +65,7 @@ function Navbar() {
             </a>
             &nbsp;
             <a>
-              <Link to="/contact-us" component={Contact}></Link>
+              <Link to="/contact-us" component={Contact}>Contact Us</Link>
             </a>
             &nbsp;
             <a>
