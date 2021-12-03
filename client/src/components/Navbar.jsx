@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 //import {Link} from 'react';
 import { Link } from "react-router-dom";
 import About from "./About";
@@ -15,6 +16,7 @@ function Navbar() {
   if (window.location.href.includes("/admin")) {
     return null;
   }
+  
 
 
   // {/* <div className="dropdown-menu">
