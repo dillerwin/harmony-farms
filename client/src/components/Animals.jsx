@@ -17,7 +17,6 @@ function Animals() {
         </p>
       </div>
 
-      <div id="animal-cards"></div>
       <Footer />
     </>
   );

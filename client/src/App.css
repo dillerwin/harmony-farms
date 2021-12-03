@@ -18,7 +18,7 @@
   --clr-light-green: rgb(180, 198, 166);
   --clr-drk-green: rgb(102, 128, 106);
   --clr-orange: rgb(255, 194, 134);
-  --cly-yellow: rgb(255, 241, 175);
+  --clr-yellow: rgb(255, 241, 175);
   --clr-text: #303030;
   --clr-white: rgb(247, 247, 247);
 
@@ -681,7 +681,7 @@ a {
 
 #cash-donation-container,
 #donate-goods {
-  background-color: rgb(255, 241, 175, 0.7);
+  background-color: var(--clr-yellow);
   padding: 1em 0;
 }
 
