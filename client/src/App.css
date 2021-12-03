@@ -113,19 +113,6 @@
 }
 
 /* Dropdown Menu Styling */
-<<<<<<< HEAD
-/* .Navbar .dropdown-menu .li a {
-  text-decoration: none;
-}
-
-.Navbar .dropdown-menu {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  margin: auto
-} */
-=======
->>>>>>> e9566343b647f53c3c45f281c16eab9f61d7d541
 
 /* Media responsiveness for Navbar */
 @media screen and (min-width: 810px) and (max-width: 1024px) {
