@@ -20,6 +20,9 @@ import Contact from "./components/Contact.jsx";
 
 import Navbar from "./components/Navbar";
 
+import ReqAuth from "./admin/ReqAuth";
+import AdminPage from "./admin/AdminPage";
+
 import Raffle from "./components/Raffle";
 //imports the Raffle component
 
@@ -32,11 +35,12 @@ function App() {
         {/* BrowserRouter is used for client side routing with URL segments*/}
         <BrowserRouter>
           <div className="Navbar">
-            {" "}
-            <Navbar />{" "}
+            <Navbar />
           </div>
           {/* Routes contains all of the routes */}
           <Routes>
+            <Route path="/admin" element={<ReqAuth />} />
+            <Route path="/admin/edit" element={<AdminPage />} />
             {/* Route is each individual route - utilizes the path and element prop. 
           Path reflects the URL path, element is where component is rendered */}
             {/* Routes to Home Component */}
