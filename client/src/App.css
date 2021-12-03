@@ -101,9 +101,16 @@
   color: var(--clr-drk-green);
 }
 
-.Navbar .button:hover{
+.Navbar .button:hover {
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #f7708b, #e75b70, #d64656, #c3313b, #af1a21);
+  background-image: linear-gradient(
+    to bottom,
+    #f7708b,
+    #e75b70,
+    #d64656,
+    #c3313b,
+    #af1a21
+  );
 }
 
 /* Dropdown Menu Styling */
@@ -117,7 +124,6 @@
   flex-direction: column;
   margin: auto
 } */
-
 
 /* Media responsiveness for Navbar */
 @media (max-width: 850px) {
@@ -785,4 +791,86 @@ a {
   #donate-goods {
     margin: 2em 0 0 0;
   }
+}
+
+/* Sponsor Page Styles */
+
+#sponsor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  margin-top: 3em;
+  margin-bottom: 2em;
+  justify-content: center;
+  max-height: fit-content;
+  background: var(--clr-yellow);
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.sponsor-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: fit-content;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  overflow: hidden;
+}
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--bs);
+  transition: 0.3s;
+  overflow: hidden;
+  max-width: 300px;
+  margin-top: 1em;
+  border-radius: 10px;
+  border: 2px solid var(--clr-drk-green);
+}
+
+.sponsor-card-title {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  color: var(--clr-text);
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin: 0;
+  max-height: fit-content;
+}
+
+.sponsor-card-text {
+  font-family: var(--ff-secondary);
+  font-weight: 550;
+  color: var(--clr-text);
+  text-align: center;
+  margin-top: 0;
+  max-height: fit-content;
+}
+
+.sponsor-card-title::after {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 1px;
+  margin: 0.5em auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
+.sponsor-card-image {
+  max-width: 300px;
+  max-height: 375px;
+  min-height: 375px;
+}
+
+.sponsor-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.sponsor-container {
+  padding: 2px 16px;
+  background: var(--clr-light-green);
+  border-top: 1px solid var(--clr-drk-green);
 }

@@ -135,7 +135,7 @@ export default function AdminPage() {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           width: "50vw",
         }}
       >
@@ -190,7 +190,7 @@ export default function AdminPage() {
           </form>
         </div>
         <div>
-          <div style={{ paddingLeft: "5vw" }}>{animalList}</div>
+          <div style={{ paddingLeft: "30vw" }}>{animalList}</div>
         </div>
       </div>
     </div>
