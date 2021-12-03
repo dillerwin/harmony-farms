@@ -21,19 +21,6 @@ app.use(express.static(staticDir));
 
 app.use(express.urlencoded({ extended: true }));
 
-const testSchema = new mongoose.Schema({
-  testContent: { type: String },
-});
-
-const Test = mongoose.model("Test", testSchema);
-
-app.post("/test", async (req, res) => {
-  let userObj = req.body;
-  let newTestObj = new Test(userObj);
-  await newTestObj.save();
-  res.send("posted");
-});
-
 const animalSchema = new mongoose.Schema({
   animalName: { type: String },
   animalDescription: { type: String },
