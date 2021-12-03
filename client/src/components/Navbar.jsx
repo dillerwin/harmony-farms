@@ -18,7 +18,6 @@ function Navbar() {
   }
   
 
-
   // {/* <div className="dropdown-menu">
   //     <button id="drop-button">Ways to Support Us</button>
   //     <div id="menu-items" className="dropdown-items">
@@ -30,7 +29,7 @@ function Navbar() {
   //         <li><a id="amazon"> <Link to ="/amazon">Amazon Wishlist</Link></a></li>
 
   //         <li><a id="volunteer"> <Link to ="/volunteer">Volunteer</Link></a></li>
-
+  
   //     </div>
   // </div> */}
 

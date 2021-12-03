@@ -1,10 +1,11 @@
 //imports react into the component
 import React from "react";
+import ServicesHero from "./ServicesHero.jsx";
 
 function Services() {
   return (
     <div id="services">
-      {/* <ServicesImage /> */}
+      <ServicesHero />
       <h1>This will be the Services page</h1>
     </div>
   );
