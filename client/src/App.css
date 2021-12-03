@@ -101,9 +101,16 @@
   color: var(--clr-drk-green);
 }
 
-.Navbar .button:hover{
+.Navbar .button:hover {
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #f7708b, #e75b70, #d64656, #c3313b, #af1a21);
+  background-image: linear-gradient(
+    to bottom,
+    #f7708b,
+    #e75b70,
+    #d64656,
+    #c3313b,
+    #af1a21
+  );
 }
 
 /* Dropdown Menu Styling */
@@ -117,7 +124,6 @@
   flex-direction: column;
   margin: auto
 } */
-
 
 /* Media responsiveness for Navbar */
 @media (max-width: 850px) {
@@ -785,4 +791,31 @@ a {
   #donate-goods {
     margin: 2em 0 0 0;
   }
+}
+
+/* Raffle page styling */
+
+.raffle-header::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+.raffle-header {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  color: var(--clr-drk-green);
+  text-align: center;
+  margin: 0.5em 0.5em;
+  text-shadow: 1px 1px var(--clr-text);
+}
+
+.raffle-text {
+  font-family: var(--ff-secondary);
+  font-size: 1em;
+  text-align: center;
+  margin: 0 0.5em 1em;
 }
