@@ -786,3 +786,82 @@ a {
     margin: 2em 0 0 0;
   }
 }
+
+/* ---Services Page CSS--- */
+
+/* Glamping Container */
+#glamping-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glamping Header */
+#glamping-header {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  color: var(--clr-drk-green);
+  text-align: center;
+  margin-top: 1.5em;
+  text-shadow: 1px 1px var(--clr-text);
+}
+
+/* Glamping description */
+#glamping-text {
+  font-family: var(--ff-secondary);
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-right: 150px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+/* Glamping imgs wrapper */
+#glamping-img-wrapper {
+  margin-top: 3em;
+}
+
+/* 1st HipCamp Img */
+#hipcamp1-img {
+  max-width: 550px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+}
+
+/* 2nd HipCamp Img */
+#hipcamp2-img {
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+/* 3rd HipCamp Img */
+#hipcamp3-img {
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+/* Glamping caption */
+#glamping-img-caption {
+  margin-top: 1rem;
+  font-family: var(--ff-secondary);
+  color: var(--clr-drk-green);
+}
+
+/* Book HipCamp Button */
+#hip-camp-button-container {
+  margin-top: 2em;
+}
+
+.hip-camp-button {
+  margin: 0.5em 1em;
+  font-size: 1.1em;
+  min-width: 325px;
+  max-width: 325px;
+}
+

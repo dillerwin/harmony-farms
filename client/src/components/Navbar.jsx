@@ -9,7 +9,7 @@ import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
-import Services from './Services';
+import VisitUs from './VisitUs';
 //'./app.css';
 
 function Navbar() {
@@ -52,8 +52,8 @@ function Navbar() {
             </a>
             &nbsp;
             <a>
-              <Link to="/services" component={Services}>
-                Services
+              <Link to="/visit-us" component={VisitUs}>
+                Visit Us
               </Link>
             </a>
             &nbsp;

@@ -1,13 +1,13 @@
 import React from "react";
 import "../App.css";
 
-function ServicesHero() {
+function VisitUsHero() {
   return (
     <>
       <div id="hero-image">
         <div className="hero-text">
           <h1 className="hero-welcome-text">
-            Our Services
+            Visit Us
           </h1>
         </div>
       </div>
@@ -15,4 +15,4 @@ function ServicesHero() {
   );
 }
 
-export default ServicesHero;
+export default VisitUsHero;
