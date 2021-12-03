@@ -57,6 +57,7 @@
   flex: 70%;
   display: inline-flex;
   flex-wrap: wrap;
+  /* flex-grow: 4; */
   justify-content: left;
   align-items: center;
   justify-content: space-between;
@@ -73,23 +74,15 @@
   font-weight: var(--fw-bold);
 }
 
-.Navbar #button {
-  display: flex;
-  position: center;
-  justify-content: flex-end;
-  /* margin: auto; */
-  padding-top: 15px;
-  padding-bottom: 15px;
-  /* height: 3.6vh;
-  width: 3.0vw; */
-  padding-right: 25px;
-}
-
 .Navbar .rightSide #button:hover {
   cursor: pointer;
 }
 
 .Navbar .rightSide #button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  /* padding-top: 25rem; */
   width: 150px;
   height: 35px;
   width: 50px;

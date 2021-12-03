@@ -8,6 +8,7 @@ import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
+import Services from './Services';
 //'./app.css';
 
 function Navbar() {
@@ -48,24 +49,35 @@ function Navbar() {
                 About Us
               </Link>
             </a>
+            &nbsp;
             <a>
               <Link to="/animals" component={Animals}>
                 Our Animals
               </Link>
             </a>
+            &nbsp;
             <a>
               <Link to="/wellness-center" component={WellnessCenter}>
                 Wellness Center
               </Link>
             </a>
+            &nbsp;
             <a>
               <Link to="/contact-us" component={Contact}></Link>
             </a>
+            &nbsp;
             <a>
               <Link to="/raffle" component={Raffle}>
                 Raffle
               </Link>
             </a>
+            &nbsp;
+            <a>
+              <Link to="/services" component={Services}>
+                Services
+              </Link>
+            </a>
+            &nbsp;
           </ol>
         </div>
       </div>
