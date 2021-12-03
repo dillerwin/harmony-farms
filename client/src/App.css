@@ -819,3 +819,13 @@ a {
   text-align: center;
   margin: 0 0.5em 1em;
 }
+
+#winner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  background: var(--clr-drk-green);
+  margin-top: 2.5em;
+  flex-wrap: wrap;
+}

@@ -23,6 +23,7 @@ function Raffle() {
           Every $5 dollars donated give you 1 slot; exp: $5 = 1 entry, $40 = 8
           entries.
         </p>
+        <h1 id="winner-container">This Weeks Winner: Lorem Ipsum!</h1>
         <RaffleImages />
         <QuoteBlockTwo />
         <Footer />
