@@ -23,6 +23,7 @@ export default function AdminPage() {
         let animalList = animals
           .sort(function (alpha, beta) {
             return alpha - beta;
+            return alpha.animalName - beta.animalName
           })
           .map((item) => {
             return (
