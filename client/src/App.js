@@ -5,10 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home.jsx";
 //Imports the About component
 import About from "./components/About.jsx";
-
 //Imports the Donate component
 import Donate from "./components/Donate";
-
 //Imports the Animals component
 import Animals from "./components/Animals.jsx";
 //Imports the Wellness Center component
