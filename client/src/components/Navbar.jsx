@@ -20,7 +20,7 @@ function Navbar() {
   }
   return (
     <div className="Navbar">
-      <div className="leftSide">
+      <div className="rightSide">
         <div className="links">
           <ol>
             <a>

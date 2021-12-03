@@ -189,11 +189,7 @@ export default function AdminPage() {
           </form>
         </div>
         <div>
-<<<<<<< HEAD
-          <div style={{ paddingLeft: "30vw" }}>{animalList}</div>
-=======
           <div style={{ width: "30vw", paddingLeft: "5vw" }}>{animalList}</div>
->>>>>>> e9566343b647f53c3c45f281c16eab9f61d7d541
         </div>
       </div>
     </div>

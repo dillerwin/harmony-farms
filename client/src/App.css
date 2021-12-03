@@ -797,7 +797,6 @@ a {
   max-height: fit-content;
   flex-wrap: wrap;
   margin-top: 1em;
-  overflow: hidden;
 }
 .sponsor-card {
   display: flex;
@@ -856,4 +855,52 @@ a {
   padding: 2px 16px;
   background: var(--clr-light-green);
   border-top: 1px solid var(--clr-drk-green);
+}
+
+/* Raffle page styling */
+
+.raffle-header::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+.raffle-header {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  color: var(--clr-drk-green);
+  text-align: center;
+  margin: 0.4em 0.4em;
+  text-shadow: 1px 1px var(--clr-text);
+}
+
+.raffle-text {
+  font-family: var(--ff-secondary);
+  font-size: 1em;
+  text-align: center;
+  margin: 0 0.5em 1em;
+}
+
+.raffle-donate-container {
+  background-color: rgb(255, 241, 175, 0.7);
+}
+
+.winner-display {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 0.0001em;
+  border-radius: 30px;
+  font-family: var(--ff-primary);
+  letter-spacing: 1.5px;
+}
+
+.winner-name {
+  color: black;
+}
+
+.raffle-images {
+  display: flex;
+  justify-content: space-around;
 }
