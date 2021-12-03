@@ -59,7 +59,6 @@ export default function AdminPage() {
           });
         setAnimalList(animalList);
       });
-    // console.log(animalList));
   }, []);
 
   return (
@@ -135,7 +134,7 @@ export default function AdminPage() {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           width: "50vw",
         }}
       >
@@ -190,7 +189,7 @@ export default function AdminPage() {
           </form>
         </div>
         <div>
-          <div style={{ paddingLeft: "5vw" }}>{animalList}</div>
+          <div style={{ width: "30vw", paddingLeft: "5vw" }}>{animalList}</div>
         </div>
       </div>
     </div>

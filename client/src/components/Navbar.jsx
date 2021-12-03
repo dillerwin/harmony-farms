@@ -9,31 +9,15 @@ import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
+import Events from './Events';
 import Services from './Services';
+import DropDown from "./Dropdown";
 //'./app.css';
 
 function Navbar() {
   if (window.location.href.includes("/admin")) {
     return null;
   }
-  
-
-  // {/* <div className="dropdown-menu">
-  //     <button id="drop-button">Ways to Support Us</button>
-  //     <div id="menu-items" className="dropdown-items">
-
-  //         <li><a id="donate"> <Link to ="/donate" component={Donate}>Donate</Link></a></li>
-
-  //         <li><a id="chewy"> <Link to ="/chewy">Chewy Wishlist</Link></a></li>
-
-  //         <li><a id="amazon"> <Link to ="/amazon">Amazon Wishlist</Link></a></li>
-
-  //         <li><a id="volunteer"> <Link to ="/volunteer">Volunteer</Link></a></li>
-  
-  //     </div>
-  // </div> */}
-
-
   return (
     <div className="Navbar">
       <div className="rightSide">
@@ -64,26 +48,36 @@ function Navbar() {
             </a>
             &nbsp;
             <a>
-              <Link to="/contact-us" component={Contact}></Link>
-            </a>
-            &nbsp;
-            <a>
               <Link to="/raffle" component={Raffle}>
                 Raffle
               </Link>
             </a>
             &nbsp;
             <a>
+              <Link to="/events" component={Events}>
+                Events
+              </Link>
+            </a>
+            <a>
               <Link to="/services" component={Services}>
                 Services
               </Link>
             </a>
             &nbsp;
+            <a>
+              <Link to="/contact-us" component={Contact}>
+                Contact Us
+                </Link>
+            </a>
           </ol>
         </div>
       </div>
       <div className="rightSide">
-        <button className="button">DONATE</button>
+        <button className="button">
+          <Link to="/donate">DONATE</Link></button>
+      </div>
+      <div className="dropdown-menu-wrapper">
+        <button component={DropDown}></button>
       </div>
     </div>
   );
