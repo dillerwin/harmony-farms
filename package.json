@@ -1,7 +1,6 @@
 {
   "name": "harmony-farms",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
     "create-react-app": "^4.0.3",
@@ -28,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/dillerwin/harmony-farms/issues"
   },
-  "homepage": "https://github.com/dillerwin/harmony-farms#readme"
+  "homepage": "https://github.com/dillerwin/harmony-farms#readme",
+  "description": ""
 }
