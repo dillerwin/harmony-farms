@@ -9,7 +9,9 @@ import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
+import Events from './Events';
 import Services from './Services';
+import DropDown from "./Dropdown";
 //'./app.css';
 
 function Navbar() {
@@ -52,6 +54,11 @@ function Navbar() {
             </a>
             &nbsp;
             <a>
+              <Link to="/events" component={Events}>
+                Events
+              </Link>
+            </a>
+            <a>
               <Link to="/services" component={Services}>
                 Services
               </Link>
@@ -66,7 +73,11 @@ function Navbar() {
         </div>
       </div>
       <div className="rightSide">
-        <button className="button"><Link to = "/donate">DONATE</Link></button>
+        <button className="button">
+          <Link to="/donate">DONATE</Link></button>
+      </div>
+      <div className="dropdown-menu-wrapper">
+        <button component={DropDown}></button>
       </div>
     </div>
   );
