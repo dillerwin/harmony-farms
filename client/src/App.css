@@ -43,6 +43,10 @@
   }
 }
 
+h1 {
+  letter-spacing: 1.5px;
+}
+
 /* --- Navbar styling --- */
 .Navbar {
   display: flex;
@@ -842,8 +846,6 @@ a {
 
 .sponsor-card-image {
   max-width: 300px;
-  max-height: 375px;
-  min-height: 375px;
 }
 
 .sponsor-card:hover {
@@ -962,8 +964,6 @@ a {
   margin-left: 1em;
   margin-bottom: 1em;
 }
-
-
 
 /* Glamping caption */
 #glamping-img-caption {

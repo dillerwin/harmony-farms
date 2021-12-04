@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function SponsorCards() {
   const [animalInfo, setAnimalInfo] = useState("");
-  //   const [animalName, setAnimalName] = useState("");
-  //   const [animalImage, setAnimalImage] = useState("");
-  //   const [animalLink, setAnimalLink] = useState("");
+  
   useEffect(() => {
     fetch("/api/animals")
       .then((res) => res.json())
@@ -20,7 +18,7 @@ function SponsorCards() {
                   <div class="sponsor-container">
                     <h4 className="sponsor-card-title">{item.animalName}</h4>
                     <p className="sponsor-card-text">
-                      Click here to hear my story and sponsor me!
+                      Click here to hear my rescue story and sponsor me!
                     </p>
                   </div>
                 </div>
