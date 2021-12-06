@@ -80,7 +80,7 @@ function Navbar() {
         <li 
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>
-          <Link to = "/visitus" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
+          <Link to = "/visit-us" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
             Visit Us &nbsp;<i className="fas fa-caret-down"/>
             </Link>
             {dropdown && <Dropdown />}
