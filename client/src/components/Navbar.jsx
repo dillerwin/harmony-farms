@@ -9,23 +9,23 @@ import Contact from "./Contact";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
-<<<<<<< HEAD
+
 import VisitUs from "./VisitUs";
 import Events from "./Events";
 import DropDown from "./Dropdown";
-=======
+
 //import Events from './Events';
-<<<<<<< HEAD
+
 import Services from "./Services";
 import Volunteer from "./Volunteer";
-=======
-import VisitUs from './VisitUs';
+
+// import VisitUs from './VisitUs';
 import Volunteer from './Volunteer';
-<<<<<<< HEAD
->>>>>>> 5cd86b8e39332d6810614a485cfe96bdbd187db0
-=======
->>>>>>> 7967b1b14a1b524d1b672cf9f785a0f6659a8826
->>>>>>> 672f337451495e8c7d131d91d844909b16515edc
+
+
+
+
+
 //import './app.css';
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
@@ -58,10 +58,10 @@ function Navbar() {
   // GB: Dill- moved your admin block to down below my hooks bc it was throwing error
   if (window.location.href.includes("/admin")) {
     return null;
-<<<<<<< HEAD
+
   }
-=======
-<<<<<<< HEAD
+
+
   }
   return (
     <div className="Navbar" id="anchor">
@@ -116,9 +116,9 @@ function Navbar() {
         <button className="button">
           <Link to="/donate">DONATE</Link>
         </button>
-=======
+)
   };
->>>>>>> 672f337451495e8c7d131d91d844909b16515edc
+
 
   return (
     <>
@@ -129,22 +129,22 @@ function Navbar() {
           </Link>
         </div>
 
-<<<<<<< HEAD
+
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
-=======
+
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
->>>>>>> 7967b1b14a1b524d1b672cf9f785a0f6659a8826
+
       </div>
->>>>>>> 672f337451495e8c7d131d91d844909b16515edc
+
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           {/* <li>
           <Link to = "/" className="nav-item" component={Home} onClick={closeMobileMenu}>Home</Link>
         </li> */}
-<<<<<<< HEAD
+
           <li>
             <Link
               to="/about"
@@ -194,7 +194,7 @@ function Navbar() {
             >
               Visit Us &nbsp;
               <i className="fas fa-caret-down" />
-=======
+
         <li>
           <Link to = "/about" className="nav-item" component={About} onClick={closeMobileMenu}>About</Link>
         </li>
@@ -212,7 +212,7 @@ function Navbar() {
         onMouseLeave={onMouseLeave}>
           <Link to = "/visitus" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
             Visit Us &nbsp;<i className="fas fa-caret-down"/>
->>>>>>> 5cd86b8e39332d6810614a485cfe96bdbd187db0
+
             </Link>
             {dropdown && <Dropdown />}
           </li>
@@ -233,6 +233,6 @@ function Navbar() {
       </nav>
     </>
   );
-}
+
 
 export default Navbar;
