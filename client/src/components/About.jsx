@@ -1,5 +1,7 @@
 //Imports react into the component
 import React from "react";
+//Imports About CSS file
+import "../About.css"
 //Imports Photo to use for About Page
 import placeholder from "../img/about-placeholder.jpg";
 //Imports About Hero Component into page
