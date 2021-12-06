@@ -8,6 +8,8 @@ const port = process.env.PORT || 8000;
 const app = express();
 const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 
+const bcrypt = require("bcrypt");
+
 //connects to database
 const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.idqix.mongodb.net/harmony-farms`;
 
@@ -22,6 +24,11 @@ app.listen(port, () => {
 app.use(express.static(staticDir));
 
 app.use(express.urlencoded({ extended: true }));
+
+const Admin = mongoose.model("Admin", {
+  username: { type: String, required: true },
+  password: { type: String, required: true },
+});
 
 //creates schema bones for animal info
 const animalSchema = new mongoose.Schema({
@@ -39,6 +46,23 @@ app.post("/animalPost", async (req, res) => {
   console.log("Animal Added");
   res.status(200).redirect("/admin/edit");
 });
+
+app.get("/admin", (req, res) => {
+  res.sendFile(__dirname + "/assign.html");
+});
+
+// app.post("/assign", async (req, res) => {
+//   bcrypt.hash(req.body.password, 10, async (err, hash) => {
+//     let userDoc = {
+//       username: req.body.username,
+//       password: hash,
+//     };
+//     let user = new Admin(userDoc);
+
+//     user.save();
+//   });
+//   console.log(`admin added`);
+// });
 
 app.get("/api/animals", async (req, res) => {
   let animals = await Animal.find({});
