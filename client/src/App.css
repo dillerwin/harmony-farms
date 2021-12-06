@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 
+
 /* ---Root Level CSS--- */
 :root {
   /* Font families */
   --ff-primary: "Architects Daughter", cursive;
   --ff-secondary: "Open Sans", sans-serif;
+  --ff-tertiary: "Raleway", sans-serif;
 
   /* Font weights */
   --fw-reg: 300;
@@ -44,7 +46,7 @@
 }
 
 /* --- Navbar styling --- */
-.Navbar {
+/* .Navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -54,20 +56,27 @@
   width: 100%;
   height: 90px;
   font-family: var(--ff-primary);
-}
+} */
 
-.Navbar .links {
+/* .Navbar .links {
   flex: 70%;
   display: inline-flex;
   flex-wrap: wrap;
   /* flex-grow: 4; */
-  justify-content: left;
+  /* justify-content: left;
   align-items: center;
   justify-content: space-between;
   padding-left: 35px;
   text-decoration: none;
   color: var(--clr-drk-green);
   font-size: 22px;
+<<<<<<< HEAD
+} */ 
+
+/* @media screen and (min-width: 810px) and (max-width: 1024px) {
+  
+} */
+=======
   /* margin-right: 20px; */
 }
 
@@ -120,6 +129,7 @@
     width: 80%;
   }
 }
+>>>>>>> 1caf1a86a3e800709e68363a531c40d63f88fedb
 /* @media screen and (min-width: 360) and (max-width: 809px) {
   .Navbar .leftSide .links a {
     display: none;
