@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 /* ---Root Level CSS--- */
 :root {
   /* Font families */
@@ -45,6 +44,10 @@
   }
 }
 
+h1 {
+  letter-spacing: 1.5px;
+}
+
 /* --- Navbar styling --- */
 /* .Navbar {
   display: flex;
@@ -63,7 +66,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   /* flex-grow: 4; */
-  /* justify-content: left;
+/* justify-content: left;
   align-items: center;
   justify-content: space-between;
   padding-left: 35px;
@@ -488,8 +491,6 @@ a {
   }
 } */
 
-
-
 /* Styles for donate page */
 
 .donate-header,
@@ -664,8 +665,6 @@ a {
 
 .sponsor-card-image {
   max-width: 300px;
-  max-height: 375px;
-  min-height: 375px;
 }
 
 .sponsor-card:hover {
@@ -677,6 +676,12 @@ a {
   padding: 2px 16px;
   background: var(--clr-light-green);
   border-top: 1px solid var(--clr-drk-green);
+}
+
+@media (min-width: 1025px) {
+  #sponsor-container {
+    grid-template-columns: repeat(4, minmax(250px, 350px));
+  }
 }
 
 /* Raffle page styling */
@@ -726,4 +731,3 @@ a {
   display: flex;
   justify-content: space-around;
 }
-

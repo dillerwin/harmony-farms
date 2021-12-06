@@ -30,6 +30,7 @@ function DonateHeader() {
             className="button money-button"
             href="https://www.paypal.com/paypalme/hfswc?locale.x=en_US"
             target="_blank"
+            rel="noreferrer"
           >
             Donate: Paypal
           </a>
@@ -37,6 +38,7 @@ function DonateHeader() {
             className="button money-button"
             href="https://account.venmo.com/u/HFSWC"
             target="_blank"
+            rel="noreferrer"
           >
             Donate: Venmo
           </a>
@@ -44,6 +46,7 @@ function DonateHeader() {
             className="button money-button "
             href="https://www.gofundme.com/f/Harmony-Farm-sanctuary-and-wellness?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet"
             target="_blank"
+            rel="noreferrer"
           >
             Donate: GoFundMe
           </a>
@@ -66,6 +69,7 @@ function DonateHeader() {
             className="button money-button"
             href="https://www.chewy.com/g/harmony-farm-sanctuary-and-wellness-corp_b77105647"
             target="_blank"
+            rel="noreferrer"
           >
             Chewy.com Wishlist
           </a>
@@ -73,6 +77,7 @@ function DonateHeader() {
             className="button money-button "
             href="https://www.amazon.com/gp/registry/wishlist/2WWK9KPL158SB/"
             target="_blank"
+            rel="noreferrer"
           >
             Amazon.com Wishlist
           </a>
