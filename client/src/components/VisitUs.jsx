@@ -1,6 +1,7 @@
 //imports
 import React from "react";
 import { Link } from "react-router-dom";
+import "../Visitus.css"
 import VisitUsHero from "./VisitUsHero.jsx";
 // import DonateCards from "./DonateCards";
 import Footer from "./Footer";
@@ -8,6 +9,7 @@ import hipcamp3 from "../img/hipcamp3.jpg";
 import hipcamp2 from "../img/hipcamp2.jpg";
 import hipcamp1 from "../img/hipcamp1.jpg";
 import farmPigs from "../img/farm-pigs.jpg";
+import About from "../img/about-placeholder.jpg";
 
 function Services() {
   return (
@@ -58,26 +60,38 @@ function Services() {
           </a>
         </div>
       </div>
-      <div id="cash-donation-container">
-        <h2 className="cash-donation-header">Interested in a Tour?</h2>
+      <div id="tour-wrapper">
+        <h2 id="tour-header">Interested in a Tour?</h2>
         {/* Image */}
-        <img id="about-img" src={farmPigs} alt="Pigs at the Sanctuary" />
-        <p className="money-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nulla
-          eum voluptatem, eveniet quidem exercitationem animi totam laborum
-          possimus enim iure ducimus ipsum doloribus dolorem.
+        <div id="tour-img-text-wrapper">
+        <img id="tour-img" src={farmPigs} alt="Pigs at the Sanctuary" />
+        <p id="tour-text">
+          We'd love to show you around! We do stay pretty busy taking care of our animals here at the sanctuary, so please reach out to us via email to schedule a time to visit. 
         </p>
-        <div className="money-button-container">
+        </div>
+        <div id="tour-button-container">
           <Link to="/book-tour">
-            <button className="button money-button">Send Us an Email</button>
+            <button className="button tour-button">Email Us</button>
           </Link>
         </div>
       </div>
       {/* <div className="line"></div> */}
       {/* <DonateCards /> */}
 
-      <div>
-        <h1>Interested in Volunteering?</h1>
+      <div id="volunteer-wrapper">
+        <h2 id="volunteer-header">Interested in Volunteering?</h2>
+        {/* Image */}
+        <div id="volunteer-img-text-wrapper">
+        <p id="volunteer-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <img id="volunteer-img" src={About} alt="Pigs at the Sanctuary" />
+        </div>
+        <div id="volunteer-button-container">
+          <Link to="/volunteer">
+            <button className="button volunteer-button">Email Us</button>
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>
