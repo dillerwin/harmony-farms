@@ -9,6 +9,11 @@ import Contact from "./Contact";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
+<<<<<<< HEAD
+import VisitUs from "./VisitUs";
+import Events from "./Events";
+import DropDown from "./Dropdown";
+=======
 //import Events from './Events';
 <<<<<<< HEAD
 import Services from "./Services";
@@ -16,7 +21,11 @@ import Volunteer from "./Volunteer";
 =======
 import VisitUs from './VisitUs';
 import Volunteer from './Volunteer';
+<<<<<<< HEAD
 >>>>>>> 5cd86b8e39332d6810614a485cfe96bdbd187db0
+=======
+>>>>>>> 7967b1b14a1b524d1b672cf9f785a0f6659a8826
+>>>>>>> 672f337451495e8c7d131d91d844909b16515edc
 //import './app.css';
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
@@ -49,7 +58,67 @@ function Navbar() {
   // GB: Dill- moved your admin block to down below my hooks bc it was throwing error
   if (window.location.href.includes("/admin")) {
     return null;
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+  return (
+    <div className="Navbar" id="anchor">
+      <div className="rightSide">
+        <div className="links">
+          <ol>
+            <a>
+              <Link to="/" component={Home}>
+                Home
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/about" component={About}>
+                About Us
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/animals" component={Animals}>
+                Our Animals
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/wellness-center" component={WellnessCenter}>
+                Wellness Center
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/raffle" component={Raffle}>
+                Raffle
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/visit-us" component={VisitUs}>
+                Visit Us
+              </Link>
+            </a>
+            &nbsp;
+            <a>
+              <Link to="/contact-us" component={Contact}>
+                Contact Us
+              </Link>
+            </a>
+          </ol>
+        </div>
+      </div>
+      <div className="rightSide">
+        <button className="button">
+          <Link to="/donate">DONATE</Link>
+        </button>
+=======
+  };
+>>>>>>> 672f337451495e8c7d131d91d844909b16515edc
 
   return (
     <>
@@ -60,9 +129,16 @@ function Navbar() {
           </Link>
         </div>
 
+<<<<<<< HEAD
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
+=======
+      <div className="menu-icon" onClick={handleClick}>
+        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+>>>>>>> 7967b1b14a1b524d1b672cf9f785a0f6659a8826
+      </div>
+>>>>>>> 672f337451495e8c7d131d91d844909b16515edc
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           {/* <li>

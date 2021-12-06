@@ -44,6 +44,10 @@
   }
 }
 
+h1 {
+  letter-spacing: 1.5px;
+}
+
 /* --- Navbar styling --- */
 /* .Navbar {
   display: flex;
@@ -661,8 +665,6 @@ a {
 
 .sponsor-card-image {
   max-width: 300px;
-  max-height: 375px;
-  min-height: 375px;
 }
 
 .sponsor-card:hover {
@@ -674,6 +676,12 @@ a {
   padding: 2px 16px;
   background: var(--clr-light-green);
   border-top: 1px solid var(--clr-drk-green);
+}
+
+@media (min-width: 1025px) {
+  #sponsor-container {
+    grid-template-columns: repeat(4, minmax(250px, 350px));
+  }
 }
 
 /* Raffle page styling */

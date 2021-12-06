@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import Raffle from "./Raffle";
 import Animals from "./Animals";
 
@@ -7,7 +7,7 @@ function DonateCards() {
   return (
     <>
       <div className="card-container line-break donate-card-container">
-        <Link to="/animals" component={Animals}>
+        <Link to="/animals#anchor" component={Animals}>
           <div class="card">
             <img
               className="card-image"
@@ -25,6 +25,7 @@ function DonateCards() {
         <a
           href="https://www.bonfire.com/store/harmony-farm-sanctuary-and-wellness-center/"
           target="_blank"
+          rel="noreferrer"
         >
           <div class="card">
             <img
@@ -42,7 +43,7 @@ function DonateCards() {
           </div>
         </a>
 
-        <Link to="/raffle" component={Raffle}>
+        <Link to="/raffle#anchor" component={Raffle}>
           <div class="card">
             <img
               className="card-image"
