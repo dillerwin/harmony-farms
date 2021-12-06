@@ -26,6 +26,7 @@ function Cards() {
         <a
           href="https://www.bonfire.com/store/harmony-farm-sanctuary-and-wellness-center/"
           target="_blank"
+          rel="noreferrer"
         >
           <div class="card">
             <img

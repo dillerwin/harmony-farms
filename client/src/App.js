@@ -29,6 +29,7 @@ function App() {
           <div className="Navbar">
             <Navbar />
           </div>
+
           {/* Routes contains all of the routes */}
           <Routes>
             <Route path="/admin" element={<ReqAuth />} />

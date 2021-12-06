@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 
 function SponsorCards() {
   const [animalInfo, setAnimalInfo] = useState("");
-  
+
   useEffect(() => {
     fetch("/api/animals")
       .then((res) => res.json())
       .then((animal) => {
-        console.log(animal);
         let animalData = animal.map((item) => {
           return (
             <div className="sponsor-card-container">
-              <a href={item.donorBox} target="_blank">
+              <a href={item.donorBox} target="_blank" rel="noreferrer">
                 <div class="sponsor-card">
                   <img className="sponsor-card-image" src={item.imageLink} />
 

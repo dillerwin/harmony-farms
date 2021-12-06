@@ -9,8 +9,8 @@ import Donate from "./Donate";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
-import VisitUs from './VisitUs';
-import Events from './Events';
+import VisitUs from "./VisitUs";
+import Events from "./Events";
 import DropDown from "./Dropdown";
 //import './app.css';
 
@@ -19,7 +19,7 @@ function Navbar() {
     return null;
   }
   return (
-    <div className="Navbar">
+    <div className="Navbar" id="anchor">
       <div className="rightSide">
         <div className="links">
           <ol>
@@ -62,14 +62,15 @@ function Navbar() {
             <a>
               <Link to="/contact-us" component={Contact}>
                 Contact Us
-                </Link>
+              </Link>
             </a>
           </ol>
         </div>
       </div>
       <div className="rightSide">
         <button className="button">
-          <Link to="/donate">DONATE</Link></button>
+          <Link to="/donate">DONATE</Link>
+        </button>
       </div>
       <div className="dropdown-menu-wrapper">
         <button component={DropDown}></button>

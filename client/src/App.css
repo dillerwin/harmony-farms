@@ -859,6 +859,12 @@ a {
   border-top: 1px solid var(--clr-drk-green);
 }
 
+@media (min-width: 1025px) {
+  #sponsor-container {
+    grid-template-columns: repeat(4, minmax(250px, 350px));
+  }
+}
+
 /* Raffle page styling */
 
 .raffle-header::before {

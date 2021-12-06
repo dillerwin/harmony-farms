@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import About from "./About";
 import Animals from "./Animals";
 import Contact from "./Contact";
@@ -19,50 +19,49 @@ function Footer() {
               className="social-icon"
               url="https://www.instagram.com/harmonyfarmsanctuaryvt/?hl=en"
               target="_blank"
+              rel="noreferrer"
             />
             <SocialIcon
               className="social-icon"
               url="https://www.facebook.com/harmonyfarmsanctuaryVT"
               target="_blank"
+              rel="noreferrer"
             />
           </div>
           <div className="footer-list-container">
             <a>
-              <Link to="/" component={Home}>
+              <Link to="/#anchor" component={Home}>
                 Home
               </Link>
             </a>
             <a>
-              <Link to="/about" component={About}>
+              <Link to="/about#anchor" component={About}>
                 About Us
               </Link>
             </a>
             <a>
-              <Link to="/animals" component={Animals}>
+              <Link to="/animals#anchor" component={Animals}>
                 Our Animals
               </Link>
             </a>
             <a>
-              <Link to="/wellness-center" component={WellnessCenter}>
+              <Link to="/wellness-center#anchor" component={WellnessCenter}>
                 Wellness Center
               </Link>
             </a>
             <a>
-              <Link to="/contact-us" component={Contact}>
+              <Link to="/contact-us#anchor" component={Contact}>
                 Contact
               </Link>
             </a>
             <a>
-              <Link to="/donate" component={Donate}>
+              <Link to="/donate#anchor" component={Donate}>
                 Donate
               </Link>
             </a>
           </div>
         </div>
       </div>
-      {/* <div className="rightSide">
-        <button className="button">DONATE</button>
-      </div> */}
     </>
   );
 }
