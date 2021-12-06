@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function Events() {
   return (
-    <div id="eventss">
+    <div id="events">
       <h1>This will be the Events page</h1>
       <Footer />
     </div>

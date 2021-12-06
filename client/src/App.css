@@ -9,6 +9,7 @@
   /* Font families */
   --ff-primary: "Architects Daughter", cursive;
   --ff-secondary: "Open Sans", sans-serif;
+  --ff-tertiary: "Raleway", sans-serif;
 
   /* Font weights */
   --fw-reg: 300;
@@ -48,7 +49,7 @@ h1 {
 }
 
 /* --- Navbar styling --- */
-.Navbar {
+/* .Navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -58,14 +59,14 @@ h1 {
   width: 100%;
   height: 90px;
   font-family: var(--ff-primary);
-}
+} */
 
-.Navbar .links {
+/* .Navbar .links {
   flex: 70%;
   display: inline-flex;
   flex-wrap: wrap;
   /* flex-grow: 4; */
-  justify-content: left;
+/* justify-content: left;
   align-items: center;
   justify-content: space-between;
   padding-left: 35px;
@@ -73,7 +74,7 @@ h1 {
   color: var(--clr-drk-green);
   font-size: 22px;
   /* margin-right: 20px; */
-}
+/* } */
 
 .Navbar a {
   margin-right: 8px;
