@@ -70,15 +70,8 @@
   text-decoration: none;
   color: var(--clr-drk-green);
   font-size: 22px;
-<<<<<<< HEAD
-} */ 
-
-/* @media screen and (min-width: 810px) and (max-width: 1024px) {
-  
-} */
-=======
   /* margin-right: 20px; */
-}
+/* } */
 
 .Navbar a {
   margin-right: 8px;
@@ -129,7 +122,6 @@
     width: 80%;
   }
 }
->>>>>>> 1caf1a86a3e800709e68363a531c40d63f88fedb
 /* @media screen and (min-width: 360) and (max-width: 809px) {
   .Navbar .leftSide .links a {
     display: none;

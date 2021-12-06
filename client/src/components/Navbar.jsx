@@ -10,7 +10,7 @@ import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
 //import Events from './Events';
-import Services from './Services';
+import VisitUs from './VisitUs';
 import Volunteer from './Volunteer';
 //import './app.css';
 import Dropdown from "./Dropdown";
@@ -80,7 +80,7 @@ function Navbar() {
         <li 
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>
-          <Link to = "/services" className="nav-item" component={Services} onClick={closeMobileMenu}>
+          <Link to = "/visitus" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
             Visit Us &nbsp;<i className="fas fa-caret-down"/>
             </Link>
             {dropdown && <Dropdown />}
