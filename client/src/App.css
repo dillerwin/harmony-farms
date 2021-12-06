@@ -20,7 +20,7 @@
   --clr-light-green: rgb(180, 198, 166);
   --clr-drk-green: rgb(102, 128, 106);
   --clr-orange: rgb(255, 194, 134);
-  --cly-yellow: rgb(255, 241, 175);
+  --clr-yellow: rgb(255, 241, 175);
   --clr-text: #303030;
   --clr-white: rgb(247, 247, 247);
 
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 8px;
   background-color: white;
   width: 100%;
@@ -70,11 +70,66 @@
   text-decoration: none;
   color: var(--clr-drk-green);
   font-size: 22px;
+<<<<<<< HEAD
 } */ 
 
 /* @media screen and (min-width: 810px) and (max-width: 1024px) {
   
 } */
+=======
+  /* margin-right: 20px; */
+}
+
+.Navbar a {
+  margin-right: 8px;
+}
+
+.Navbar .links a:hover {
+  text-decoration: overline;
+  color: cornflowerblue;
+  font-weight: var(--fw-bold);
+}
+
+.Navbar .rightSide #button:hover {
+  cursor: pointer;
+}
+
+.Navbar .rightSide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 35px;
+  width: 20px;
+  margin-right: 10px;
+  border: 6px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+  color: white;
+  /* color: var(--clr-drk-green); */
+}
+
+.Navbar .button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    #f7708b,
+    #e75b70,
+    #d64656,
+    #c3313b,
+    #af1a21
+  );
+}
+
+/* Dropdown Menu Styling */
+
+/* Media responsiveness for Navbar */
+@media screen and (min-width: 810px) and (max-width: 1024px) {
+  .Navbar .leftSide .links {
+    width: 80%;
+  }
+}
+>>>>>>> 1caf1a86a3e800709e68363a531c40d63f88fedb
 /* @media screen and (min-width: 360) and (max-width: 809px) {
   .Navbar .leftSide .links a {
     display: none;
@@ -644,7 +699,7 @@ a {
 
 #cash-donation-container,
 #donate-goods {
-  background-color: rgb(255, 241, 175, 0.7);
+  background-color: var(--clr-yellow);
   padding: 1em 0;
 }
 
@@ -731,6 +786,87 @@ a {
   }
 }
 
+/* Sponsor Page Styles */
+
+#sponsor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  margin-top: 3em;
+  margin-bottom: 2em;
+  justify-content: center;
+  max-height: fit-content;
+  background: var(--clr-yellow);
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.sponsor-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: fit-content;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--bs);
+  transition: 0.3s;
+  overflow: hidden;
+  max-width: 300px;
+  margin-top: 1em;
+  border-radius: 10px;
+  border: 2px solid var(--clr-drk-green);
+}
+
+.sponsor-card-title {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  color: var(--clr-text);
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin: 0;
+  max-height: fit-content;
+}
+
+.sponsor-card-text {
+  font-family: var(--ff-secondary);
+  font-weight: 550;
+  color: var(--clr-text);
+  text-align: center;
+  margin-top: 0;
+  max-height: fit-content;
+}
+
+.sponsor-card-title::after {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 1px;
+  margin: 0.5em auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
+.sponsor-card-image {
+  max-width: 300px;
+  max-height: 375px;
+  min-height: 375px;
+}
+
+.sponsor-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.sponsor-container {
+  padding: 2px 16px;
+  background: var(--clr-light-green);
+  border-top: 1px solid var(--clr-drk-green);
+}
+
 /* Raffle page styling */
 
 .raffle-header::before {
@@ -747,7 +883,7 @@ a {
   font-size: var(--fs-h2);
   color: var(--clr-drk-green);
   text-align: center;
-  margin: 0.4em 0.4em;
+  margin-top: 1.5em;
   text-shadow: 1px 1px var(--clr-text);
 }
 
@@ -777,4 +913,83 @@ a {
 .raffle-images {
   display: flex;
   justify-content: space-around;
+}
+
+/* ---Services Page CSS--- */
+
+/* Glamping Container */
+#glamping-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glamping Header */
+#glamping-header {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  color: var(--clr-drk-green);
+  text-align: center;
+  margin: 0.5em 0.5em;
+  text-shadow: 1px 1px var(--clr-text);
+}
+/* Glamping description */
+#glamping-text {
+  font-family: var(--ff-secondary);
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-right: 150px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+/* Glamping imgs wrapper */
+#glamping-img-wrapper {
+  margin-top: 3em;
+}
+
+/* 3rd HipCamp Img */
+#hipcamp1-img {
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+/* 1st HipCamp Img */
+#hipcamp2-img {
+  max-width: 550px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+}
+
+/* 2nd HipCamp Img */
+#hipcamp3-img {
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+/* Glamping caption */
+#glamping-img-caption {
+  margin-top: 1rem;
+  font-family: var(--ff-secondary);
+  color: var(--clr-drk-green);
+}
+
+/* Book HipCamp Button */
+#hip-camp-button-container {
+  margin-top: 2em;
+}
+
+.hip-camp-button {
+  margin: 0.5em 1em;
+  font-size: 1.1em;
+  min-width: 325px;
+  max-width: 325px;
 }

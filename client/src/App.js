@@ -1,28 +1,19 @@
+//Imports
 import "./App.css";
 //Import BrowserRouter, Route, and Routes from react-router-dom to be used in component
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-//Imports the Home component
 import Home from "./components/Home.jsx";
-//Imports the About component
 import About from "./components/About.jsx";
-//Imports the Animals component
 import Animals from "./components/Animals.jsx";
-//Imports the Wellness Center component
 import WellnessCenter from "./components/WellnessCenter.jsx";
-//Imports the Support component
 import Support from "./components/Support.jsx";
-//Imports the Volunteer component
 import Volunteer from "./components/Volunteer.jsx";
-//Imports the Contact component
 import Contact from "./components/Contact.jsx";
-//Imports the NavBar
 import Navbar from "./components/Navbar";
-//imports the Raffle component
 import Raffle from "./components/Raffle";
-//Imports the Services component
-import Services from "./components/Services.jsx";
-//Imports the Donate component
+import VisitUs from "./components/VisitUs.jsx";
 import Donate from "./components/Donate.jsx";
+import BookTour from "./components/BookTour.jsx";
 
 import ReqAuth from "./admin/ReqAuth";
 import AdminPage from "./admin/AdminPage";
@@ -48,10 +39,8 @@ function App() {
             <Route path="/" element={<Home />} />
             {/* Routes to About Component */}
             <Route path="/about" element={<About />} />
-
             {/* Routes to Donate Component */}
             <Route path="/donate" element={<Donate />} />
-
             {/* Routes to Animals Component */}
             <Route path="/animals" element={<Animals />} />
             {/* Routes to Wellness Center Component */}
@@ -65,9 +54,11 @@ function App() {
             {/* Routes to Raffle Component */}
             <Route path="/raffle" element={<Raffle />} />
             {/* Routes to Raffle Component */}
-            <Route path="/services" element={<Services />} />
+            <Route path="/visit-us" element={<VisitUs />} />
             {/* Routes to Raffle Component */}
             <Route path="/donate" element={<Donate />} />
+            {/* Routes to Book Tour Component */}
+            <Route path="/book-tour" element={<BookTour />} />
           </Routes>
         </BrowserRouter>
       </div>

@@ -33,7 +33,13 @@ function DonateHeader() {
           >
             Donate: Paypal
           </a>
-          <a className="button money-button">Donate: Venmo</a>
+          <a
+            className="button money-button"
+            href="https://account.venmo.com/u/HFSWC"
+            target="_blank"
+          >
+            Donate: Venmo
+          </a>
           <a
             className="button money-button "
             href="https://www.gofundme.com/f/Harmony-Farm-sanctuary-and-wellness?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet"

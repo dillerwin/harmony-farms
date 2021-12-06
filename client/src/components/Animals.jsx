@@ -3,6 +3,7 @@ import React from "react";
 //Imports  Hero Component into page
 import HeroImage from "./Hero";
 import Footer from "./Footer";
+import SponsorCards from "./SponsorCards";
 
 function Animals() {
   return (
@@ -16,8 +17,7 @@ function Animals() {
           possimus enim iure ducimus ipsum doloribus dolorem.
         </p>
       </div>
-
-      <div id="animal-cards"></div>
+      <SponsorCards />
       <Footer />
     </>
   );
