@@ -12,7 +12,7 @@ export const MenuItems = [
   },
   {
     title: "Glamping",
-    path: "glamping",
+    path: "/visit-us",
     className: "dropdown-link",
   },
   {
