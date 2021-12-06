@@ -10,8 +10,13 @@ import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
 //import Events from './Events';
+<<<<<<< HEAD
 import Services from "./Services";
 import Volunteer from "./Volunteer";
+=======
+import VisitUs from './VisitUs';
+import Volunteer from './Volunteer';
+>>>>>>> 5cd86b8e39332d6810614a485cfe96bdbd187db0
 //import './app.css';
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
@@ -63,6 +68,7 @@ function Navbar() {
           {/* <li>
           <Link to = "/" className="nav-item" component={Home} onClick={closeMobileMenu}>Home</Link>
         </li> */}
+<<<<<<< HEAD
           <li>
             <Link
               to="/about"
@@ -112,6 +118,25 @@ function Navbar() {
             >
               Visit Us &nbsp;
               <i className="fas fa-caret-down" />
+=======
+        <li>
+          <Link to = "/about" className="nav-item" component={About} onClick={closeMobileMenu}>About</Link>
+        </li>
+        <li>
+          <Link to = "/animals" className="nav-item" component={Animals} onClick={closeMobileMenu}>Animals</Link>
+        </li>
+        <li>
+          <Link to = "/wellness-center" className="nav-item" component={WellnessCenter} onClick={closeMobileMenu}>Wellness Center</Link>
+        </li>
+        <li>
+          <Link to = "/raffle" className="nav-item" component={Raffle} onClick={closeMobileMenu}>&nbsp;Raffle&nbsp; </Link>
+        </li>
+        <li 
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}>
+          <Link to = "/visitus" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
+            Visit Us &nbsp;<i className="fas fa-caret-down"/>
+>>>>>>> 5cd86b8e39332d6810614a485cfe96bdbd187db0
             </Link>
             {dropdown && <Dropdown />}
           </li>
