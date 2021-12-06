@@ -11,7 +11,7 @@ import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
 //import Events from './Events';
 import VisitUs from './VisitUs';
-import Volunteer from './Volunteer';
+// import Volunteer from './Volunteer';
 //import './app.css';
 import Dropdown from "./Dropdown";
 import './Navbar.css';
