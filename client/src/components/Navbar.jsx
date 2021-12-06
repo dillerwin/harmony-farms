@@ -9,6 +9,7 @@ import Contact from "./Contact";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
+<<<<<<< HEAD
 
 import VisitUs from "./VisitUs";
 import Events from "./Events";
@@ -26,6 +27,11 @@ import Volunteer from './Volunteer';
 
 
 
+=======
+import VisitUs from "./VisitUs";
+import Events from "./Events";
+import DropDown from "./Dropdown";
+>>>>>>> 1e1b8179149e83e8fdb32a1f9a9e1115ff62b102
 //import './app.css';
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
@@ -58,6 +64,7 @@ function Navbar() {
   // GB: Dill- moved your admin block to down below my hooks bc it was throwing error
   if (window.location.href.includes("/admin")) {
     return null;
+<<<<<<< HEAD
 
   }
 
@@ -117,6 +124,8 @@ function Navbar() {
           <Link to="/donate">DONATE</Link>
         </button>
 )
+=======
+>>>>>>> 1e1b8179149e83e8fdb32a1f9a9e1115ff62b102
   };
 
 
@@ -136,7 +145,10 @@ function Navbar() {
 
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e1b8179149e83e8fdb32a1f9a9e1115ff62b102
       </div>
 
 
@@ -210,7 +222,7 @@ function Navbar() {
         <li 
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>
-          <Link to = "/visitus" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
+          <Link to = "/visit-us" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
             Visit Us &nbsp;<i className="fas fa-caret-down"/>
 
             </Link>
