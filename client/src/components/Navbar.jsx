@@ -15,7 +15,7 @@ import Events from "./Events";
 import DropDown from "./Dropdown";
 =======
 //import Events from './Events';
-import Services from './Services';
+import VisitUs from './VisitUs';
 import Volunteer from './Volunteer';
 >>>>>>> 7967b1b14a1b524d1b672cf9f785a0f6659a8826
 //import './app.css';
@@ -143,7 +143,7 @@ function Navbar() {
         <li 
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>
-          <Link to = "/services" className="nav-item" component={Services} onClick={closeMobileMenu}>
+          <Link to = "/visitus" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
             Visit Us &nbsp;<i className="fas fa-caret-down"/>
             </Link>
             {dropdown && <Dropdown />}
