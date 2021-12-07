@@ -33,7 +33,6 @@ function App() {
           {/* Routes contains all of the routes */}
           <Routes>
             <Route path="/admin" element={<ReqAuth />} />
-            <Route path="/admin/edit" element={<AdminPage />} />
             {/* Route is each individual route - utilizes the path and element prop. 
           Path reflects the URL path, element is where component is rendered */}
             {/* Routes to Home Component */}
