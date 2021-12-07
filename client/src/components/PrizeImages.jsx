@@ -5,7 +5,7 @@ function PrizeImages() {
   return (
     <>
       <h2 className="donate-header">Some of our Previous Giveaway Prizes!</h2>
-      <div className="raffle-images">
+      <div id="intro-image-container">
         <img
           className="intro-image"
           src={require("../img/farm-chickens.jpg").default}

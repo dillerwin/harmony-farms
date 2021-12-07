@@ -44,9 +44,7 @@ function Navbar() {
   // GB: Dill- moved your admin block to down below my hooks bc it was throwing error
   if (window.location.href.includes("/admin")) {
     return null;
-  };
-
-
+  }
   return (
     <>
       <nav className="navbar">
@@ -56,21 +54,14 @@ function Navbar() {
           </Link>
         </div>
 
-
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
-
-      <div className="menu-icon" onClick={handleClick}>
-        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-      </div>
-
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           {/* <li>
           <Link to = "/" className="nav-item" component={Home} onClick={closeMobileMenu}>Home</Link>
         </li> */}
-
           <li>
             <Link
               to="/about"
@@ -113,32 +104,13 @@ function Navbar() {
           </li>
           <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <Link
-              to="/services"
+              to="/visit-us"
               className="nav-item"
-              component={Services}
+              component={VisitUs}
               onClick={closeMobileMenu}
             >
               Visit Us &nbsp;
               <i className="fas fa-caret-down" />
-
-        <li>
-          <Link to = "/about" className="nav-item" component={About} onClick={closeMobileMenu}>About</Link>
-        </li>
-        <li>
-          <Link to = "/animals" className="nav-item" component={Animals} onClick={closeMobileMenu}>Animals</Link>
-        </li>
-        <li>
-          <Link to = "/wellness-center" className="nav-item" component={WellnessCenter} onClick={closeMobileMenu}>Wellness Center</Link>
-        </li>
-        <li>
-          <Link to = "/raffle" className="nav-item" component={Raffle} onClick={closeMobileMenu}>&nbsp;Raffle&nbsp; </Link>
-        </li>
-        <li 
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}>
-          <Link to = "/visit-us" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
-            Visit Us &nbsp;<i className="fas fa-caret-down"/>
-
             </Link>
             {dropdown && <Dropdown />}
           </li>
