@@ -112,7 +112,6 @@ app.post("/edit", async (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-  console.log(req.body);
   //redirects back to page if either entry field is empty
   if (req.body.username === "" || req.body.password === "") {
     console.log("no entry");

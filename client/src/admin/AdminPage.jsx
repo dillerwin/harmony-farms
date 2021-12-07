@@ -1,6 +1,4 @@
-import { PromiseProvider } from "mongoose";
 import React, { useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
 import "./admin.css";
 
 export default function AdminPage(props) {
