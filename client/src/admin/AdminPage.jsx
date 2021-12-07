@@ -1,30 +1,46 @@
 import React, { useEffect, useState } from "react";
 import "./admin.css";
 
-export default function AdminPage() {
+export default function AdminPage(props) {
   const [animalList, setAnimalList] = useState("");
   const [editView, setEditView] = useState("none");
   const [animal, setAnimal] = useState("");
 
+  //event handler for edit
   function editHandle(event) {
-    setEditView("block");
+    setEditView("flex");
     setAnimal(event.target.value);
   }
 
+  //event handler for edit box close button
   function handleClose(event) {
     setEditView("none");
     setAnimal("");
   }
 
+  //function to log out of admin portal
+  function logOut(event) {
+    //sets token prop to false
+    props.setToken(false);
+    //removes login token from localStorage
+    localStorage.removeItem("token");
+  }
+
+  //database fetch for animal list
   useEffect(() => {
+    //sends get request
     fetch("/api/animals")
+      //reads response json
       .then((res) => res.json())
       .then((animals) => {
         let animalList = animals
+          //sorts response alphabetically by name
           .sort(function (alpha, beta) {
             return alpha.animalName - beta.animalName;
           })
+          //creates and returns an array of unordered list of animals with nested list items of the animal's info
           .map((item) => {
+            //has a button for editing and one for deletion, both of which find an animal entry by name and edit or delete it as required
             return (
               <ul
                 style={{
@@ -63,32 +79,39 @@ export default function AdminPage() {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
     >
-      <h1>Admin Page</h1>
+      <div>
+        {/* title page */}
+        <h1 style={{}}>Admin Page</h1>
+      </div>
       <div
+        // edit modal that appear on button click in animal entry
         name="edit div"
         style={{
           display: editView,
+          flexDirection: "column",
           zIndex: "1",
           position: "fixed",
+          top: "10vh",
+          left: "25vw",
           overflow: "auto",
+          alignItems: "center",
         }}
       >
-        Edit Animal
-        <span
-          style={{ float: "right", fontWeight: "bold" }}
-          onClick={handleClose}
-        >
-          X
-        </span>
+        {/* form for edit input */}
         <form
           action="/edit"
           method="post"
           style={{
             padding: "20px",
+            paddingRight: "40px",
             border: "2px solid black",
-            backgroundColor: "rgba(0,0,0,1)",
+            backgroundColor: "rgb(0,0,0)",
             color: "white",
           }}
         >
@@ -125,9 +148,19 @@ export default function AdminPage() {
               placeholder="Enter link to animal's donorbox"
             />
           </label>
-          <button type="submit" name="editSubmit">
-            Submit Edit
-          </button>
+          <p
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              padding: "none",
+              paddingTop: "2vh",
+            }}
+          >
+            <button type="submit" name="editSubmit">
+              Submit Edit
+            </button>
+            <button onClick={handleClose}>Close Edit</button>
+          </p>
         </form>
       </div>
       <div
@@ -140,6 +173,7 @@ export default function AdminPage() {
       >
         <div>
           <form
+            //form for adding a new animal into the database
             className="addAnimalForm"
             action="/animalPost"
             method="post"
@@ -187,8 +221,22 @@ export default function AdminPage() {
               Submit Animal
             </button>
           </form>
+          <button
+            //logout button
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "absolute",
+              bottom: "20vh",
+              padding: "5px",
+            }}
+            onClick={logOut}
+          >
+            Log Out
+          </button>
         </div>
         <div>
+          {/* displays animal list */}
           <div style={{ width: "30vw", paddingLeft: "5vw" }}>{animalList}</div>
         </div>
       </div>
