@@ -6,30 +6,41 @@ export default function AdminPage(props) {
   const [editView, setEditView] = useState("none");
   const [animal, setAnimal] = useState("");
 
+  //event handler for edit
   function editHandle(event) {
     setEditView("flex");
     setAnimal(event.target.value);
   }
 
+  //event handler for edit box close button
   function handleClose(event) {
     setEditView("none");
     setAnimal("");
   }
 
+  //function to log out of admin portal
   function logOut(event) {
+    //sets token prop to false
     props.setToken(false);
+    //removes login token from localStorage
     localStorage.removeItem("token");
   }
 
+  //database fetch for animal list
   useEffect(() => {
+    //sends get request
     fetch("/api/animals")
+      //reads response json
       .then((res) => res.json())
       .then((animals) => {
         let animalList = animals
+          //sorts response alphabetically by name
           .sort(function (alpha, beta) {
             return alpha.animalName - beta.animalName;
           })
+          //creates and returns an array of unordered list of animals with nested list items of the animal's info
           .map((item) => {
+            //has a button for editing and one for deletion, both of which find an animal entry by name and edit or delete it as required
             return (
               <ul
                 style={{
@@ -75,9 +86,11 @@ export default function AdminPage(props) {
       }}
     >
       <div>
+        {/* title page */}
         <h1 style={{}}>Admin Page</h1>
       </div>
       <div
+        // edit modal that appear on button click in animal entry
         name="edit div"
         style={{
           display: editView,
@@ -90,6 +103,7 @@ export default function AdminPage(props) {
           alignItems: "center",
         }}
       >
+        {/* form for edit input */}
         <form
           action="/edit"
           method="post"
@@ -97,7 +111,7 @@ export default function AdminPage(props) {
             padding: "20px",
             paddingRight: "40px",
             border: "2px solid black",
-            backgroundColor: "rgba(0,0,0,1)",
+            backgroundColor: "rgb(0,0,0)",
             color: "white",
           }}
         >
@@ -159,6 +173,7 @@ export default function AdminPage(props) {
       >
         <div>
           <form
+            //form for adding a new animal into the database
             className="addAnimalForm"
             action="/animalPost"
             method="post"
@@ -207,6 +222,7 @@ export default function AdminPage(props) {
             </button>
           </form>
           <button
+            //logout button
             style={{
               display: "flex",
               flexDirection: "column",
@@ -220,6 +236,7 @@ export default function AdminPage(props) {
           </button>
         </div>
         <div>
+          {/* displays animal list */}
           <div style={{ width: "30vw", paddingLeft: "5vw" }}>{animalList}</div>
         </div>
       </div>
