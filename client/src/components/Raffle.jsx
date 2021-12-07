@@ -18,7 +18,7 @@ function Raffle() {
           <Winner />
         </div>
         <h1 className="raffle-header">What's This?</h1>
-        <p className="money-text">
+        <p className="money-text raffle-info">
           Every week, we here at Harmony Farms hold a raffle to give back to our
           amazing donors!
         </p>

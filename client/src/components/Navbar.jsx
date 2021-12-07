@@ -45,7 +45,10 @@ function Navbar() {
   if (window.location.href.includes("/admin")) {
     return null;
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 96c56c8092aa5496cc62ec8f451627d23c62aea1
   return (
     <>
       <nav className="navbar">
@@ -105,7 +108,11 @@ function Navbar() {
           </li>
           <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <Link
+<<<<<<< HEAD
+              to="/visit-us"
+=======
               to="/visitus"
+>>>>>>> 96c56c8092aa5496cc62ec8f451627d23c62aea1
               className="nav-item"
               component={VisitUs}
               onClick={closeMobileMenu}
