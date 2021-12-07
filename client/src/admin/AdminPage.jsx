@@ -1,19 +1,26 @@
+import { PromiseProvider } from "mongoose";
 import React, { useEffect, useState } from "react";
+import { Redirect } from "react-router-dom";
 import "./admin.css";
 
-export default function AdminPage() {
+export default function AdminPage(props) {
   const [animalList, setAnimalList] = useState("");
   const [editView, setEditView] = useState("none");
   const [animal, setAnimal] = useState("");
 
   function editHandle(event) {
-    setEditView("block");
+    setEditView("flex");
     setAnimal(event.target.value);
   }
 
   function handleClose(event) {
     setEditView("none");
     setAnimal("");
+  }
+
+  function logOut(event) {
+    props.setToken(false);
+    localStorage.removeItem("token");
   }
 
   useEffect(() => {
@@ -63,30 +70,34 @@ export default function AdminPage() {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
     >
-      <h1>Admin Page</h1>
+      <div>
+        <h1 style={{}}>Admin Page</h1>
+      </div>
       <div
         name="edit div"
         style={{
           display: editView,
+          flexDirection: "column",
           zIndex: "1",
           position: "fixed",
+          top: "10vh",
+          left: "25vw",
           overflow: "auto",
+          alignItems: "center",
         }}
       >
-        Edit Animal
-        <span
-          style={{ float: "right", fontWeight: "bold" }}
-          onClick={handleClose}
-        >
-          X
-        </span>
         <form
           action="/edit"
           method="post"
           style={{
             padding: "20px",
+            paddingRight: "40px",
             border: "2px solid black",
             backgroundColor: "rgba(0,0,0,1)",
             color: "white",
@@ -125,9 +136,19 @@ export default function AdminPage() {
               placeholder="Enter link to animal's donorbox"
             />
           </label>
-          <button type="submit" name="editSubmit">
-            Submit Edit
-          </button>
+          <p
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              padding: "none",
+              paddingTop: "2vh",
+            }}
+          >
+            <button type="submit" name="editSubmit">
+              Submit Edit
+            </button>
+            <button onClick={handleClose}>Close Edit</button>
+          </p>
         </form>
       </div>
       <div
@@ -187,6 +208,18 @@ export default function AdminPage() {
               Submit Animal
             </button>
           </form>
+          <button
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "absolute",
+              bottom: "20vh",
+              padding: "5px",
+            }}
+            onClick={logOut}
+          >
+            Log Out
+          </button>
         </div>
         <div>
           <div style={{ width: "30vw", paddingLeft: "5vw" }}>{animalList}</div>
