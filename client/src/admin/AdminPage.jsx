@@ -42,12 +42,7 @@ export default function AdminPage(props) {
           .map((item) => {
             //has a button for editing and one for deletion, both of which find an animal entry by name and edit or delete it as required
             return (
-              <ul
-                style={{
-                  border: "2px dashed black",
-                  padding: "2px",
-                }}
-              >
+              <ul className="animalBox">
                 <ul style={{ fontSize: "150%" }}>{item.animalName}</ul>
                 <ul>
                   <li>{item.animalDescription} </li>
@@ -78,43 +73,21 @@ export default function AdminPage(props) {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div className="animalListWrapper">
       <div>
         {/* title page */}
-        <h1 style={{}}>Admin Page</h1>
+        <h1 className="adminTitle">Admin Page</h1>
       </div>
       <div
         // edit modal that appear on button click in animal entry
         name="edit div"
+        className="editModal"
         style={{
           display: editView,
-          flexDirection: "column",
-          zIndex: "1",
-          position: "fixed",
-          top: "10vh",
-          left: "25vw",
-          overflow: "auto",
-          alignItems: "center",
         }}
       >
         {/* form for edit input */}
-        <form
-          action="/edit"
-          method="post"
-          style={{
-            padding: "20px",
-            paddingRight: "40px",
-            border: "2px solid black",
-            backgroundColor: "rgb(0,0,0)",
-            color: "white",
-          }}
-        >
+        <form className="editForm" action="/edit" method="post">
           <label>
             <p>Editing {animal}</p>
           </label>
@@ -177,13 +150,6 @@ export default function AdminPage(props) {
             className="addAnimalForm"
             action="/animalPost"
             method="post"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              position: "absolute",
-              bottom: "30vh",
-              padding: "5px",
-            }}
           >
             <label>
               <p>Animal Name</p>
@@ -217,19 +183,15 @@ export default function AdminPage(props) {
                 placeholder="Enter link to animal's donorbox"
               />
             </label>
-            <button type="submit" name="submitButton">
-              Submit Animal
-            </button>
+            <label className="submitWrapper">
+              <button className="animalSubmit" type="submit">
+                Submit Animal
+              </button>
+            </label>
           </form>
           <button
             //logout button
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              position: "absolute",
-              bottom: "20vh",
-              padding: "5px",
-            }}
+            className="logOut"
             onClick={logOut}
           >
             Log Out
@@ -237,7 +199,7 @@ export default function AdminPage(props) {
         </div>
         <div>
           {/* displays animal list */}
-          <div style={{ width: "30vw", paddingLeft: "5vw" }}>{animalList}</div>
+          <div className="animalDisplay">{animalList}</div>
         </div>
       </div>
     </div>

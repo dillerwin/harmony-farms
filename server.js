@@ -52,9 +52,13 @@ const Animal = mongoose.model("Animal", animalSchema);
 //writes new animal entries into the database
 app.post("/animalPost", async (req, res) => {
   let newObj = new Animal(req.body);
-  await newObj.save();
-  console.log("Animal Added");
-  res.status(200).redirect("/admin/edit");
+  if (newObj.animalName === "") {
+    res.status(403).redirect("/admin");
+  } else {
+    await newObj.save();
+    console.log("Animal Added");
+    res.status(200).redirect("/admin");
+  }
 });
 
 // app.post("/assign", async (req, res) => {
@@ -81,7 +85,7 @@ app.post("/delete", async (req, res) => {
   let target = await Animal.find({ animalName: req.body.animalDelete });
   let targetId = target[0]._id;
   await Animal.deleteOne({ _id: targetId });
-  res.redirect("/admin/edit");
+  res.redirect("/admin");
 });
 
 //edits animal entry
@@ -108,7 +112,7 @@ app.post("/edit", async (req, res) => {
       { $set: { donorBox: req.body.donorBox } }
     );
   }
-  res.redirect("/admin/edit");
+  res.redirect("/admin");
 });
 
 app.post("/login", async (req, res) => {
