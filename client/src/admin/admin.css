@@ -1,0 +1,66 @@
+.animalBox {
+  border: 2px dashed black;
+  padding: 2px;
+}
+
+.animalListWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editModal {
+  flex-direction: column;
+  z-index: 1;
+  position: fixed;
+  top: 10vh;
+  left: 25vw;
+  overflow: auto;
+  align-items: center;
+}
+
+.editForm {
+  padding: 20px;
+  padding-right: 40px;
+  border: 2px solid black;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.addAnimalForm {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-size: 150%;
+  bottom: 30vh;
+  padding: 5px;
+}
+
+.addAnimalForm > label > input {
+  height: 2em;
+  width: 12em;
+}
+
+.submitWrapper {
+  padding-top: 1em;
+}
+
+.animalDisplay {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  grid-template-rows: repeat(auto-fit);
+  margin-top: 3em;
+  margin-bottom: 2em;
+  justify-content: center;
+  max-height: fit-content;
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.logOut {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 15em;
+  padding: 5px;
+}
