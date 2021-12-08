@@ -15,8 +15,7 @@ import VisitUs from "./components/VisitUs.jsx";
 import Donate from "./components/Donate.jsx";
 import BookTour from "./components/BookTour.jsx";
 
-import ReqAuth from "./admin/ReqAuth";
-import AdminPage from "./admin/AdminPage";
+import AdminAuth from "./admin/AdminAuth";
 
 //Function for the main app
 function App() {
@@ -32,8 +31,7 @@ function App() {
 
           {/* Routes contains all of the routes */}
           <Routes>
-            <Route path="/admin" element={<ReqAuth />} />
-            <Route path="/admin/edit" element={<AdminPage />} />
+            <Route path="/admin" element={<AdminAuth />} />
             {/* Route is each individual route - utilizes the path and element prop. 
           Path reflects the URL path, element is where component is rendered */}
             {/* Routes to Home Component */}

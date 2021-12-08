@@ -14,12 +14,11 @@ import Events from "./Events";
 import DropDown from "./Dropdown";
 //import './app.css';
 import Dropdown from "./Dropdown";
-import './Navbar.css';
+import "./Navbar.css";
 import { NavButton } from "./NavButton";
 //import Logo from "./Logo";
 
 function Navbar() {
-  
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -27,7 +26,7 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
-    if(window.innerWidth < 960) {
+    if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
       setDropdown(true);
@@ -41,14 +40,14 @@ function Navbar() {
       setDropdown(false);
     }
   };
-  
-// GB: Dill- moved your admin block to down below my hooks bc it was throwing error
+
+  // GB: Dill- moved your admin block to down below my hooks bc it was throwing error
   if (window.location.href.includes("/admin")) {
     return null;
-  };
-
-  return(
+  }
+  return (
     <>
+
     <nav className="navbar">
     
       <div>
@@ -97,7 +96,8 @@ function Navbar() {
       
     </nav>
     </>
-  );
+
+    );
 }
 
 export default Navbar;

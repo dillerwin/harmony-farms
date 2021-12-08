@@ -600,15 +600,6 @@ a {
 
 /* Raffle page styling */
 
-.raffle-header::before {
-  content: "";
-  display: block;
-  width: 4rem;
-  height: 1px;
-  margin: 2rem auto;
-  background: var(--clr-drk-green);
-  opacity: 0.35;
-}
 .raffle-header {
   font-family: var(--ff-primary);
   font-size: var(--fs-h2);
@@ -631,8 +622,7 @@ a {
 
 .winner-display {
   background-color: rgb(255, 241, 175, 0.7);
-  padding: 0.0001em;
-  border-radius: 30px;
+  padding: 0.5em;
   font-family: var(--ff-primary);
   letter-spacing: 1.5px;
 }
@@ -644,4 +634,7 @@ a {
 .raffle-images {
   display: flex;
   justify-content: space-around;
+}
+.raffle-info {
+  margin-bottom: 3em;
 }
