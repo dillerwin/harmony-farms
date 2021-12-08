@@ -18,6 +18,14 @@ function PrizeImages() {
           className="intro-image"
           src={require("../img/prize-3.jpg").default}
         />
+        <img
+          className="intro-image"
+          src={require("../img/prize-4.jpg").default}
+        />
+        <img
+          className="intro-image"
+          src={require("../img/prize-5.jpg").default}
+        />
       </div>
     </>
   );
