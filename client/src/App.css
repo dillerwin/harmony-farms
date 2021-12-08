@@ -48,92 +48,6 @@ h1 {
   letter-spacing: 1.5px;
 }
 
-/* --- Navbar styling --- */
-/* .Navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 10px;
-  margin-bottom: 8px;
-  background-color: white;
-  width: 100%;
-  height: 90px;
-  font-family: var(--ff-primary);
-} */
-
-/* .Navbar .links {
-  flex: 70%;
-  display: inline-flex;
-  flex-wrap: wrap;
-  /* flex-grow: 4; */
-/* justify-content: left;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 35px;
-  text-decoration: none;
-  color: var(--clr-drk-green);
-  font-size: 22px;
-  /* margin-right: 20px; */
-/* } */
-
-.Navbar a {
-  margin-right: 8px;
-}
-
-.Navbar .links a:hover {
-  text-decoration: overline;
-  color: cornflowerblue;
-  font-weight: var(--fw-bold);
-}
-
-.Navbar .rightSide #button:hover {
-  cursor: pointer;
-}
-
-.Navbar .rightSide {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  height: 35px;
-  width: 20px;
-  margin-right: 10px;
-  border: 6px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: var(--fw-bold);
-  color: white;
-  /* color: var(--clr-drk-green); */
-}
-
-.Navbar .button:hover {
-  cursor: pointer;
-  background-image: linear-gradient(
-    to bottom,
-    #f7708b,
-    #e75b70,
-    #d64656,
-    #c3313b,
-    #af1a21
-  );
-}
-
-/* Dropdown Menu Styling */
-
-/* Media responsiveness for Navbar */
-@media screen and (min-width: 810px) and (max-width: 1024px) {
-  .Navbar .leftSide .links {
-    width: 80%;
-  }
-}
-/* @media screen and (min-width: 360) and (max-width: 809px) {
-  .Navbar .leftSide .links a {
-    display: none;
-    font-size: 10px;
-    flex-shrink: 6;
-    add hamburger menu and list items for THIS media respo
-  } */
-/* } */
-
 /* ---styles for hero image--- */
 #hero-image {
   width: 100%;
@@ -686,15 +600,6 @@ a {
 
 /* Raffle page styling */
 
-.raffle-header::before {
-  content: "";
-  display: block;
-  width: 4rem;
-  height: 1px;
-  margin: 2rem auto;
-  background: var(--clr-drk-green);
-  opacity: 0.35;
-}
 .raffle-header {
   font-family: var(--ff-primary);
   font-size: var(--fs-h2);
@@ -717,8 +622,7 @@ a {
 
 .winner-display {
   background-color: rgb(255, 241, 175, 0.7);
-  padding: 0.0001em;
-  border-radius: 30px;
+  padding: 0.5em;
   font-family: var(--ff-primary);
   letter-spacing: 1.5px;
 }
@@ -730,4 +634,21 @@ a {
 .raffle-images {
   display: flex;
   justify-content: space-around;
+}
+.raffle-info {
+  margin-bottom: 3em;
+}
+
+.donate-request-container {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 0.5em;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.donate-prize-header {
+  font-family: var(--ff-primary);
+  color: var(--clr-drk-green);
+  text-align: center;
+  text-shadow: 1px 1px var(--clr-text);
 }

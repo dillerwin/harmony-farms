@@ -16,12 +16,7 @@ export const MenuItems = [
     className: "dropdown-link",
   },
   {
-    title: "Events",
-    path: "/events",
-    className: "dropdown-link",
-  },
-  {
-    title: "Volunteer",
+    title: "Volunteer Waiver",
     path: "/volunteer",
     className: "dropdown-link",
   }
