@@ -1,6 +1,6 @@
 import React from "react";
 import IntroImages from "./IntroImages";
-import HeroImage from "./Hero";
+import HomeHero from "./HomeHero";
 import MeetButton from "./MeetButton";
 import QuoteBlockOne from "./QuoteBlockOne";
 import Cards from "./Cards";
@@ -12,12 +12,11 @@ import Footer from "./Footer";
 
 import Navbar from "./Navbar";
 
-
 function Home() {
   return (
     <>
       {/* <Navbar /> */}
-      <HeroImage />
+      <HomeHero />
       <IntroImages />
       <MeetButton />
       <QuoteBlockOne />

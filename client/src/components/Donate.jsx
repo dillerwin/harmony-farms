@@ -1,12 +1,13 @@
 import React from "react";
-import HeroImage from "./Hero";
+
 import DonateHeader from "./DonateHeader";
 import Footer from "./Footer";
+import DonateHero from "./DonateHero";
 
 function Donate() {
   return (
     <>
-      <HeroImage />
+      <DonateHero />
       <DonateHeader />
       <Footer />
     </>

@@ -9,9 +9,9 @@ import Contact from "./Contact";
 import Home from "./Home";
 import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
-//import Events from './Events';
 import VisitUs from "./VisitUs";
-import Volunteer from "./Volunteer";
+import Events from "./Events";
+import DropDown from "./Dropdown";
 //import './app.css';
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
@@ -48,7 +48,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar" id="anchor">
         <div className="logo-image-wrapper">
           <Link to="/" component={Home}>
             <img src={Logo} className="logo-image" />
@@ -105,7 +105,7 @@ function Navbar() {
           </li>
           <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <Link
-              to="/visitus"
+              to="/visit-us"
               className="nav-item"
               component={VisitUs}
               onClick={closeMobileMenu}

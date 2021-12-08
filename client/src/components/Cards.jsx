@@ -12,6 +12,7 @@ function Cards() {
             <img
               className="card-image"
               src={require("../img/farm-chickens.jpg").default}
+              alt="Harmony Farms Animals at the Sanctuary"
             />
 
             <div class="container">
@@ -32,10 +33,11 @@ function Cards() {
             <img
               className="card-image merch-image"
               src={require("../img/harmony-farms-store.jpeg").default}
+              alt="Harmony Farms Animal Sanctuary Store Merchandise"
             />
 
             <div class="container">
-              <h4 className="card-title"> Farm Merchandise</h4>
+              <h4 className="card-title"> Sanctuary Merchandise</h4>
               <p className="card-text">
                 Visit our store to check out our branded clothing, mugs, bags,
                 and more!
@@ -48,12 +50,13 @@ function Cards() {
             <img
               className="card-image"
               src={require("../img/harmony-farms-raffle-prize.png").default}
+              alt="Raffle prize example for Harmony Farms Sanctuary Vermont"
             />
 
             <div class="container">
               <h4 className="card-title">Enter our $5 Friday Raffle</h4>
               <p className="card-text">
-                Support the farm and get a chance to win a bundle of great
+                Support the sanctuary and get a chance to win a bundle of great
                 gifts!
               </p>
             </div>
