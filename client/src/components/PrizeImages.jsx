@@ -8,15 +8,15 @@ function PrizeImages() {
       <div id="intro-image-container">
         <img
           className="intro-image"
-          src={require("../img/farm-chickens.jpg").default}
+          src={require("../img/prize-1.jpg").default}
         />
         <img
           className="intro-image"
-          src={require("../img/farm-chickens.jpg").default}
+          src={require("../img/prize-2.jpg").default}
         />
         <img
           className="intro-image"
-          src={require("../img/farm-chickens.jpg").default}
+          src={require("../img/prize-3.jpg").default}
         />
       </div>
     </>

@@ -724,3 +724,17 @@ a {
 .raffle-info {
   margin-bottom: 3em;
 }
+
+.donate-request-container {
+  background-color: rgb(255, 241, 175, 0.7);
+  padding: 0.5em;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.donate-prize-header {
+  font-family: var(--ff-primary);
+  color: var(--clr-drk-green);
+  text-align: center;
+  text-shadow: 1px 1px var(--clr-text);
+}
