@@ -16,7 +16,7 @@ import DropDown from "./Dropdown";
 import Dropdown from "./Dropdown";
 import './Navbar.css';
 import { NavButton } from "./NavButton";
-import Logo from "./Logo";
+//import Logo from "./Logo";
 
 function Navbar() {
   
@@ -51,44 +51,46 @@ function Navbar() {
     <>
     <nav className="navbar">
     
-      <div className="logo-image-wrapper">
+      <div>
       <Link to="/" component={Home}>
-        <img src={Logo} className="logo-image" />
+        <img src={require("../img/harmony-farms-logo.png").default} className="logo-image" />
       </Link>
       </div>
 
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
-
+      <div className="nav-menu-wrapper">
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         {/* <li>
           <Link to = "/" className="nav-item" component={Home} onClick={closeMobileMenu}>Home</Link>
         </li> */}
-        <li>
-          <Link to = "/about" className="nav-item" component={About} onClick={closeMobileMenu}>About</Link>
+        <li className="nav-item">
+          <Link to = "/about" className="nav-links" component={About} onClick={closeMobileMenu}>About</Link>
         </li>
-        <li>
-          <Link to = "/animals" className="nav-item" component={Animals} onClick={closeMobileMenu}>Animals</Link>
+        <li className="nav-item">
+          <Link to = "/animals" className="nav-links" component={Animals} onClick={closeMobileMenu}>Animals</Link>
         </li>
-        <li>
-          <Link to = "/wellness-center" className="nav-item" component={WellnessCenter} onClick={closeMobileMenu}>Wellness Center</Link>
+        <li className="nav-item">
+          <Link to = "/wellness-center" className="nav-links" component={WellnessCenter} onClick={closeMobileMenu}>Wellness Center</Link>
         </li>
-        <li>
-          <Link to = "/raffle" className="nav-item" component={Raffle} onClick={closeMobileMenu}>&nbsp;Raffle&nbsp; </Link>
+        <li className="nav-item">
+          <Link to = "/raffle" className="nav-links" component={Raffle} onClick={closeMobileMenu}>&nbsp;Raffle&nbsp; </Link>
         </li>
         <li 
+        className="nav-item" 
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>
-          <Link to = "/visit-us" className="nav-item" component={VisitUs} onClick={closeMobileMenu}>
+          <Link to = "/visit-us" className="nav-links" component={VisitUs} onClick={closeMobileMenu}>
             Visit Us &nbsp;<i className="fas fa-caret-down"/>
             </Link>
             {dropdown && <Dropdown />}
         </li>
-        <li>
-          <Link to = "/contact" className="nav-item" component={Contact} onClick={closeMobileMenu}>Contact Us</Link>
+        <li className="nav-item">
+          <Link to = "/contact" className="nav-links" component={Contact} onClick={closeMobileMenu}>Contact Us</Link>
         </li>
       </ul>
+      </div>
       <div>
       <NavButton />
       </div>
