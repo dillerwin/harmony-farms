@@ -7,7 +7,7 @@ import About from "./components/About.jsx";
 import Animals from "./components/Animals.jsx";
 import WellnessCenter from "./components/WellnessCenter.jsx";
 import Support from "./components/Support.jsx";
-import Volunteer from "./components/Volunteer.jsx";
+import Volunteer from "./components/VolunteerWaiver.jsx";
 import Contact from "./components/Contact.jsx";
 import Navbar from "./components/Navbar";
 import Raffle from "./components/Raffle";
