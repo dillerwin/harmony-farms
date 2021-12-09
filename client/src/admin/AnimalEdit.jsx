@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./admin.css";
 
-export default function EditAnimalList(props) {
+export default function AnimalEdit(props) {
   const [animalList, setAnimalList] = useState("");
   const [editView, setEditView] = useState("none");
   const [animal, setAnimal] = useState("");

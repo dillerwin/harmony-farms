@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import EditAnimalList from "./EditAnimalList";
-import PhotoEdit from "./ImageEdit";
+import AnimalEdit from "./AnimalEdit";
+import ImageEdit from "./ImageEdit";
 
 export default function AdminPage(props) {
   const [view, setView] = useState(false);
@@ -18,9 +18,21 @@ export default function AdminPage(props) {
 
   if (!view) {
     return (
-      <div>
-        <div>
-          <p>Where would you like to go?</p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h2>Where would you like to go?</h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: "1em",
+          }}
+        >
           <button name="animal" onClick={handleClick}>
             Edit Animals
           </button>
@@ -34,8 +46,8 @@ export default function AdminPage(props) {
       </div>
     );
   } else if (view === "animal") {
-    return <EditAnimalList setView={setView} />;
+    return <AnimalEdit setView={setView} />;
   } else if (view === "images") {
-    return <PhotoEdit setView={setView} />;
+    return <ImageEdit setView={setView} />;
   }
 }

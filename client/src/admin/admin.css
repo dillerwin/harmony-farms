@@ -81,13 +81,33 @@ button {
   padding-top: 2vh;
 }
 
-.photoEdit {
+.imageNavButtons {
   display: flex;
-  flex-direction: column;
+  padding-bottom: 1em;
 }
 
-.photoTitle {
+.imageEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageTitle {
   font-family: var(--ff-primary);
+}
+
+.imageBody {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.imageBody > * {
+  border: 1px dashed black;
+}
+
+h4 {
+  border-bottom: 1px solid var(--clr-text);
 }
 
 .animalBox {
