@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 export default function ImageEdit(props) {
   const [modalView, setModalView] = useState("none");
+  const [imageId, setImageId] = useState("");
+  const [imageName, setImageName] = useState("");
 
   function handleRedirect(event) {
     event.preventDefault();
@@ -18,7 +20,14 @@ export default function ImageEdit(props) {
   function clickHandle(event) {
     event.preventDefault();
     setModalView("flex");
+    setImageId(event.target.id);
+    setImageName(event.target.textContent);
     console.log(`clicked`, event.target.id);
+  }
+
+  function exitEdit(event) {
+    event.preventDefault();
+    setModalView("none");
   }
 
   return (
@@ -33,17 +42,26 @@ export default function ImageEdit(props) {
         </button>
       </div>
       <div className="imageEditModal" style={{ display: modalView }}>
-        URL for new image:
-        <form className="newImageForm" action="/imagePost" method="post">
-          <input type="text" />
-          <button type="submit">Submit</button>
+        URL for new {imageName} image:
+        <form className="newImageForm" action="/imageEdit" method="post">
+          <input
+            style={{ display: "none" }}
+            type="text"
+            name="imageId"
+            value={imageId}
+          />
+          <input style={{ padding: ".5em" }} type="text" name="imageURL" />
+          <div style={{ display: "flex", paddingTop: ".5em" }}>
+            <button type="submit">Submit</button>
+            <button onClick={exitEdit}>Exit Edit</button>
+          </div>
         </form>
       </div>
       <div className="imageBody">
         <div>
-          <h4>Logo</h4>
+          <h4>Edit Logo</h4>
           <div onClick={clickHandle} id="logo">
-            Edit Logo
+            Logo
           </div>
         </div>
         <div className="homepageImages">

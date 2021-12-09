@@ -95,7 +95,7 @@ button {
 
 .newImageForm {
   display: flex;
-  padding-bottom: 1em;
+  flex-direction: column;
 }
 
 .imageEdit {

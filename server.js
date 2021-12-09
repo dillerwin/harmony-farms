@@ -51,13 +51,28 @@ const animalSchema = new mongoose.Schema({
 //schema for site images
 const imageSchema = new mongoose.Schema({
   imageId: { type: String, required: true },
-  imageLink: { type: String },
+  imageURL: { type: String },
 });
 
 const Image = mongoose.model("Image", imageSchema);
 
-app.post("/imagePost", async (req, res) => {
-  console.log(req.body);
+//adds new image to database. No route in functional site
+app.post("/imageAdd", async (req, res) => {
+  let newObj = new Image(req.body);
+  await newObj.save();
+  console.log(`image added`);
+  res.redirect("/admin");
+});
+
+app.post("/imageEdit", async (req, res) => {
+  let target = await Image.find({ imageId: req.body.imageId });
+  let targetId = target[0]._id;
+  await Image.updateOne(
+    { _id: targetId },
+    { $set: { imageURL: req.body.imageURL } }
+  );
+  console.log(`image URL changed`);
+
   res.redirect("/admin");
 });
 
@@ -108,8 +123,6 @@ app.post("/delete", async (req, res) => {
 app.post("/edit", async (req, res) => {
   let target = await Animal.find({ animalName: req.body.animalName });
   let targetId = target[0]._id;
-  console.log(targetId);
-  console.log(req.body.animalDescription);
   if (req.body.animalDescription !== "") {
     await Animal.updateOne(
       { _id: targetId },
