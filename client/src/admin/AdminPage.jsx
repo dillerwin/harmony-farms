@@ -41,7 +41,12 @@ export default function AdminPage(props) {
           alignItems: "center",
         }}
       >
-        <h2>Where would you like to go?</h2>
+        <div className="titleWrapper">
+          {/* title page */}
+          <h1 className="adminTitle">Harmony Farms Sanctuary</h1>
+          <h2 className="adminTitle">Admin Portal</h2>
+          <h2>What would you like to edit?</h2>
+        </div>
         <div
           style={{
             display: "flex",

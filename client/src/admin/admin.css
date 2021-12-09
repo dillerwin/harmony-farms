@@ -115,8 +115,9 @@ button {
 }
 
 .imageBody > * {
-  border: 1px dashed black;
   padding: 0.5em;
+  background-color: var(--clr-orange);
+  border-radius: 2%;
 }
 
 .imageBody > div > div {

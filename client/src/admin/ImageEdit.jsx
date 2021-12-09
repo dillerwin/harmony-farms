@@ -32,7 +32,12 @@ export default function ImageEdit(props) {
 
   return (
     <div className="imageEdit">
-      <h1 className="imageTitle">Edit Images</h1>
+      <div className="titleWrapper">
+        {/* title page */}
+        <h1 className="adminTitle">Harmony Farms Sanctuary</h1>
+        <h2 className="adminTitle">Admin Portal</h2>
+      </div>
+      <h3 className="imageTitle">Edit Images</h3>
       <div className="imageNavButtons">
         <button className="animalRedirect" onClick={handleRedirect}>
           Edit Animals

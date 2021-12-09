@@ -82,7 +82,8 @@ export default function AnimalEdit(props) {
       <div className="titleWrapper">
         {/* title page */}
         <h1 className="adminTitle">Harmony Farms Sanctuary</h1>
-        <h2 className="adminTitle">Admin</h2>
+        <h2 className="adminTitle">Admin Portal</h2>
+        <h3>Edit Animal Entries</h3>
       </div>
       <div
         className="navButtons"
