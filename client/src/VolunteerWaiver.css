@@ -16,13 +16,24 @@
   text-shadow: 1px 1px var(--clr-text);
 }
 
+#volunteer-waiver-header::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
 /* Volunteer description text */
 #volunteer-waiver-text {
   font-family: var(--ff-secondary);
   font-size: 1.5em;
-  margin: auto;
-  margin-top: 2em;
+  font-weight: var(--fw-bold);
+  max-width: 800px;
   text-align: center;
+  line-height: 1.5em;
 }
 
 /* Wrapper around volunteer form */
@@ -50,7 +61,7 @@ background-color: var(--clr-yellow);
 }
 
 @media screen and (min-width: 360px) and (max-width: 809px) {
-    /* Volunteer description text */
+/* Volunteer description text */
 #volunteer-waiver-text {
     font-size: 1.2em;
     margin-top: 1em;
@@ -84,9 +95,8 @@ background-color: var(--clr-yellow);
 
 #volunteer-waiver-text {
     font-size: 1.2em;
-    margin-top: 1em;
-    margin-right: 2em;
-    margin-left: 2em;
+    margin-top: auto;
+    max-width: 600px;
     text-align: center;
   }
 

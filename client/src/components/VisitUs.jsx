@@ -70,7 +70,7 @@ function VisitUs() {
         </p>
         </div>
         <div id="tour-button-container">
-          <Link to="/book-tour">
+          <Link to="/contact">
             <button className="button tour-button">Contact Us</button>
           </Link>
         </div>

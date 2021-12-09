@@ -14,14 +14,26 @@
   margin: 0.5em 0.5em;
   text-shadow: 1px 1px var(--clr-text);
 }
+
+#glamping-header::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
 /* Glamping description */
 #glamping-text {
   font-family: var(--ff-secondary);
   font-size: 1.5em;
-  margin-top: 1em;
+  font-weight: var(--fw-bold);
   margin-right: 150px;
   margin-left: 150px;
   text-align: center;
+  line-height: 1.5em;
 }
 
 /* Glamping imgs wrapper */
@@ -35,7 +47,7 @@
   border-radius: 1rem;
   box-shadow: var(--bs);
   margin-right: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 /* 2nd HipCamp Img */
@@ -51,7 +63,7 @@
   border-radius: 1rem;
   box-shadow: var(--bs);
   margin-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 /* Glamping caption */
@@ -91,6 +103,16 @@
   text-shadow: 1px 1px var(--clr-text);
 }
 
+#tour-header::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
 /* Tour Image */
 #tour-img {
   max-width: 550px;
@@ -110,11 +132,13 @@
 #tour-text {
   max-width: 650px;
   text-align: center;
+  font-weight: var(--fw-bold);
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
   font-size: 1.5em;
   font-family: var(--ff-secondary);
+  line-height: 1.5em;
 }
 
 /* Tour Button Container */
@@ -149,6 +173,16 @@
   text-shadow: 1px 1px var(--clr-text);
 }
 
+#volunteer-header::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--clr-drk-green);
+  opacity: 0.35;
+}
+
 /* Volunteer text and img wrapper */
 #volunteer-img-text-wrapper {
   display: flex;
@@ -159,11 +193,13 @@
 #volunteer-text {
   max-width: 650px;
   text-align: center;
+  font-weight: var(--fw-bold);
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
   font-size: 1.5em;
   font-family: var(--ff-secondary);
+  line-height: 1.5em;
 }
 
 #volunteer-img {
@@ -305,12 +341,12 @@
     margin: 0.5em 0.5em;
     margin-top: 1em;  
   }
+  
   /* Glamping description */
   #glamping-text {
     font-family: var(--ff-secondary);
     font-size: 1.5em;
     margin: auto;
-    margin-top: 1em;
     text-align: center;
   }
   
@@ -324,21 +360,21 @@
   
   /* 1st HipCamp Img */
   #hipcamp1-img {
-    max-width: 650px;
+    max-width: 720px;
     margin: auto;
     margin-bottom: 1em;
   }
   
   /* 2nd HipCamp Img */
   #hipcamp2-img {
-    max-width: 650px;
+    max-width: 750px;
     margin: auto;
     margin-bottom: 1em;
   }
   
   /* 3rd HipCamp Img */
   #hipcamp3-img {
-    max-width: 650px;
+    max-width: 720px;
     margin: auto;
     margin-bottom: 1em;
   }

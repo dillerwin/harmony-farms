@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
 import Animals from "./components/Animals.jsx";
-import WellnessCenter from "./components/WellnessCenter.jsx";
 import Support from "./components/Support.jsx";
 import Volunteer from "./components/VolunteerWaiver.jsx";
 import Contact from "./components/Contact.jsx";
@@ -13,7 +12,7 @@ import Navbar from "./components/Navbar";
 import Raffle from "./components/Raffle";
 import VisitUs from "./components/VisitUs.jsx";
 import Donate from "./components/Donate.jsx";
-import BookTour from "./components/BookTour.jsx";
+
 
 import AdminAuth from "./admin/AdminAuth";
 
@@ -42,22 +41,18 @@ function App() {
             <Route path="/donate" element={<Donate />} />
             {/* Routes to Animals Component */}
             <Route path="/animals" element={<Animals />} />
-            {/* Routes to Wellness Center Component */}
-            <Route path="/wellness-center" element={<WellnessCenter />} />
             {/* Routes to Support Component */}
             <Route path="/support" element={<Support />} />
             {/* Routes to Volunteer Component */}
             <Route path="/volunteer" element={<Volunteer />} />
             {/* Routes to Contact Us Component */}
-            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
             {/* Routes to Raffle Component */}
             <Route path="/raffle" element={<Raffle />} />
             {/* Routes to Raffle Component */}
             <Route path="/visit-us" element={<VisitUs />} />
             {/* Routes to Raffle Component */}
             <Route path="/donate" element={<Donate />} />
-            {/* Routes to Book Tour Component */}
-            <Route path="/book-tour" element={<BookTour />} />
           </Routes>
         </BrowserRouter>
       </div>

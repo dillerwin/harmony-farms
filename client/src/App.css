@@ -134,6 +134,19 @@ h1 {
     url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638982218/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-6_wd8sas.jpg");
 }
 
+.volunteer-hero {
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638982218/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-6_wd8sas.jpg");
+}
+
 /* media query for hero image text */
 @media (max-width: 750px) {
   .hero-text {
