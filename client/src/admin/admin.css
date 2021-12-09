@@ -81,6 +81,15 @@ button {
   padding-top: 2vh;
 }
 
+.photoEdit {
+  display: flex;
+  flex-direction: column;
+}
+
+.photoTitle {
+  font-family: var(--ff-primary);
+}
+
 .animalBox {
   padding: 2px;
   background-color: var(--clr-orange);

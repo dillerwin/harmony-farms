@@ -16,6 +16,7 @@ const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 const bcrypt = require("bcrypt");
 
 const cookieParser = require("cookie-parser");
+
 //connects to database
 const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.idqix.mongodb.net/harmony-farms`;
 
@@ -62,6 +63,7 @@ app.post("/animalPost", async (req, res) => {
   }
 });
 
+// for assigning new admins
 // app.post("/assign", async (req, res) => {
 //   bcrypt.hash(req.body.password, 10, async (err, hash) => {
 //     let userDoc = {
