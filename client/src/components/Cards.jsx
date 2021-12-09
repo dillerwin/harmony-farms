@@ -7,7 +7,7 @@ function Cards() {
   return (
     <>
       <div className="card-container">
-        <Link to="/donate" component={Donate}>
+        <Link to="/donate#anchor" component={Donate}>
           <div class="card">
             <img
               className="card-image"
@@ -45,7 +45,7 @@ function Cards() {
             </div>
           </div>
         </a>
-        <Link to="/raffle" component={Raffle}>
+        <Link to="/raffle#anchor" component={Raffle}>
           <div class="card">
             <img
               className="card-image"
