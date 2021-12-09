@@ -86,6 +86,18 @@ button {
   padding-bottom: 1em;
 }
 
+.imageEditModal {
+  flex-direction: column;
+  background-color: var(--clr-orange);
+  width: fit-content;
+  padding: 1em;
+}
+
+.newImageForm {
+  display: flex;
+  padding-bottom: 1em;
+}
+
 .imageEdit {
   display: flex;
   flex-direction: column;
@@ -104,6 +116,13 @@ button {
 
 .imageBody > * {
   border: 1px dashed black;
+  padding: 0.5em;
+}
+
+.imageBody > div > div {
+  cursor: pointer;
+  display: list-item;
+  list-style-position: inside;
 }
 
 h4 {

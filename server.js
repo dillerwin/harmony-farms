@@ -42,10 +42,23 @@ const Admin = mongoose.model("Admin", {
 
 //creates schema bones for animal info
 const animalSchema = new mongoose.Schema({
-  animalName: { type: String },
+  animalName: { type: String, required: true },
   animalDescription: { type: String },
   imageLink: { type: String },
   donorBox: { type: String },
+});
+
+//schema for site images
+const imageSchema = new mongoose.Schema({
+  imageId: { type: String, required: true },
+  imageLink: { type: String },
+});
+
+const Image = mongoose.model("Image", imageSchema);
+
+app.post("/imagePost", async (req, res) => {
+  console.log(req.body);
+  res.redirect("/admin");
 });
 
 const Animal = mongoose.model("Animal", animalSchema);
@@ -63,7 +76,7 @@ app.post("/animalPost", async (req, res) => {
   }
 });
 
-// for assigning new admins
+// for assigning new admins, only works server-side
 // app.post("/assign", async (req, res) => {
 //   bcrypt.hash(req.body.password, 10, async (err, hash) => {
 //     let userDoc = {

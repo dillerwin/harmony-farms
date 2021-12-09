@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AnimalEdit from "./AnimalEdit";
 import ImageEdit from "./ImageEdit";
 
 export default function AdminPage(props) {
   const [view, setView] = useState(false);
 
+  useEffect(() => {
+    if (localStorage.getItem("view")) {
+      setView(localStorage.getItem("view"));
+    }
+  }, []);
+  //function to log out of admin portal
+  function logOut(event) {
+    //sets token prop to false
+    props.setToken(false);
+    //removes login token from localStorage
+    localStorage.removeItem("token");
+  }
+
   function handleClick(event) {
     event.preventDefault();
     if (event.target.name === "animal") {
       setView("animal");
+      localStorage.setItem("view", "animal");
     } else if (event.target.name === "images") {
       setView("images");
+      localStorage.setItem("view", "images");
     } else {
+      localStorage.removeItem("view");
       window.location.href = "/";
     }
   }
@@ -39,8 +55,8 @@ export default function AdminPage(props) {
           <button name="images" onClick={handleClick}>
             Edit Images
           </button>
-          <button name="homepage" onClick={handleClick}>
-            Return to site
+          <button name="logOut" onClick={logOut}>
+            Log Out
           </button>
         </div>
       </div>

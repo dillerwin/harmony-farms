@@ -22,14 +22,13 @@ export default function AnimalEdit(props) {
   function handleRedirect(event) {
     event.preventDefault();
     props.setView("images");
+    localStorage.setItem("view", "images");
   }
 
-  //function to log out of admin portal
-  function logOut(event) {
-    //sets token prop to false
-    props.setToken(false);
-    //removes login token from localStorage
-    localStorage.removeItem("token");
+  function handleReturn(event) {
+    event.preventDefault();
+    props.setView(false);
+    localStorage.removeItem("view");
   }
 
   //database fetch for animal list
@@ -92,7 +91,7 @@ export default function AnimalEdit(props) {
         <button className="imageRedirect" onClick={handleRedirect}>
           Edit Images
         </button>
-        <button className="homeRedirect" onClick={handleRedirect}>
+        <button className="homeRedirect" onClick={handleReturn}>
           Exit Animal Edit
         </button>
       </div>
@@ -194,13 +193,6 @@ export default function AnimalEdit(props) {
               </button>
             </label>
           </form>
-          <button
-            //logout button
-            className="logOut"
-            onClick={logOut}
-          >
-            Log Out
-          </button>
         </div>
         <div>
           {/* displays animal list */}

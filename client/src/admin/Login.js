@@ -64,7 +64,7 @@ export default function Login(props) {
         </label>
         <label>
           <p>Password</p>
-          <input type="text" name="password" onChange={handlePassword} />
+          <input type="password" name="password" onChange={handlePassword} />
         </label>
         <button type="submit">Log In</button>
       </form>

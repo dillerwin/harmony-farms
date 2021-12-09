@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import AdminPage from "./AdminPage";
-import Login from "./Login";
+import Login from "./Login"
 
 export default function AdminAuth() {
   const [token, setToken] = useState(false);
