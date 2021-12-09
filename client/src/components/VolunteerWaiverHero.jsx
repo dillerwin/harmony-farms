@@ -1,13 +1,13 @@
 import React from "react";
 import "../App.css";
 
-function RaffleImage() {
+function VolunteerWaiverHero() {
   return (
     <>
-      <div id="hero-image" className="raffle-hero">
+      <div id="hero-image">
         <div className="hero-text">
           <h1 className="hero-welcome-text">
-            Harmony Farm's $5 Weekly Raffles
+          Volunteering at the Sanctuary
           </h1>
         </div>
       </div>
@@ -15,4 +15,4 @@ function RaffleImage() {
   );
 }
 
-export default RaffleImage;
+export default VolunteerWaiverHero;

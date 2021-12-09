@@ -1,13 +1,14 @@
 import React from "react";
 import "../App.css";
 
-function RaffleImage() {
+//Hero Image and Text Component for the About Page
+function AnimalHero() {
   return (
     <>
-      <div id="hero-image" className="raffle-hero">
+      <div id="hero-image " className="animal-hero">
         <div className="hero-text">
           <h1 className="hero-welcome-text">
-            Harmony Farm's $5 Weekly Raffles
+            Meet the Animals of the Sanctuary
           </h1>
         </div>
       </div>
@@ -15,4 +16,4 @@ function RaffleImage() {
   );
 }
 
-export default RaffleImage;
+export default AnimalHero;

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 .dropdown-menu {
-    width: 200px;
+    width: 250px;
     position: absolute;
-    top: 80px;
+    top: 68px;
     list-style: none;
     text-align: start;
+    z-index: 10;
 }
 
 .dropdown-menu li {
@@ -26,7 +27,7 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: #fff;
+    color: white;
     padding: 16px;
     font-family: var(--ff-tertiary);
 }

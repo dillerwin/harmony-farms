@@ -1,6 +1,6 @@
 //imports
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "../Visitus.css"
 import VisitUsHero from "./VisitUsHero.jsx";
 // import DonateCards from "./DonateCards";
@@ -11,9 +11,9 @@ import hipcamp1 from "../img/hipcamp1.jpg";
 import farmPigs from "../img/farm-pigs.jpg";
 import About from "../img/about-placeholder.jpg";
 
-function Services() {
+function VisitUs() {
   return (
-    <div id="services">
+    <div id="visit-us">
       <VisitUsHero />
       <div id="glamping-container">
         <h1 id="glamping-header">Glamping at the Sanctuary</h1>
@@ -66,12 +66,12 @@ function Services() {
         <div id="tour-img-text-wrapper">
         <img id="tour-img" src={farmPigs} alt="Pigs at the Sanctuary" />
         <p id="tour-text">
-          We'd love to show you around! We do stay pretty busy taking care of our animals here at the sanctuary, so please reach out to us via email to schedule a time to visit. 
+          We'd love to show you around! We do stay pretty busy taking care of our animals here at the sanctuary, so please reach out to us via email at harmonyfarmsanctuaryvt@gmail.com to schedule a time to visit. 
         </p>
         </div>
         <div id="tour-button-container">
           <Link to="/book-tour">
-            <button className="button tour-button">Email Us</button>
+            <button className="button tour-button">Contact Us</button>
           </Link>
         </div>
       </div>
@@ -83,13 +83,13 @@ function Services() {
         {/* Image */}
         <div id="volunteer-img-text-wrapper">
         <p id="volunteer-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        We'd love to have your help! Please fill out the volunteer waiver (linked below) and send us an email at harmonyfarmsanctuaryvt@gmail.com for more information. Thank you!
         </p>
         <img id="volunteer-img" src={About} alt="Pigs at the Sanctuary" />
         </div>
         <div id="volunteer-button-container">
-          <Link to="/volunteer">
-            <button className="button volunteer-button">Email Us</button>
+          <Link to="/volunteer#anchor">
+            <button className="button volunteer-button">Volunteer Waiver</button>
           </Link>
         </div>
       </div>
@@ -98,5 +98,5 @@ function Services() {
   );
 }
 
-//exports Services function to be used by other components
-export default Services;
+//exports VisitUS function to be used by other components
+export default VisitUs;

@@ -8,6 +8,7 @@ import Donate from "./Donate.jsx";
 import DonateHeader from "./DonateHeader.jsx";
 import RaffleDonate from "./RaffleDonate.jsx";
 import Winner from "./Winner.jsx";
+import DonatePrize from "./DonatePrize.jsx";
 
 function Raffle() {
   return (
@@ -24,6 +25,7 @@ function Raffle() {
         </p>
         <RaffleDonate />
         <PrizeImages />
+        <DonatePrize />
         <Footer />
       </div>
     </>

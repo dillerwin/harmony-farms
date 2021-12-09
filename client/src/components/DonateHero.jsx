@@ -2,16 +2,16 @@ import React from "react";
 import "../App.css";
 
 //Hero Image and Text Component for the About Page
-function AboutHero() {
+function DonateHero() {
   return (
     <>
-      <div id="hero-image" className="about-hero">
+      <div id="hero-image " className="donate-hero">
         <div className="hero-text">
-          <h1 className="hero-welcome-text">About Us</h1>
+          <h1 className="hero-welcome-text">Donate to the Sanctuary</h1>
         </div>
       </div>
     </>
   );
 }
 
-export default AboutHero;
+export default DonateHero;

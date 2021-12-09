@@ -1,14 +1,14 @@
 //Imports react into the component
 import React from "react";
 //Imports  Hero Component into page
-import HeroImage from "./Hero";
+import AnimalHero from "./AnimalHero";
 import Footer from "./Footer";
 import SponsorCards from "./SponsorCards";
 
 function Animals() {
   return (
     <>
-      <HeroImage />
+      <AnimalHero />
       <div id="donate-header-container">
         <h1 className="donate-header">Sponsor one of the Animals</h1>
         <p className="donate-text">

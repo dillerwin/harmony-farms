@@ -2,83 +2,201 @@
 
 /* About page wrapper */
 #about-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* About page heading wrapper */
+#about-heading-wrapper {
+  margin-top: 4rem;
+  background-color: var(--clr-drk-green);
+}
+
+/* About page hero image */
+
+.about-hero {
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+
+  background-position: 50% 72%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638902940/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-2_1_1_levdrg.jpg");
+}
+
+/* About page header */
+#about-heading {
+  display: flex;
+  justify-content: flex-start;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1-alt);
+  color: var(--cly-yellow);
+  letter-spacing: 0.03em;
+  margin-left: 1em;
+}
+
+/* About wrapper around image and description text */
+#about-img-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-top: 1.5rem;
+}
+
+/* About images wrapper */
+#about-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+/* About page image 1 */
+#about-img {
+  max-width: 900px;
+  border-radius: 1rem;
+  box-shadow: var(--bs);
+}
+
+/* About page img captions */
+#about-img-caption {
+  margin-top: 1rem;
+  font-family: var(--ff-secondary);
+  color: var(--clr-drk-green);
+}
+
+/* About page wrapper around description */
+#about-desc-wrapper {
+  background-color: var(--clr-drk-green);
+}
+
+/* About page description heading */
+#about-desc-heading {
+  font-family: var(--ff-primary);
+  color: var(--cly-yellow);
+  font-size: 2em;
+  letter-spacing: 0.2rem;
+  margin-left: 1.5em;
+  margin-top: 1em;
+  margin-bottom: -1em;
+}
+
+/* About page description */
+#about-desc {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h3);
+  color: var(--cly-yellow);
+  padding: 3rem;
+}
+
+/* ---About Mobile Responsive--- */
+@media screen and (min-width: 360px) and (max-width: 809px) {
+  /* ---About Page CSS--- */
+
+  /* About page wrapper */
+  #about-wrapper {
     display: flex;
     flex-direction: column;
   }
-  
-  /* About page heading wrapper */
-  #about-heading-wrapper {
-    margin-top: 4rem;
-    background-color: var(--clr-drk-green);
-  }
-  
-  /* About page header */
-  #about-heading {
-    display: flex;
-    justify-content: flex-start;
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h1-alt);
-    color: var(--cly-yellow);
-    letter-spacing: 0.03em;
-    margin-left: 1em;
-  }
-  
+
   /* About wrapper around image and description text */
   #about-img-text-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
-    margin-top: 1.5rem;
+    margin-top: 0.1rem;
   }
-  
-  /* About images wrapper */
-  #about-img-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2em;
-    margin-bottom: 3em;
-  }
-  
-  /* About page image 1 */
+
+  /* About page main image */
   #about-img {
-    max-width: 900px;
+    max-width: 350px;
     border-radius: 1rem;
-    box-shadow: var(--bs);
   }
-  
-  /* About page img captions */
+
+  /* About page img caption */
   #about-img-caption {
     margin-top: 1rem;
+    font-size: 0.7rem;
     font-family: var(--ff-secondary);
     color: var(--clr-drk-green);
   }
-  
-  /* About page wrapper around description */
-  #about-desc-wrapper {
-    background-color: var(--clr-drk-green);
+
+  /* About page description heading */
+  #about-desc-heading {
+    font-size: 1.5em;
+    margin-left: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
-  
+
+  /* About page description */
+  #about-desc {
+    max-width: 350px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: -1.5rem;
+  }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1024px) {
+  /* ---About Page CSS--- */
+
+  /* About page wrapper */
+  #about-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* About wrapper around image and description text */
+  #about-img-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0.1rem;
+  }
+
+  /* About page main image */
+  #about-img {
+    max-width: 650px;
+    border-radius: 1rem;
+  }
+
+  /* About page img caption */
+  #about-img-caption {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-family: var(--ff-secondary);
+    color: var(--clr-drk-green);
+  }
+
   /* About page description heading */
   #about-desc-heading {
     font-family: var(--ff-primary);
     color: var(--cly-yellow);
+    text-align: center;
     font-size: 2em;
     letter-spacing: 0.2rem;
-    margin-left: 1.5em;
     margin-top: 1em;
-    margin-bottom: -1em;
+    
   }
-  
+
   /* About page description */
   #about-desc {
     font-family: var(--ff-secondary);
     font-size: var(--fs-h3);
+    text-align: center;
     color: var(--cly-yellow);
     padding: 3rem;
   }
+}
   
   /* ---About Mobile Responsive--- */
   @media screen and (min-width: 360px) and (max-width: 809px) {
@@ -101,7 +219,7 @@
   
     /* About page main image */
     #about-img {
-      max-width: 350px;
+      max-width: 375px;
       border-radius: 1rem;
     }
   
@@ -116,7 +234,6 @@
     /* About page description heading */
     #about-desc-heading {
       font-size: 1.5em;
-      margin-left: 1.5em;
       margin-top: 1em;
       margin-bottom: 1em;
     }
@@ -124,9 +241,11 @@
     /* About page description */
     #about-desc {
       max-width: 350px;
-      padding: 1.5rem;
+      padding: 1rem;
+      padding-bottom: 2rem;
       border-radius: 1rem;
-      margin-top: -1.5rem;
+      margin: auto;
+      
     }
   }
   
@@ -150,7 +269,7 @@
   
     /* About page main image */
     #about-img {
-      max-width: 650px;
+      max-width: 700px;
       border-radius: 1rem;
     }
   
@@ -165,7 +284,6 @@
     /* About page description heading */
     #about-desc-heading {
       font-size: 1.6em;
-      margin-left: 1.5em;
       margin-top: 1em;
       margin-bottom: 1em;
     }
@@ -174,7 +292,6 @@
     #about-desc {
       max-width: 850px;
       padding: 1.5rem;
-      border-radius: 1rem;
       margin-top: -1.5rem;
       font-size: 1.1rem;
     }

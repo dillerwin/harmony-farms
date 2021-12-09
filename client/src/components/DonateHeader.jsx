@@ -5,7 +5,7 @@ function DonateHeader() {
   return (
     <>
       <div id="donate-header-container">
-        <h1 className="donate-header">Help Support Harmony Farms</h1>
+        <h1 className="donate-header">Help Support Harmony Farms Sanctuary</h1>
         <p className="donate-text">
           Animals have long played a major role in the human experience, and
           many don’t even realize how much they actually help us, both
@@ -18,7 +18,7 @@ function DonateHeader() {
       </div>
       <div id="cash-donation-container">
         <h2 className="cash-donation-header">
-          Make a Monetary Donation to the Farm
+          Make a Monetary Donation to the Sanctuary
         </h2>
         <p className="money-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nulla
@@ -57,7 +57,7 @@ function DonateHeader() {
 
       <div id="donate-goods">
         <h2 className="cash-donation-header">
-          Purchase Goods for the Farm or Animals
+          Purchase Goods for the Sanctuary or Animals
         </h2>
         <p className="money-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nulla
