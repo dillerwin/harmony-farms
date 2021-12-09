@@ -8,7 +8,7 @@
 :root {
   /* Font families */
   --ff-primary: "Architects Daughter", cursive;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-secondary: "Raleway", sans-serif;
   --ff-tertiary: "Raleway", sans-serif;
 
   /* Font weights */
@@ -48,40 +48,19 @@ h1 {
   letter-spacing: 1.5px;
 }
 
-<<<<<<< HEAD
-/* Dropdown Menu Styling */
-
-/* Media responsiveness for Navbar */
-@media screen and (min-width: 810px) and (max-width: 1024px) {
-  .Navbar .leftSide .links {
-    width: 80%;
-  }
-}
-/* @media screen and (min-width: 360) and (max-width: 809px) {
-  .Navbar .leftSide .links a {
-    display: none;
-    font-size: 10px;
-    flex-shrink: 6;
-    add hamburger menu and list items for THIS media respo
-  } */
-/* } */
-
-/* ---styles for hero images--- */
-
-=======
 /* ---styles for hero image--- */
 #hero-image {
   width: 100%;
   height: 40vh;
   min-height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./img/farm-landscape.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/farm-landscape.jpg"); */
+  /* background-position: center;
+  background-repeat: no-repeat; */
   background-size: cover;
   position: relative;
 }
->>>>>>> dc5120b55a5c6c7df430ccdc5f8caba43b015429
+
 .hero-text {
   font-size: var(--fs-h3);
   text-align: center;
@@ -697,11 +676,7 @@ a {
 
 .winner-display {
   background-color: rgb(255, 241, 175, 0.7);
-<<<<<<< HEAD
-  padding: 0.0001em;
-=======
   padding: 0.5em;
->>>>>>> dc5120b55a5c6c7df430ccdc5f8caba43b015429
   font-family: var(--ff-primary);
   letter-spacing: 1.5px;
 }
@@ -714,12 +689,6 @@ a {
   display: flex;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-
-.logo-image {
-  max-height: 100px;
-  max-width: 100px;
-=======
 .raffle-info {
   margin-bottom: 3em;
 }
@@ -736,5 +705,4 @@ a {
   color: var(--clr-drk-green);
   text-align: center;
   text-shadow: 1px 1px var(--clr-text);
->>>>>>> dc5120b55a5c6c7df430ccdc5f8caba43b015429
 }

@@ -23,7 +23,7 @@ function About() {
             {/* Image */}
             <img id="about-img" src={placeholder} alt="placeholder" />
             <figcaption id="about-img-caption">
-              Maramonie and Don King at the Sanctuary
+              Maramonie King and her husband Jon at the Sanctuary
             </figcaption>
           </div>
           <div id="about-desc-wrapper">

@@ -179,12 +179,6 @@
 
   /* About page description heading */
   #about-desc-heading {
-<<<<<<< HEAD
-    font-size: 1.6em;
-    margin-left: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-=======
     font-family: var(--ff-primary);
     color: var(--cly-yellow);
     text-align: center;
@@ -192,27 +186,18 @@
     letter-spacing: 0.2rem;
     margin-top: 1em;
     
->>>>>>> 77994b9f7605500447e466d8b1f79afe7529cdfb
   }
 
   /* About page description */
   #about-desc {
-<<<<<<< HEAD
-    max-width: 850px;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    margin-top: -1.5rem;
-    font-size: 1.1rem;
-  }
-}
-=======
     font-family: var(--ff-secondary);
     font-size: var(--fs-h3);
     text-align: center;
     color: var(--cly-yellow);
     padding: 3rem;
   }
-  
+}
+
   /* ---About Mobile Responsive--- */
   @media screen and (min-width: 360px) and (max-width: 809px) {
     /* ---About Page CSS--- */
@@ -311,4 +296,3 @@
       font-size: 1.1rem;
     }
   }
->>>>>>> 77994b9f7605500447e466d8b1f79afe7529cdfb
