@@ -56,6 +56,22 @@ const imageSchema = new mongoose.Schema({
 
 const Image = mongoose.model("Image", imageSchema);
 
+//save raffle winner to database
+app.post("/storeRaffleWinner", async (req, res) => {
+  let newObj = new mongoose.model("raffleWinner", {
+    name: req.winnerName,
+    date: req.winDate,
+  });
+  await newObj.save();
+  res.redirect("/admin");
+});
+
+//get raffle winner
+app.get("/getRaffleWinner", async (req, res) => {
+  let target = await raffleWinner.find({});
+  res.send(target);
+});
+
 //adds new image to database. No route in functional site
 app.post("/imageAdd", async (req, res) => {
   let newObj = new Image(req.body);
