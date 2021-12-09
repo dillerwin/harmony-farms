@@ -60,6 +60,7 @@ h1 {
   background-size: cover;
   position: relative;
 }
+
 .hero-text {
   font-size: var(--fs-h3);
   text-align: center;
@@ -154,7 +155,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5em;
 }
 
 .outside-image {
@@ -238,7 +238,7 @@ h1 {
   align-items: center;
   height: fit-content;
   background: var(--clr-drk-green);
-  margin-top: 2.5em;
+  margin-top: 1em;
   flex-wrap: wrap;
 }
 
@@ -279,6 +279,7 @@ h1 {
   #quote-container-one,
   #quote-container-two {
     flex-wrap: nowrap;
+    margin-top: 2em;
   }
 
   .quote-one-text,
@@ -298,6 +299,7 @@ h1 {
     justify-content: space-around;
     flex-wrap: nowrap;
     max-width: 100vw;
+    margin-top: 2em;
   }
 
   .quote-one-text,
@@ -322,6 +324,7 @@ h1 {
   flex-wrap: wrap;
   margin-top: 1em;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -343,7 +346,8 @@ h1 {
   letter-spacing: 1.2px;
   text-align: center;
   margin: 0;
-  max-height: fit-content;
+  max-height: 100px;
+  min-height: 70px;
 }
 
 .card-text {
@@ -352,9 +356,11 @@ h1 {
   color: var(--clr-text);
   text-align: center;
   margin-top: 0;
-  max-height: fit-content;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .card-title::after {
   content: "";
   display: block;
@@ -366,9 +372,15 @@ h1 {
 }
 
 .card-image {
-  max-width: 300px;
+  max-height: 300px;
+
   /* border-radius: 10px 10px 0 0; */
 }
+
+/* .outside-card-image {
+  max-height: 250px;
+  min-height: 250px;
+} */
 
 .merch-image {
   position: relative;
@@ -395,14 +407,19 @@ h1 {
   .card {
     max-width: 225px;
   }
+
+  .outside-card-image {
+    max-height: 200px;
+  }
 }
 @media (min-width: 700px) {
   .card-container {
     flex-wrap: nowrap;
+    margin-top: 2em;
   }
 }
 
-@media (min-width: 1025) {
+/* @media (min-width: 1025) {
   .card-image {
     max-width: 450px;
   }
@@ -410,7 +427,7 @@ h1 {
   .card {
     max-width: 450px;
   }
-}
+} */
 
 /* Styles for Footer */
 
@@ -469,6 +486,7 @@ a {
   text-align: center;
   margin: 0.5em 0.5em;
   text-shadow: 1px 1px var(--clr-text);
+  letter-spacing: 1px;
 }
 
 .donate-text {

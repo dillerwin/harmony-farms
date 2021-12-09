@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import Donate from "./Donate";
 import Raffle from "./Raffle";
 
@@ -8,15 +8,15 @@ function Cards() {
     <>
       <div className="card-container">
         <Link to="/donate#anchor" component={Donate}>
-          <div class="card">
+          <div class="card outside-card">
             <img
-              className="card-image"
-              src={require("../img/farm-chickens.jpg").default}
+              className="card-image outside-card-image"
+              src="https://res.cloudinary.com/dtbi27ygq/image/upload/v1639075777/Website%20Content/farm-chickens_iqaygp.jpg"
               alt="Harmony Farms Animals at the Sanctuary"
             />
 
             <div class="container">
-              <h4 className="card-title">Support our Cause</h4>
+              <h4 className="card-title">Support the Sanctuary </h4>
               <p className="card-text">
                 Explore all the ways you can help us further our cause.
               </p>
@@ -46,10 +46,10 @@ function Cards() {
           </div>
         </a>
         <Link to="/raffle#anchor" component={Raffle}>
-          <div class="card">
+          <div class="card outside-card">
             <img
-              className="card-image"
-              src={require("../img/harmony-farms-raffle-prize.png").default}
+              className="card-image outside-card-image"
+              src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,w_640/v1639075512/Website%20Content/harmony-farms-raffle-prize-1_rm1gzd.png"
               alt="Raffle prize example for Harmony Farms Sanctuary Vermont"
             />
 
