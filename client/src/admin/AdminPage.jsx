@@ -40,6 +40,7 @@ export default function AdminPage(props) {
           flexDirection: "column",
           alignItems: "center",
         }}
+        className="adminBody"
       >
         <div className="titleWrapper">
           {/* title page */}
