@@ -52,6 +52,7 @@ const Animal = mongoose.model("Animal", animalSchema);
 //writes new animal entries into the database
 app.post("/animalPost", async (req, res) => {
   let newObj = new Animal(req.body);
+  // prevents write to database if animal has no name
   if (newObj.animalName === "") {
     res.status(403).redirect("/admin");
   } else {

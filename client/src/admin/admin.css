@@ -1,6 +1,53 @@
-.animalBox {
-  border: 2px dashed black;
-  padding: 2px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ---Root Level CSS--- */
+:root {
+  /* Font families */
+  --ff-primary: "Architects Daughter", cursive;
+  --ff-secondary: "Open Sans", sans-serif;
+  --ff-tertiary: "Raleway", sans-serif;
+
+  /* Font weights */
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  /* Colors */
+  --clr-light-green: rgb(180, 198, 166);
+  --clr-drk-green: rgb(102, 128, 106);
+  --clr-orange: rgb(255, 194, 134);
+  --clr-yellow: rgb(255, 241, 175);
+  --clr-text: #303030;
+  --clr-white: rgb(247, 247, 247);
+
+  /* Font sizes */
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  /* Box shadows */
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: var(--clr-drk-green);
+  color: var(--clr-text);
+}
+
+button {
+  padding: 1%;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--ff-primary);
 }
 
 .animalListWrapper {
@@ -17,14 +64,34 @@
   left: 25vw;
   overflow: auto;
   align-items: center;
+  color: var(--clr-text);
 }
 
 .editForm {
   padding: 20px;
   padding-right: 40px;
   border: 2px solid black;
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: var(--clr-drk-green);
+}
+
+.editButtons {
+  display: flex;
+  justify-content: space-around;
+  padding: none;
+  padding-top: 2vh;
+}
+
+.animalBox {
+  padding: 2px;
+  background-color: var(--clr-orange);
+  border-radius: 5%;
+}
+
+.addAnimal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
 }
 
 .addAnimalForm {
@@ -48,13 +115,14 @@
 .animalDisplay {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-  grid-template-rows: repeat(auto-fit);
   margin-top: 3em;
   margin-bottom: 2em;
   justify-content: center;
   max-height: fit-content;
   width: 100%;
   padding-bottom: 2em;
+  padding-left: 2em;
+  grid-gap: 3px;
 }
 
 .logOut {

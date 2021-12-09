@@ -14,6 +14,7 @@ export default function AdminPage(props) {
 
   //event handler for edit box close button
   function handleClose(event) {
+    event.preventDefault();
     setEditView("none");
     setAnimal("");
   }
@@ -74,19 +75,20 @@ export default function AdminPage(props) {
 
   return (
     <div className="animalListWrapper">
-      <div>
+      <div className="titleWrapper">
         {/* title page */}
-        <h1 className="adminTitle">Admin Page</h1>
+        <h1 className="adminTitle">Harmony Farms Sanctuary</h1>
+        <h2 className="adminTitle">Admin</h2>
       </div>
       <div
-        // edit modal that appear on button click in animal entry
+        // edit modal that appears on button click in animal entry
         name="edit div"
         className="editModal"
         style={{
           display: editView,
         }}
       >
-        {/* form for edit input */}
+        {/* edit animal form */}
         <form className="editForm" action="/edit" method="post">
           <label>
             <p>Editing {animal}</p>
@@ -121,14 +123,7 @@ export default function AdminPage(props) {
               placeholder="Enter link to animal's donorbox"
             />
           </label>
-          <p
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              padding: "none",
-              paddingTop: "2vh",
-            }}
-          >
+          <p className="editButtons">
             <button type="submit" name="editSubmit">
               Submit Edit
             </button>
@@ -136,15 +131,9 @@ export default function AdminPage(props) {
           </p>
         </form>
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "50vw",
-        }}
-      >
+      <div className="addAnimal">
         <div>
+          {/* new animal entry */}
           <form
             //form for adding a new animal into the database
             className="addAnimalForm"
