@@ -8,7 +8,7 @@
 
 .navbar {
     background: white;
-    height: 70px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +20,8 @@
     flex-wrap: wrap;
     justify-self: flex-start;
     margin-left: 1;
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     /* justify-self: start; */
     cursor: pointer;
     border-radius: 25%;
@@ -121,7 +121,7 @@
     .logo-image {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 0.8rem;
     }
   
     .menu-icon {
@@ -136,11 +136,14 @@
   
     .fa-times {
       color: black;
-      font-size: 2rem;
+      font-size: 2em;
     }
 
     .fa-bars {
         color: black;
+        font-size: 2.5rem;
+        top: 0rem;
+        right: 0rem;
       }
 
     .fa-caret-down {
