@@ -16,6 +16,7 @@ const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 const bcrypt = require("bcrypt");
 
 const cookieParser = require("cookie-parser");
+
 //connects to database
 const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.idqix.mongodb.net/harmony-farms`;
 
@@ -41,10 +42,38 @@ const Admin = mongoose.model("Admin", {
 
 //creates schema bones for animal info
 const animalSchema = new mongoose.Schema({
-  animalName: { type: String },
+  animalName: { type: String, required: true },
   animalDescription: { type: String },
   imageLink: { type: String },
   donorBox: { type: String },
+});
+
+//schema for site images
+const imageSchema = new mongoose.Schema({
+  imageId: { type: String, required: true },
+  imageURL: { type: String },
+});
+
+const Image = mongoose.model("Image", imageSchema);
+
+//adds new image to database. No route in functional site
+app.post("/imageAdd", async (req, res) => {
+  let newObj = new Image(req.body);
+  await newObj.save();
+  console.log(`image added`);
+  res.redirect("/admin");
+});
+
+app.post("/imageEdit", async (req, res) => {
+  let target = await Image.find({ imageId: req.body.imageId });
+  let targetId = target[0]._id;
+  await Image.updateOne(
+    { _id: targetId },
+    { $set: { imageURL: req.body.imageURL } }
+  );
+  console.log(`image URL changed`);
+
+  res.redirect("/admin");
 });
 
 const Animal = mongoose.model("Animal", animalSchema);
@@ -52,6 +81,7 @@ const Animal = mongoose.model("Animal", animalSchema);
 //writes new animal entries into the database
 app.post("/animalPost", async (req, res) => {
   let newObj = new Animal(req.body);
+  // prevents write to database if animal has no name
   if (newObj.animalName === "") {
     res.status(403).redirect("/admin");
   } else {
@@ -61,6 +91,7 @@ app.post("/animalPost", async (req, res) => {
   }
 });
 
+// for assigning new admins, only works server-side
 // app.post("/assign", async (req, res) => {
 //   bcrypt.hash(req.body.password, 10, async (err, hash) => {
 //     let userDoc = {
@@ -92,8 +123,6 @@ app.post("/delete", async (req, res) => {
 app.post("/edit", async (req, res) => {
   let target = await Animal.find({ animalName: req.body.animalName });
   let targetId = target[0]._id;
-  console.log(targetId);
-  console.log(req.body.animalDescription);
   if (req.body.animalDescription !== "") {
     await Animal.updateOne(
       { _id: targetId },
