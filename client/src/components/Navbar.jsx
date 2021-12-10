@@ -7,7 +7,6 @@ import Animals from "./Animals";
 import Contact from "./Contact";
 //import Donate from "./Donate";
 import Home from "./Home";
-import WellnessCenter from "./WellnessCenter";
 import Raffle from "./Raffle";
 import VisitUs from "./VisitUs";
 import Events from "./Events";
@@ -83,16 +82,6 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Animals
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/wellness-center"
-                className="nav-links"
-                component={WellnessCenter}
-                onClick={closeMobileMenu}
-              >
-                Wellness Center
               </Link>
             </li>
             <li className="nav-item">

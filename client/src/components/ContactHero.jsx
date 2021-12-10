@@ -6,7 +6,7 @@ function VisitUsHero() {
     <>
       <div id="hero-image" className="visit-hero">
         <div className="hero-text">
-          <h1 className="hero-welcome-text">Visit Us at the Sanctuary</h1>
+          <h1 className="hero-welcome-text">Contacting the Sanctuary</h1>
         </div>
       </div>
     </>

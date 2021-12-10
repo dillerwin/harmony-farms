@@ -135,6 +135,19 @@ h1 {
     url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638982218/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-6_wd8sas.jpg");
 }
 
+.volunteer-hero {
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638982218/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-6_wd8sas.jpg");
+}
+
 /* media query for hero image text */
 @media (max-width: 750px) {
   .hero-text {
@@ -690,14 +703,10 @@ a {
 }
 
 .winner-display {
-  background-color: rgb(255, 241, 175, 0.7);
-  padding: 0.5em;
+  padding: 1em;
   font-family: var(--ff-primary);
   letter-spacing: 1.5px;
-}
-
-.winner-name {
-  color: black;
+  margin-top: -2em;
 }
 
 .raffle-images {
@@ -716,8 +725,36 @@ a {
 }
 
 .donate-prize-header {
-  font-family: var(--ff-primary);
-  color: var(--clr-drk-green);
+  font-family: sans-serif;
+  color: black;
   text-align: center;
+  font-size: 1em;
   text-shadow: 1px 1px var(--clr-text);
+}
+
+.raffle-animal-images {
+  width: 100%;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.thank-you-text {
+  font-family: var(--ff-tertiary);
+  color: black;
+  font-size: 0.5em;
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
+}
+
+.winner-name {
+  margin-top: 0.4em;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  color: cornflowerblue;
+  text-align: center;
 }

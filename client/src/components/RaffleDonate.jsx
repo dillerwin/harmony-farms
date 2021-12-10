@@ -4,16 +4,15 @@ function RaffleDonate() {
   return (
     <>
       <div className="raffle-donate-container">
-        <h1 className="donate-header">How Do I Participate?</h1>
+        <h1 className="donate-header">Want to Participate?</h1>
         <h4 className="donate-header">
-          Just Make a Monetary Donation to the Farm !
+          Just Make a Monetary Donation to the Farm
         </h4>
         <p className="money-text">
-          <i>Every</i> donation makes you automatically eligible for the raffle!
-          Every $5 donated secures you one entry in our weekly raffle.
+          <i>Every</i> $5 donation secures you one entry in our weekly raffle.
         </p>
         <p className="money-text">
-          *Minimum $5 to be eligible. Every $5 = 1 entry*
+          <i>*Minimum $5 to be eligible. Every $5 = 1 entry*</i>
         </p>
         <div className="money-button-container">
           <a

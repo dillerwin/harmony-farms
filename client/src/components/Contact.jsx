@@ -1,11 +1,27 @@
 //Imports react into the component
 import React from "react";
 //Imports About Hero Component into page
+import ContactHero from "./ContactHero"
+import ContactEmbed from "./ContactEmbed";
+import Footer from "./Footer"
+import "../Contact.css"
 
 function Contact() {
   return (
     <div id="contact">
-      <h1>This is the contact us page</h1>
+      <ContactHero />
+      <div id="contact-container">
+        <h1 id="contact-header">Contact Us</h1>
+        <p id="contact-text">
+          We would love to hear from you! Send us a message if you would like to volunteer, schedule a time to visit, become a prize donor, or would like to learn more about what we do here at Harmony Farms Sanctuary and Wellness Center. Thank you for supporting the us!
+        </p>
+      </div>
+      <div id="form-wrapper">
+        <div id="contact-form-container">
+        <ContactEmbed />
+        </div>
+    </div>
+    <Footer />
     </div>
   );
 }
