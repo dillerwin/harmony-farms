@@ -56,12 +56,17 @@ const imageSchema = new mongoose.Schema({
 
 const Image = mongoose.model("Image", imageSchema);
 
+const raffleSchema = new mongoose.Schema({
+  name: { type: String },
+});
+
+const Raffle = mongoose.model("Raffle", raffleSchema);
+
 //save raffle winner to database
 app.post("/storeRaffleWinner", async (req, res) => {
-  let newObj = new mongoose.model("raffleWinner", {
-    name: req.winner,
-    // date: req.winDate,
-  });
+  console.log(req.body);
+  let newObj = new Raffle(req.body);
+  console.log(newObj);
   await newObj.save();
   res.redirect("/admin");
 });
