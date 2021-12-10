@@ -95,7 +95,8 @@ h1 {
     url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638903115/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-1.jpg");
 }
 
-.animal-hero {
+.animal-hero,
+.volunteer-hero {
   width: 100%;
   height: 40vh;
   min-height: 300px;
@@ -167,7 +168,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5em;
 }
 
 .outside-image {
@@ -251,7 +251,7 @@ h1 {
   align-items: center;
   height: fit-content;
   background: var(--clr-drk-green);
-  margin-top: 1.5em;
+  margin-top: 1em;
   flex-wrap: wrap;
 }
 
@@ -292,6 +292,7 @@ h1 {
   #quote-container-one,
   #quote-container-two {
     flex-wrap: nowrap;
+    margin-top: 2em;
   }
 
   .quote-one-text,
@@ -311,6 +312,7 @@ h1 {
     justify-content: space-around;
     flex-wrap: nowrap;
     max-width: 100vw;
+    margin-top: 2em;
   }
 
   .quote-one-text,
@@ -335,6 +337,7 @@ h1 {
   flex-wrap: wrap;
   margin-top: 1em;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -356,7 +359,8 @@ h1 {
   letter-spacing: 1.2px;
   text-align: center;
   margin: 0;
-  max-height: fit-content;
+  max-height: 100px;
+  min-height: 70px;
 }
 
 .card-text {
@@ -365,9 +369,11 @@ h1 {
   color: var(--clr-text);
   text-align: center;
   margin-top: 0;
-  max-height: fit-content;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .card-title::after {
   content: "";
   display: block;
@@ -379,8 +385,11 @@ h1 {
 }
 
 .card-image {
-  max-width: 300px;
-  /* border-radius: 10px 10px 0 0; */
+  max-height: 300px;
+}
+
+.outside-card-image {
+  max-height: 250px;
 }
 
 .merch-image {
@@ -408,14 +417,19 @@ h1 {
   .card {
     max-width: 225px;
   }
+
+  .outside-card-image {
+    max-height: 200px;
+  }
 }
 @media (min-width: 700px) {
   .card-container {
     flex-wrap: nowrap;
+    margin-top: 2em;
   }
 }
 
-@media (min-width: 1025) {
+/* @media (min-width: 1025) {
   .card-image {
     max-width: 450px;
   }
@@ -423,7 +437,7 @@ h1 {
   .card {
     max-width: 450px;
   }
-}
+} */
 
 /* Styles for Footer */
 
@@ -482,6 +496,7 @@ a {
   text-align: center;
   margin: 0.5em 0.5em;
   text-shadow: 1px 1px var(--clr-text);
+  letter-spacing: 1px;
 }
 
 .donate-text {
@@ -677,7 +692,7 @@ a {
 }
 
 .raffle-text {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-tertiary);
   font-size: 1em;
   text-align: center;
   margin: 0 0.5em 1em;
@@ -688,14 +703,10 @@ a {
 }
 
 .winner-display {
-  background-color: rgb(255, 241, 175, 0.7);
-  padding: 0.5em;
+  padding: 1em;
   font-family: var(--ff-primary);
   letter-spacing: 1.5px;
-}
-
-.winner-name {
-  color: black;
+  margin-top: -2em;
 }
 
 .raffle-images {
@@ -714,8 +725,36 @@ a {
 }
 
 .donate-prize-header {
-  font-family: var(--ff-primary);
-  color: var(--clr-drk-green);
+  font-family: sans-serif;
+  color: black;
   text-align: center;
+  font-size: 1em;
   text-shadow: 1px 1px var(--clr-text);
+}
+
+.raffle-animal-images {
+  width: 100%;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.thank-you-text {
+  font-family: var(--ff-tertiary);
+  color: black;
+  font-size: 0.5em;
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
+}
+
+.winner-name {
+  margin-top: 0.4em;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  color: cornflowerblue;
+  text-align: center;
 }

@@ -6,9 +6,7 @@ function VolunteerWaiverHero() {
     <>
       <div id="hero-image" className="volunteer-hero">
         <div className="hero-text">
-          <h1 className="hero-welcome-text">
-          Volunteering at the Sanctuary
-          </h1>
+          <h1 className="hero-welcome-text">Volunteering at the Sanctuary</h1>
         </div>
       </div>
     </>

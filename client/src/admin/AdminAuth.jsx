@@ -16,7 +16,11 @@ export default function AdminAuth() {
       setToken(true);
     }
     //if token is false, displays login page
-    return <Login setToken={setToken} />;
+    return (
+      <div className="adminPage">
+        <Login setToken={setToken} />
+      </div>
+    );
   } else {
     //if token is true displays admin portal
     return <AdminPage token={token} setToken={setToken} />;

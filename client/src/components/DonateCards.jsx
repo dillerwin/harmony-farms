@@ -10,13 +10,13 @@ function DonateCards() {
         <Link to="/animals#anchor" component={Animals}>
           <div class="card">
             <img
-              className="card-image"
+              className="card-image outside-card-image"
               src={require("../img/harmony-farms-animal-sponsor.png").default}
               alt="Harmony Farms Animal Sanctuary painting of rescued animals"
             />
 
             <div class="container">
-              <h4 className="card-title">Sponsor an Animal</h4>
+              <h4 className="card-title">Sponsor an Animal at the Sanctuary</h4>
               <p className="card-text">
                 Help our amimals by being a single time or reoccuring sponsor
               </p>
@@ -48,7 +48,7 @@ function DonateCards() {
         <Link to="/raffle#anchor" component={Raffle}>
           <div class="card">
             <img
-              className="card-image"
+              className="card-image outside-card-image"
               src={require("../img/harmony-farms-raffle-prize.png").default}
               alt="Raffle prize example for Harmony Farms Sanctuary Vermont"
             />
