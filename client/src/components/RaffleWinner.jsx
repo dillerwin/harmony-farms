@@ -8,15 +8,30 @@ function RaffleWinner(props) {
   // let [winnerName, setWinnerName] = useState("");
   let winnerName;
   let donor;
+  let chosenWinner;
   let contributors = [];
   let donorName = "";
   let donorAmount = "";
+  let [winner, setWinner] = useState("");
+
+  function pushWinner(name) {
+    return fetch("/storeRaffleWinner", {
+      method: "post",
+      body: JSON.stringify(name),
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+  }
+
   // loops through names array for each donor
 
-  function winnerPicker() {
+  function winnerPicker(evt) {
+    evt.preventDefault();
+
     let number;
     let entries;
-    let winner;
+
     let winnerPool = [];
     let i = 0;
 
@@ -54,9 +69,10 @@ function RaffleWinner(props) {
     let winnerIndex = randomNumber(winnerPool.length);
 
     //   picks winner based on random number generated used as index
-    winner = winnerPool[winnerIndex];
+    chosenWinner = winnerPool[winnerIndex];
     // setWinnerName(winner);
-    winnerName = winner;
+    setWinner(chosenWinner);
+    pushWinner(winner);
     console.log(`${winner} is this weeks $5 raffle winner!`);
     console.log(winnerPool);
   }
