@@ -14,15 +14,15 @@ function RaffleWinner(props) {
   let donorAmount = "";
   let [winner, setWinner] = useState("");
 
-  function pushWinner(name) {
-    return fetch("/storeRaffleWinner", {
-      method: "post",
-      body: JSON.stringify(name),
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
-  }
+  // function pushWinner(name) {
+  //   return fetch("/storeRaffleWinner", {
+  //     method: "post",
+  //     body: JSON.stringify(name),
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //   });
+  // }
 
   // loops through names array for each donor
 
@@ -71,7 +71,7 @@ function RaffleWinner(props) {
     //   picks winner based on random number generated used as index
     chosenWinner = winnerPool[winnerIndex];
     // setWinnerName(winner);
-    setWinner(chosenWinner);
+    setWinner(winner);
 
     console.log(`${winner} is this weeks $5 raffle winner!`);
     console.log(winnerPool);
