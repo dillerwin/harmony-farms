@@ -11,7 +11,7 @@ function Cards() {
           <div class="card outside-card">
             <img
               className="card-image outside-card-image"
-              src="https://res.cloudinary.com/dtbi27ygq/image/upload/v1639075777/Website%20Content/farm-chickens_iqaygp.jpg"
+              src="https://res.cloudinary.com/dtbi27ygq/image/upload/v1639094104/Website%20Content/chickens_kzsnal.jpg"
               alt="Harmony Farms Animals at the Sanctuary"
             />
 
@@ -46,7 +46,7 @@ function Cards() {
           </div>
         </a>
         <Link to="/raffle#anchor" component={Raffle}>
-          <div class="card outside-card">
+          <div class="card">
             <img
               className="card-image outside-card-image"
               src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,w_640/v1639075512/Website%20Content/harmony-farms-raffle-prize-1_rm1gzd.png"

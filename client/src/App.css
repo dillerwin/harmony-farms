@@ -373,14 +373,11 @@ h1 {
 
 .card-image {
   max-height: 300px;
-
-  /* border-radius: 10px 10px 0 0; */
 }
 
-/* .outside-card-image {
+.outside-card-image {
   max-height: 250px;
-  min-height: 250px;
-} */
+}
 
 .merch-image {
   position: relative;

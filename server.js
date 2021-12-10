@@ -59,8 +59,8 @@ const Image = mongoose.model("Image", imageSchema);
 //save raffle winner to database
 app.post("/storeRaffleWinner", async (req, res) => {
   let newObj = new mongoose.model("raffleWinner", {
-    name: req.winnerName,
-    date: req.winDate,
+    name: req.winner,
+    // date: req.winDate,
   });
   await newObj.save();
   res.redirect("/admin");
