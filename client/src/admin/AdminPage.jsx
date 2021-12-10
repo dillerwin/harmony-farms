@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AnimalEdit from "./AnimalEdit";
 import ImageEdit from "./ImageEdit";
+import RaffleWinner from "../components/RaffleWinner";
 
 export default function AdminPage(props) {
   const [view, setView] = useState(false);
@@ -58,6 +59,7 @@ export default function AdminPage(props) {
             Log Out
           </button>
         </div>
+        <RaffleWinner />
       </div>
     );
   } else if (view === "animal") {
