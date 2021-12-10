@@ -35,14 +35,7 @@ export default function AdminPage(props) {
 
   if (!view) {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-        className="adminBody"
-      >
+      <div className="adminBody">
         <div className="titleWrapper">
           {/* title page */}
           <h1 className="adminTitle">Harmony Farms Sanctuary</h1>
@@ -70,8 +63,16 @@ export default function AdminPage(props) {
       </div>
     );
   } else if (view === "animal") {
-    return <AnimalEdit setView={setView} />;
+    return (
+      <div className="adminPage">
+        <AnimalEdit setView={setView} />
+      </div>
+    );
   } else if (view === "images") {
-    return <ImageEdit setView={setView} />;
+    return (
+      <div className="adminPage" style={{}}>
+        <ImageEdit setView={setView} />
+      </div>
+    );
   }
 }
