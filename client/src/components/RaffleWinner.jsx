@@ -38,7 +38,7 @@ function RaffleWinner(props) {
     // let contributors = [allContributors];
     console.log(contributors.length);
 
-    while (i < contributors.length - 1) {
+    while (i < contributors.length) {
       number = contributors[i].amount;
       entries = Math.floor(number / 5);
       let entryPush = 0;
@@ -60,7 +60,7 @@ function RaffleWinner(props) {
 
     //   generates random number between one and num
     const randomNumber = (num) => {
-      return Math.round(Math.random() * num - 1);
+      return Math.round(Math.random() * num);
     };
 
     console.log(winnerPool.length);
@@ -72,7 +72,7 @@ function RaffleWinner(props) {
     chosenWinner = winnerPool[winnerIndex];
     // setWinnerName(winner);
     setWinner(chosenWinner);
-    pushWinner(winner);
+
     console.log(`${winner} is this weeks $5 raffle winner!`);
     console.log(winnerPool);
   }
@@ -127,8 +127,13 @@ function RaffleWinner(props) {
           <button onClick={submit}>Add Name</button>
           <input id="submit-donor" type="submit" />
         </form>
+
+        <form action="/storeRaffleWinner" method="post">
+          <input name="name" style={{ display: "none" }} />
+          <input type="submit" />
+        </form>
       </div>
-      <h1>{winnerName} is this weeks $5 raffle winner!</h1>
+      <h1>{winner} is this weeks $5 raffle winner!</h1>
     </>
   );
 }
