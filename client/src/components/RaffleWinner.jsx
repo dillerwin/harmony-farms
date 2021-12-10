@@ -92,6 +92,10 @@ function RaffleWinner(props) {
     console.log(contributors.length);
   }
 
+  // <form action="/storeRaffleWinner" method="post">
+  //   <input name="name" style={{ display: "none" }} />
+  // </form>;
+
   return (
     <>
       <div className="userGuessField">
