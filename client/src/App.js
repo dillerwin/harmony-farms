@@ -49,9 +49,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* Routes to Raffle Component */}
             <Route path="/raffle" element={<Raffle />} />
-            {/* Routes to Raffle Component */}
+            {/* Routes to Visit Us Component */}
             <Route path="/visit-us" element={<VisitUs />} />
-            {/* Routes to Raffle Component */}
+            {/* Routes to Donate Component */}
             <Route path="/donate" element={<Donate />} />
           </Routes>
         </BrowserRouter>

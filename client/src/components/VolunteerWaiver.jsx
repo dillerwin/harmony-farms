@@ -13,9 +13,7 @@ function VolunteerWaiver() {
       <div id="volunteer-waiver-container">
         <h1 id="volunteer-waiver-header">Volunteer Waiver</h1>
         <p id="volunteer-waiver-text">
-          Interested in volunteering at the Sanctuary? Please fill out the
-          waiver below and send us an email at harmonyfarmsanctuaryvt@gmail.com
-          for more information. Thank you!
+          Would you like a more "hands-on" way to support the sanctuary? Become a volunteer! We need ongoing help keeping shelters clean, completing projects, and just giving our residents the love and attention they deserve. If you are interested in volunteering, please email us a little about you, your availability, and any experience you might have working with animals at harmonyfarmsanctuaryvt@gmail.com. We also require all volunteers and visitors to complete a waiver. Thank you!
         </p>
       </div>
       <div id="form-wrapper">
@@ -23,7 +21,7 @@ function VolunteerWaiver() {
         <VolunteerWaiverEmbed />
         </div>
         <div id="volunteer-contact-button-container">
-          <Link to="/contact-us">
+          <Link to="/contact">
             <button className="button volunteer-waiver-button">Contact Us</button>
           </Link>
         </div>

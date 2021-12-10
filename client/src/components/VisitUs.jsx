@@ -83,12 +83,12 @@ function VisitUs() {
         {/* Image */}
         <div id="volunteer-img-text-wrapper">
         <p id="volunteer-text">
-        We'd love to have your help! Please fill out the volunteer waiver (linked below) and send us an email at harmonyfarmsanctuaryvt@gmail.com for more information. Thank you!
+        Would you like a more "hands-on" way to support the sanctuary? Become a volunteer! We need ongoing help keeping shelters clean, completing projects, and just giving our residents the love and attention they deserve. If you are interested in volunteering, please email us a little about you, your availability, and any experience you might have working with animals at harmonyfarmsanctuaryvt@gmail.com. We also require all volunteers and visitors to complete a waiver. Thank you!
         </p>
         <img id="volunteer-img" src={About} alt="Pigs at the Sanctuary" />
         </div>
         <div id="volunteer-button-container">
-          <Link to="/volunteer#anchor">
+          <Link to="/volunteer">
             <button className="button volunteer-button">Volunteer Waiver</button>
           </Link>
         </div>
