@@ -4,9 +4,11 @@ import React from "react";
 
 function WellnessCenter() {
   return (
-    <div id="wellness-center">
-      <h1>This is the WellnessCenter page</h1>
-    </div>
+    <>
+      <div id="wellness-center">
+        <h1>This is the WellnessCenter page</h1>
+      </div>
+    </>
   );
 }
 
