@@ -58,6 +58,7 @@ const Image = mongoose.model("Image", imageSchema);
 
 const raffleSchema = new mongoose.Schema({
   name: { type: String },
+  date: { type: String },
 });
 
 const Raffle = mongoose.model("Raffle", raffleSchema);
@@ -73,7 +74,7 @@ app.post("/storeRaffleWinner", async (req, res) => {
 
 //get raffle winner
 app.get("/getRaffleWinner", async (req, res) => {
-  let target = await raffleWinner.find({});
+  let target = await Raffle.find({});
   res.send(target);
 });
 

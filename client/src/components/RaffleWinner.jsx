@@ -6,7 +6,7 @@ function RaffleWinner(props) {
   let nameInput = document.getElementById("number-input");
 
   // let [winnerName, setWinnerName] = useState("");
-  let winnerName;
+
   let donor;
   let chosenWinner;
   let contributors = [];
@@ -71,8 +71,8 @@ function RaffleWinner(props) {
     //   picks winner based on random number generated used as index
     chosenWinner = winnerPool[winnerIndex];
     // setWinnerName(winner);
-    setWinner(winner);
-
+    setWinner(chosenWinner);
+    console.log(winner);
     console.log(`${winner} is this weeks $5 raffle winner!`);
     console.log(winnerPool);
   }
@@ -90,6 +90,7 @@ function RaffleWinner(props) {
     contributors.push(donor);
     console.log(contributors);
     console.log(contributors.length);
+    document.name.reset();
   }
 
   // <form action="/storeRaffleWinner" method="post">
@@ -121,19 +122,19 @@ function RaffleWinner(props) {
             type="text"
             onChange={(evt) => {
               donorAmount = evt.target.value;
-              donorAmount = +donorAmount;
             }}
           />
           <button onClick={submit}>Add Name</button>
           <input id="submit-donor" type="submit" />
         </form>
 
-        <form action="/storeRaffleWinner" method="post">
-          <input name="name" style={{ display: "none" }} />
+        <form id="winner-post" action="/storeRaffleWinner" method="post">
+          <input name="name" style={{ display: "none" }} value={winner} />
+          <input name="date" type="date" />
           <input type="submit" />
         </form>
       </div>
-      <h1>{winner} is this weeks $5 raffle winner!</h1>
+      <h1> {winner} is this weeks $5 raffle winner!</h1>
     </>
   );
 }
