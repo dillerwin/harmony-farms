@@ -19,6 +19,7 @@ function RaffleDonate() {
             className="button money-button"
             href="https://www.paypal.com/paypalme/hfswc?locale.x=en_US"
             target="_blank"
+            rel="noreferrer"
           >
             Donate: Paypal
           </a>
@@ -27,6 +28,7 @@ function RaffleDonate() {
             className="button money-button "
             href="https://www.gofundme.com/f/Harmony-Farm-sanctuary-and-wellness?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet"
             target="_blank"
+            rel="noreferrer"
           >
             Donate: GoFundMe
           </a>
