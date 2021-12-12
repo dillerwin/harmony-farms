@@ -210,13 +210,18 @@ h1 {
 }
 /* Styles for meet the animals button */
 
-.meet-button {
+.meet-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 1em;
   font-family: var(--ff-primary);
+}
+
+.meet-button {
+  margin: 1em 1em;
+  font-size: 1em;
+  min-width: 325px;
+  max-width: 400px;
 }
 
 .button {
@@ -254,10 +259,6 @@ h1 {
   margin-top: 1em;
   flex-wrap: wrap;
 }
-
-/* #quote-container-two {
-  flex-wrap: wrap-reverse;
-} */
 
 .quote-one-text,
 .quote-two-text {
@@ -327,6 +328,12 @@ h1 {
     margin: 2em;
   }
 }
+
+/* @media (max-width: 500px) {
+  .meet-button {
+    max-width: 4em;
+  }
+} */
 
 /* Card styles */
 .card-container {
