@@ -85,43 +85,66 @@ function RaffleWinner(props) {
 
   return (
     <>
-      <div className="userGuessField">
-        <label for="donor-name">Contributor name</label>
-        <label for="number-input">Amount donated</label>
+      <div id="raffle-container">
+        <h1 className="raffle-header-admin">Raffle Winner Picker</h1>
         <form
           onSubmit={winnerPicker}
           action="/storeRaffleWinner"
           method="post"
           name="name"
+          id="raffle-form"
         >
+          <div id="donor-name-container">
+            <label className="raffle-label" for="donor-name">
+              Contributor name:
+            </label>
+            <input
+              id="name-input"
+              className="donor-name-input"
+              type="text"
+              placeholder="Donor Name"
+              onChange={(evt) => {
+                donorName = evt.target.value;
+              }}
+            />
+          </div>
+          <div id="donor-amount-container">
+            <label className="raffle-label" for="number-input">
+              Amount donated:
+            </label>
+            <input
+              id="number-input"
+              className="donor-amount-input"
+              type="text"
+              placeholder="Donation Amount"
+              onChange={(evt) => {
+                donorAmount = evt.target.value;
+              }}
+            />
+            <button id="donor-submit-button" onClick={submit}>
+              Add Donor Info
+            </button>
+          </div>
           <input
-            id="name-input"
-            className="donor-name-input"
-            type="text"
-            onChange={(evt) => {
-              donorName = evt.target.value;
-            }}
+            id="winner-pick-button"
+            type="submit"
+            value="Pick Raffle Winner"
           />
-
-          <input
-            id="number-input"
-            className="donor-amount-input"
-            type="text"
-            onChange={(evt) => {
-              donorAmount = evt.target.value;
-            }}
-          />
-          <button onClick={submit}>Add Name</button>
-          <input id="submit-donor" type="submit" />
         </form>
 
         <form id="winner-post" action="/storeRaffleWinner" method="post">
           <input name="name" style={{ display: "none" }} value={winner} />
-          <input name="date" type="date" />
-          <input type="submit" />
+          <input className="winner-date" name="date" type="date" />
+          <input
+            id="winner-submit-button"
+            type="submit"
+            value="Post Winner to Site"
+          />
         </form>
+        <h1 className="current-winner-admin">
+          {winner} is this weeks $5 raffle winner!
+        </h1>
       </div>
-      <h1> {winner} is this weeks $5 raffle winner!</h1>
     </>
   );
 }
