@@ -2,27 +2,13 @@ import React, { useState } from "react";
 
 function RaffleWinner(props) {
   // variable declarations
-  let answerInput = document.getElementById("name-input");
-  let nameInput = document.getElementById("number-input");
-
-  // let [winnerName, setWinnerName] = useState("");
 
   let donor;
   let chosenWinner;
   let contributors = [];
   let donorName = "";
   let donorAmount = "";
-  let [winner, setWinner] = useState("");
-
-  // function pushWinner(name) {
-  //   return fetch("/storeRaffleWinner", {
-  //     method: "post",
-  //     body: JSON.stringify(name),
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //   });
-  // }
+  let [winner, setWinner] = useState("???");
 
   // loops through names array for each donor
 
@@ -72,8 +58,8 @@ function RaffleWinner(props) {
     chosenWinner = winnerPool[winnerIndex];
     // setWinnerName(winner);
     setWinner(chosenWinner);
-    console.log(winner);
-    console.log(`${winner} is this weeks $5 raffle winner!`);
+    console.log(chosenWinner);
+
     console.log(winnerPool);
   }
 
@@ -100,12 +86,13 @@ function RaffleWinner(props) {
   return (
     <>
       <div className="userGuessField">
+        <label for="donor-name">Contributor name</label>
+        <label for="number-input">Amount donated</label>
         <form
           onSubmit={winnerPicker}
           action="/storeRaffleWinner"
           method="post"
           name="name"
-          // value={winner}
         >
           <input
             id="name-input"
