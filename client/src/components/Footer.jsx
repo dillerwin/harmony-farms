@@ -1,10 +1,4 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import About from "./About";
-import Animals from "./Animals";
-import Contact from "./Contact";
-import Home from "./Home";
-import Donate from "./Donate";
 
 import { SocialIcon } from "react-social-icons";
 
@@ -28,31 +22,11 @@ function Footer() {
             />
           </div>
           <div className="footer-list-container">
-            <a>
-              <Link to="/#anchor" component={Home}>
-                Home
-              </Link>
-            </a>
-            <a>
-              <Link to="/about#anchor" component={About}>
-                About Us
-              </Link>
-            </a>
-            <a>
-              <Link to="/animals#anchor" component={Animals}>
-                Our Animals
-              </Link>
-            </a>
-            <a>
-              <Link to="/contact-us#anchor" component={Contact}>
-                Contact
-              </Link>
-            </a>
-            <a>
-              <Link to="/donate#anchor" component={Donate}>
-                Donate
-              </Link>
-            </a>
+            <a href="/#anchor">Home</a>
+            <a href="/donate#anchor">Donate</a>
+            <a href="/about#anchor">About Us</a>
+            <a href="/animals#anchor">OurAnimals</a>
+            <a href="/contact">Contact Us</a>
           </div>
         </div>
       </div>

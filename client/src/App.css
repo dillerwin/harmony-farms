@@ -210,13 +210,18 @@ h1 {
 }
 /* Styles for meet the animals button */
 
-.meet-button {
+.meet-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 1em;
   font-family: var(--ff-primary);
+}
+
+.meet-button {
+  margin: 1em 1em;
+  font-size: 1em;
+  min-width: 325px;
+  max-width: 400px;
 }
 
 .button {
@@ -254,10 +259,6 @@ h1 {
   margin-top: 1em;
   flex-wrap: wrap;
 }
-
-/* #quote-container-two {
-  flex-wrap: wrap-reverse;
-} */
 
 .quote-one-text,
 .quote-two-text {
@@ -327,6 +328,12 @@ h1 {
     margin: 2em;
   }
 }
+
+/* @media (max-width: 500px) {
+  .meet-button {
+    max-width: 4em;
+  }
+} */
 
 /* Card styles */
 .card-container {
@@ -674,9 +681,15 @@ a {
   border-top: 1px solid var(--clr-drk-green);
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1201px) {
   #sponsor-container {
     grid-template-columns: repeat(4, minmax(250px, 350px));
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+  #sponsor-container {
+    grid-template-columns: repeat(3, minmax(250px, 350px));
   }
 }
 
@@ -757,4 +770,77 @@ a {
   letter-spacing: 0.2em;
   color: cornflowerblue;
   text-align: center;
+}
+
+/* Raffle Winner Styles */
+
+#raffle-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+  width: 55vw;
+  background: rgb(206, 200, 200);
+  font-size: 1.25em;
+  border-radius: 10px;
+}
+
+.raffle-header-admin {
+  text-align: center;
+  margin: 1em;
+  text-decoration: underline;
+}
+
+#raffle-form {
+  width: 100%;
+}
+
+#donor-name-container {
+  display: flex;
+  align-items: center;
+}
+#name-input,
+#number-input,
+#donor-submit-button,
+#winner-pick-button,
+#winner-submit-button,
+.winner-date {
+  font-size: 1em;
+}
+
+#donor-submit-button,
+#winner-pick-button,
+#winner-submit-button {
+  padding: 0.25em;
+  border-radius: 5px;
+}
+
+.donor-amount-input {
+  margin: 1em 1.5em;
+}
+
+.donor-name-input {
+  margin-left: 1em;
+}
+
+#winner-pick-button,
+#winner-submit-button {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.raffle-label,
+.winner-date {
+  margin-left: 1em;
+  font-size: 1.25em;
+}
+
+#winner-submit-button,
+#winner-date {
+  margin-top: 2em;
+}
+
+.current-winner-admin {
+  text-align: center;
+  font-size: 1.25em;
+  margin: 1em;
 }
