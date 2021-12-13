@@ -50,7 +50,6 @@ export default function AnimalEdit(props) {
               <ul className="animalBox">
                 <ul style={{ fontSize: "150%" }}>{item.animalName}</ul>
                 <ul>
-                  <li>{item.animalDescription} </li>
                   <li>{item.imageLink}</li>
                   <li>{item.donorBox}</li>
                 </ul>
@@ -116,14 +115,6 @@ export default function AnimalEdit(props) {
             value={animal}
           />
           <label>
-            <p>{animal}'s Description</p>
-            <input
-              type="text"
-              name="animalDescription"
-              placeholder="Enter a description"
-            />
-          </label>
-          <label>
             <p>Image Link</p>
             <input
               type="text"
@@ -162,14 +153,6 @@ export default function AnimalEdit(props) {
                 type="text"
                 name="animalName"
                 placeholder="Enter the animal's name"
-              />
-            </label>
-            <label>
-              <p>Description</p>
-              <input
-                type="text"
-                name="animalDescription"
-                placeholder="Enter a description"
               />
             </label>
             <label>

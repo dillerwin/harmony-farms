@@ -13,12 +13,21 @@ import Raffle from "./components/Raffle";
 import VisitUs from "./components/VisitUs.jsx";
 import Donate from "./components/Donate.jsx";
 
-
 import AdminAuth from "./admin/AdminAuth";
+import { useEffect, useState } from "react";
 
 //Function for the main app
 function App() {
-  //Returns various routes within BrowserRouter
+  const [imageJson, setImageJson] = useState();
+  //fetch for images JSON
+  useEffect(() => {
+    fetch("/api/images")
+      .then((res) => res.json())
+      .then((file) => setImageJson(file));
+  }, []);
+
+  console.log(imageJson);
+
   return (
     <>
       <div className="App">
