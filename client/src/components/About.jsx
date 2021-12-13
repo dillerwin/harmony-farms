@@ -2,8 +2,6 @@
 import React from "react";
 //Imports About CSS file
 import "../About.css";
-//Imports Photo to use for About Page
-import placeholder from "../img/about-placeholder.jpg";
 //Imports About Hero Component into page
 import AboutHero from "./AboutHero.jsx";
 //Imports Footer Hero Component into page
@@ -21,9 +19,9 @@ function About() {
           {/* Wrapper around image */}
           <div id="about-img-wrapper">
             {/* Image */}
-            <img id="about-img" src={placeholder} alt="placeholder" />
+            <img id="about-img" src="https://res.cloudinary.com/dtbi27ygq/image/upload/v1639412378/Website%20Content/Optimized%20Images/maramonie-jon-harmony-farm-sanctuary-vermont_vviwvn.jpg" alt="Maramonie and Jon King at Harmony Farm and Wellness Center" />
             <figcaption id="about-img-caption">
-              Maramonie King and her husband Jon at the Sanctuary
+              Maramonie and Jon at the Sanctuary
             </figcaption>
           </div>
           {/* Page description  */}

@@ -756,7 +756,7 @@ a {
 }
 
 .thank-you-text {
-  font-family: var(--ff-tertiary);
+  font-family: var(--ff-secondary);
   color: black;
   font-size: 0.5em;
   margin-top: -1.5em;
