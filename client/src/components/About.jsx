@@ -51,24 +51,13 @@ function About() {
 
             <h2 id="about-desc-heading">Our Story</h2>
             <p className="about-desc">
-              For the past few years my husband and I have been dreaming about
-              combining our passions, skills, and interests by founding an
-              animal sanctuary and retreat center.
+            For those of you who don’t know our story and our mission, here goes...
             </p>
             <p className="about-desc">
-              Jon is an army veteran and has a long history in the construction
-              industry. Being a builder of all things has proven invaluable in
-              starting a sanctuary from the ground up, especially with no
-              existing farm buildings as our property was when we purchased it 4
-              months ago.
+            For a few years while living in Colorado, Maramonie and Jon had been dreaming about combining their passions, skills, and interests by founding an animal sanctuary and retreat center. Jon is an army veteran and has a long history in the construction industry. Being a builder of all things has proven invaluable in starting a sanctuary from the ground up, especially with no existing farm buildings as this property was when we purchased it in 2020. 
             </p>
             <p className="about-desc">
-              Being a licensed therapist who specializes in working with
-              children and families and is also trained in Animal-Assisted Play
-              Therapy and Art Therapy, I plan to offer intensive family retreats
-              on our 50 acre property to allow families to reconnect and heal in
-              a natural and tranquil setting alongside the animals we rescue,
-              many who have trauma stories of their own.
+            Maramonie is a licensed therapist who specializes in working with children and families and is also trained in Animal-Assisted Play Therapy (AAPT), Art Therapy, and Trauma-Focused Cognitive Behavioral Therapy (TF-CBT), among other modalities. I plan to offer intensive family retreats on our 50 acre property to allow families to reconnect and heal in a natural and tranquil setting alongside the animals we rescue, many who have trauma stories of their own. We also want to educate the public and promote compassion and empathy by allowing them to experience farmed and often forgotten animals and see that they are not just “products” but living, sentient beings capable of love, happiness, and understanding much like us. 
             </p>
           </div>
         </div>
