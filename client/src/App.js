@@ -24,10 +24,8 @@ function App() {
   useEffect(() => {
     fetch("/api/images")
       .then((res) => res.json())
-      .then((file) => console.log(file));
+      .then((file) => setImageJson(file));
   }, []);
-
-  console.log(imageJson);
 
   return (
     <>
