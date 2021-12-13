@@ -7,7 +7,7 @@ function HeroImage() {
       <div id="hero-image">
         <div className="hero-text">
           <h1 className="hero-welcome-text">
-            Welcome to Harmony Farms Animal Sanctuary
+            Welcome to Harmony Farm Sanctuary and Wellness Center
           </h1>
         </div>
       </div>

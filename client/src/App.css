@@ -73,7 +73,7 @@ h1 {
 }
 
 .hero-welcome-text {
-  background-color: rgb(255, 241, 175, 0.7);
+  background-color: rgb(255, 241, 175, 0.8);
   padding: 0.5em;
   border-radius: 10px;
   width: 80vw;
@@ -140,12 +140,25 @@ h1 {
   height: 40vh;
   min-height: 300px;
 
-  background-position: 50% 40%;
+  background-position: 50% 37%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1638982218/Header%20Images/Optimized%20Header%20Images/harmony-farms-sanctuary-header-6_wd8sas.jpg");
+    url("https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_1500,q_60/v1639420184/Website%20Content/Optimized%20Images/cows-sheep-pasture-harmony-farm-vegan-sanctuary_nnj15h.jpg");
+}
+
+.contact-hero {
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+
+  background-position: 50% 48%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://res.cloudinary.com/dtbi27ygq/image/upload/v1639419762/Website%20Content/Optimized%20Images/calf-dog-harmony-farm-vegan-sanctuary-vermont_ckvlct.jpg");
 }
 
 /* media query for hero image text */
@@ -713,6 +726,7 @@ a {
 
 .raffle-donate-container {
   background-color: rgb(255, 241, 175, 0.7);
+  padding: 1em 0;
 }
 
 .winner-display {
@@ -756,15 +770,16 @@ a {
 }
 
 .thank-you-text {
-  font-family: var(--ff-tertiary);
+  font-family: var(--ff-secondary);
   color: black;
   font-size: 0.5em;
-  margin-top: -1.5em;
-  margin-bottom: 1.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-shadow: none;
 }
 
 .winner-name {
-  margin-top: 0.4em;
+  margin: 0.4em 0;
   font-family: "Bowlby One SC", cursive;
   font-size: 1.5em;
   letter-spacing: 0.2em;
@@ -772,7 +787,7 @@ a {
   text-align: center;
 }
 
-/* Raffle Winner Styles */
+/* Raffle Winner Styles for Admin Use */
 
 #raffle-container {
   display: flex;

@@ -11,7 +11,7 @@ function Cards() {
           <div class="card outside-card">
             <img
               className="card-image outside-card-image"
-              src="https://res.cloudinary.com/dtbi27ygq/image/upload/v1639094104/Website%20Content/chickens_kzsnal.jpg"
+              src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_300,q_60/v1639420136/Website%20Content/Optimized%20Images/sheep-vermont-animal-sanctuary-harmony_psqdbk.jpg"
               alt="Harmony Farms Animals at the Sanctuary"
             />
 
