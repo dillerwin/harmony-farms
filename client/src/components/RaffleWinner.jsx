@@ -10,26 +10,24 @@ function RaffleWinner(props) {
   let donorAmount = "";
   let [winner, setWinner] = useState("???");
 
-  // loops through names array for each donor
+  // loops through contributors array for each donor
 
+  // Picks a random donor out of the array as a winner
   function winnerPicker(evt) {
     evt.preventDefault();
 
+    // variable declarations
     let number;
     let entries;
-
     let winnerPool = [];
     let i = 0;
 
-    // let contributors = [allContributors];
-    console.log(contributors.length);
-
+    // adds donor's name to contributors array one time for each $5 they donated
     while (i < contributors.length) {
       number = contributors[i].amount;
       entries = Math.floor(number / 5);
       let entryPush = 0;
 
-      // adds multiple entries for each $5 donated
       if (entries > 1) {
         while (entryPush < entries) {
           winnerPool.push(contributors[i].name);
@@ -49,39 +47,32 @@ function RaffleWinner(props) {
       return Math.round(Math.random() * num);
     };
 
-    console.log(winnerPool.length);
-
     //   generates random number for use in picking winner
     let winnerIndex = randomNumber(winnerPool.length);
 
     //   picks winner based on random number generated used as index
     chosenWinner = winnerPool[winnerIndex];
+
     // setWinnerName(winner);
     setWinner(chosenWinner);
-    console.log(chosenWinner);
 
     console.log(winnerPool);
   }
 
+  // Prevents defalt action of for submit and calls logIt function
   const submit = (evt) => {
     evt.preventDefault();
-
     logIt();
   };
 
+  // Pushes donor object to the contributors array and resets the input field
   function logIt() {
     console.log(donorName);
-
     donor = { name: donorName, amount: donorAmount };
     contributors.push(donor);
     console.log(contributors);
-    console.log(contributors.length);
     document.name.reset();
   }
-
-  // <form action="/storeRaffleWinner" method="post">
-  //   <input name="name" style={{ display: "none" }} />
-  // </form>;
 
   return (
     <>
@@ -115,7 +106,7 @@ function RaffleWinner(props) {
             <input
               id="number-input"
               className="donor-amount-input"
-              type="text"
+              type="number"
               placeholder="Donation Amount"
               onChange={(evt) => {
                 donorAmount = evt.target.value;
