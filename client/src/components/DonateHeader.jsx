@@ -21,9 +21,8 @@ function DonateHeader() {
           Make a Monetary Donation to the Sanctuary
         </h2>
         <p className="money-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nulla
-          eum voluptatem, eveniet quidem exercitationem animi totam laborum
-          possimus enim iure ducimus ipsum doloribus dolorem.
+          All donations go directly towards animal care, infastructure and
+          animal housing, and future rescue efforts.
         </p>
         <div className="money-button-container">
           <a
@@ -60,9 +59,11 @@ function DonateHeader() {
           Purchase Goods for the Sanctuary or Animals
         </h2>
         <p className="money-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nulla
-          eum voluptatem, eveniet quidem exercitationem animi totam laborum
-          possimus enim iure ducimus ipsum doloribus dolorem.
+          If you would like to help support the sanctuary by donating items
+          needed for animal care, we have wishlist items on Chewy and Amazon. We
+          are also a designated charity on AmazonSmile. Setting your preference
+          to Harmony Farm Sanctuary and Wellness Center allows us to receive
+          charitable donations from qualifying purchases.
         </p>
         <div className="money-button-container">
           <a
