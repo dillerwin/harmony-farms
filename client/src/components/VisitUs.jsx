@@ -1,7 +1,7 @@
 //imports
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import "../Visitus.css"
+import "../Visitus.css";
 import VisitUsHero from "./VisitUsHero.jsx";
 // import DonateCards from "./DonateCards";
 import Footer from "./Footer";
@@ -55,6 +55,7 @@ function VisitUs() {
             className="button hip-camp-button"
             href="https://www.hipcamp.com/en-US/vermont/maramonie-k-s-land/glamping-at-the-sanctuary"
             target="_blank"
+            rel="noreferrer"
           >
             Book via HipCamp
           </a>
@@ -64,10 +65,13 @@ function VisitUs() {
         <h2 id="tour-header">Interested in a Tour?</h2>
         {/* Image */}
         <div id="tour-img-text-wrapper">
-        <img id="tour-img" src={farmPigs} alt="Pigs at the Sanctuary" />
-        <p id="tour-text">
-          We'd love to show you around! We do stay pretty busy taking care of our animals here at the sanctuary, so please reach out to us via email at harmonyfarmsanctuaryvt@gmail.com to schedule a time to visit. 
-        </p>
+          <img id="tour-img" src={farmPigs} alt="Pigs at the Sanctuary" />
+          <p id="tour-text">
+            We'd love to show you around! We do stay pretty busy taking care of
+            our animals here at the sanctuary, so please reach out to us via
+            email at harmonyfarmsanctuaryvt@gmail.com to schedule a time to
+            visit.
+          </p>
         </div>
         <div id="tour-button-container">
           <Link to="/contact">
@@ -82,14 +86,23 @@ function VisitUs() {
         <h2 id="volunteer-header">Interested in Volunteering?</h2>
         {/* Image */}
         <div id="volunteer-img-text-wrapper">
-        <p id="volunteer-text">
-        Would you like a more "hands-on" way to support the sanctuary? Become a volunteer! We need ongoing help keeping shelters clean, completing projects, and just giving our residents the love and attention they deserve. If you are interested in volunteering, please email us a little about you, your availability, and any experience you might have working with animals at harmonyfarmsanctuaryvt@gmail.com. We also require all volunteers and visitors to complete a waiver. Thank you!
-        </p>
-        <img id="volunteer-img" src={About} alt="Pigs at the Sanctuary" />
+          <p id="volunteer-text">
+            Would you like a more "hands-on" way to support the sanctuary?
+            Become a volunteer! We need ongoing help keeping shelters clean,
+            completing projects, and just giving our residents the love and
+            attention they deserve. If you are interested in volunteering,
+            please email us a little about you, your availability, and any
+            experience you might have working with animals at
+            harmonyfarmsanctuaryvt@gmail.com. We also require all volunteers and
+            visitors to complete a waiver. Thank you!
+          </p>
+          <img id="volunteer-img" src={About} alt="Pigs at the Sanctuary" />
         </div>
         <div id="volunteer-button-container">
           <Link to="/volunteer">
-            <button className="button volunteer-button">Volunteer Waiver</button>
+            <button className="button volunteer-button">
+              Volunteer Waiver
+            </button>
           </Link>
         </div>
       </div>

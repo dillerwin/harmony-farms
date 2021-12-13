@@ -14,7 +14,7 @@ function SponsorCards() {
                 <div class="sponsor-card">
                   <img className="sponsor-card-image" src={item.imageLink} />
 
-                  <div class="sponsor-container">
+                  <div className="sponsor-container">
                     <h4 className="sponsor-card-title">{item.animalName}</h4>
                     <p className="sponsor-card-text">
                       Click here to hear my rescue story and sponsor me!
