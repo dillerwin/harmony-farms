@@ -7,7 +7,12 @@ export const MenuItems = [
   },
   {
     title: "Book a Tour",
-    path: "/visit-us",
+    path: "/visit-us#tour-header",
+    className: "dropdown-link",
+  },
+  {
+    title: "Volunteer",
+    path: "/visit-us#volunteer-img-text-wrapper",
     className: "dropdown-link",
   },
   {
