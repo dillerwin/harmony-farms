@@ -14,6 +14,5 @@ export const MenuItems = [
     title: "Volunteer Waiver",
     path: "/volunteer",
     className: "dropdown-link",
-  }
-  
+  },
 ];

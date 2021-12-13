@@ -65,7 +65,11 @@ function VisitUs() {
         <h2 id="tour-header">Interested in a Tour?</h2>
         {/* Image */}
         <div id="tour-img-text-wrapper">
-          <img id="tour-img" src={farmPigs} alt="Pigs at the Sanctuary" />
+          <img
+            id="tour-img"
+            src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_600,q_60/v1639420183/Website%20Content/Optimized%20Images/snow-sunset-alpaca-vegan-harmony-farm-sanctuary_mkbduu.jpg"
+            alt="Pigs at the Sanctuary"
+          />
           <p id="tour-text">
             We'd love to show you around! We do stay pretty busy taking care of
             our animals here at the sanctuary, so please reach out to us via
@@ -96,7 +100,11 @@ function VisitUs() {
             harmonyfarmsanctuaryvt@gmail.com. We also require all volunteers and
             visitors to complete a waiver. Thank you!
           </p>
-          <img id="volunteer-img" src={About} alt="Pigs at the Sanctuary" />
+          <img
+            id="volunteer-img"
+            src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_600,q_60/v1639419475/Website%20Content/Optimized%20Images/maramonie-alpaca-harmony-farm-vegan-sanctuary-vermont_ocbwdm.jpg"
+            alt="Pigs at the Sanctuary"
+          />
         </div>
         <div id="volunteer-button-container">
           <Link to="/volunteer">

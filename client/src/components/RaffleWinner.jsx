@@ -67,10 +67,8 @@ function RaffleWinner(props) {
 
   // Pushes donor object to the contributors array and resets the input field
   function logIt() {
-    console.log(donorName);
     donor = { name: donorName, amount: donorAmount };
     contributors.push(donor);
-    console.log(contributors);
     document.name.reset();
   }
 

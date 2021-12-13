@@ -6,7 +6,7 @@ function QuoteBlockTwo() {
       <div id="quote-container-two">
         <img
           className="quote-two-image"
-          src={require("../img/farm-pigs.jpg").default}
+          src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_400,q_60/v1639420181/Website%20Content/Optimized%20Images/rabbits-vegan-harmony-farm-sanctuary_r6ci2t.jpg"
         ></img>
         <h2 className="quote-two-text ">
           "We offer animals that have suffered neglect or other abuse or who are
