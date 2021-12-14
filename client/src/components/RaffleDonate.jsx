@@ -5,7 +5,7 @@ function RaffleDonate() {
     <>
       <div className="raffle-donate-container">
         <h1 className="donate-header">Want to Participate?</h1>
-        <h4 className="donate-header">
+        <h4 className=" raffle-donation-header">
           Just Make a Monetary Donation to the Farm
         </h4>
         <p className="money-text">
@@ -23,7 +23,14 @@ function RaffleDonate() {
           >
             Donate: Paypal
           </a>
-          <a className="button money-button">Donate: Venmo</a>
+          <a
+            className="button money-button"
+            href="https://account.venmo.com/u/HFSWC"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Donate: Venmo
+          </a>
           <a
             className="button money-button "
             href="https://www.gofundme.com/f/Harmony-Farm-sanctuary-and-wellness?utm_medium=copy_link&utm_source=customer&utm_campaign=p_lico+share-sheet"

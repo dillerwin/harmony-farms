@@ -19,7 +19,7 @@ function Winner(props) {
     <>
       <div className="winner-display">
         <h5 className="winner-header">This Week's Winner:</h5>
-        <p>{winnerDate}</p>
+        <p className="winner-date-text">{winnerDate}</p>
         <h4 className="winner-name"> {newWinner}</h4>
 
         <div>

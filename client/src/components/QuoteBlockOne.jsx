@@ -11,6 +11,7 @@ function QuoteBlockOne() {
         <img
           className="quote-one-image"
           src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_400,q_60/v1639420187/Website%20Content/Optimized%20Images/goat-alpaca-harmony-farm-vegan-sanctuary_ai9ffi.jpg"
+          alt="Brown and white goat in green grassy field at Harmony Farm Sanctuary Vermont "
         ></img>
       </div>
     </>
