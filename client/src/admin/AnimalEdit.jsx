@@ -70,7 +70,7 @@ export default function AnimalEdit(props) {
                   </button>
                 </form>
               </ul>
-            );
+            )
           });
         setAnimalList(animalList);
       });

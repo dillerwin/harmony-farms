@@ -25,7 +25,7 @@ export default function AdminAuth() {
     //if token is true displays admin portal
     return (
       <div className="adminPage">
-        <AdminPage token={token} setToken={setToken} />;
+        <AdminPage token={token} setToken={setToken} />
       </div>
     );
   }
