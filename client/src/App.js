@@ -13,12 +13,20 @@ import Raffle from "./components/Raffle";
 import VisitUs from "./components/VisitUs.jsx";
 import Donate from "./components/Donate.jsx";
 
-
 import AdminAuth from "./admin/AdminAuth";
+import { useEffect, useState } from "react";
 
 //Function for the main app
 function App() {
-  //Returns various routes within BrowserRouter
+  const [imageJson, setImageJson] = useState([]);
+  //fetch for images JSON
+
+  useEffect(() => {
+    fetch("/api/images")
+      .then((res) => res.json())
+      .then((file) => setImageJson(file));
+  }, []);
+
   return (
     <>
       <div className="App">
@@ -34,7 +42,7 @@ function App() {
             {/* Route is each individual route - utilizes the path and element prop. 
           Path reflects the URL path, element is where component is rendered */}
             {/* Routes to Home Component */}
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home imageJson={imageJson} />} />
             {/* Routes to About Component */}
             <Route path="/about" element={<About />} />
             {/* Routes to Donate Component */}

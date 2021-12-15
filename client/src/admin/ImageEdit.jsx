@@ -115,10 +115,20 @@ export default function ImageEdit(props) {
             Sponsor Header Image
           </div>
         </div>
+        {/* raffle pages images */}
         <div className="weeklyRaffleImages">
           <h4>Weekly Raffle Images</h4>
           <div onClick={clickHandle} id="raffleHeader">
             Weekly Raffle Header Image
+          </div>
+          <div onClick={clickHandle} id="raffleTile1">
+            Tile Image 1
+          </div>
+          <div onClick={clickHandle} id="raffleTile2">
+            Tile Image 2
+          </div>
+          <div onClick={clickHandle} id="raffleTile3">
+            Tile Image 3
           </div>
           <div onClick={clickHandle} id="prizeImage1">
             Prize Image One

@@ -36,7 +36,7 @@ function About() {
             </p>
             <p className="about-desc">
               Animals have long played a major role in the human experience, and
-              many don’t even realize how much they actually help us, both
+              many don't even realize how much they actually help us, both
               emotionally and psychologically.
             </p>
             <p className="about-desc">

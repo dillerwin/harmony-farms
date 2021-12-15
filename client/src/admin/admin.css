@@ -20,7 +20,7 @@
   --clr-drk-green: rgb(102, 128, 106);
   --clr-orange: rgb(255, 194, 134);
   --clr-yellow: rgb(255, 241, 175);
-  --clr-text: #303030;
+  --clr-text: rgb(5, 7, 9);
   --clr-white: rgb(247, 247, 247);
 
   /* Font sizes */
@@ -34,6 +34,10 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
+button {
+  padding: 1%;
+}
+
 .adminPage {
   background-color: var(--clr-drk-green);
 }
@@ -44,7 +48,6 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: var(--clr-drk-green);
 }
 
 .titleWrapper {
@@ -153,12 +156,18 @@
   width: 50vw;
 }
 
+.addAnimalWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 60vh;
+  right: 10vw;
+}
+
 .addAnimalForm {
   display: flex;
   flex-direction: column;
-  position: absolute;
   font-size: 150%;
-  bottom: 30vh;
   padding: 5px;
 }
 
@@ -173,7 +182,7 @@
 
 .animalDisplay {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 3em;
   margin-bottom: 2em;
   justify-content: center;
@@ -181,7 +190,7 @@
   width: 100%;
   padding-bottom: 2em;
   padding-left: 2em;
-  grid-gap: 3px;
+  grid-gap: 5px;
 }
 
 .logOut {

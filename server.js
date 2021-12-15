@@ -15,8 +15,6 @@ const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 //bcrypt to encrypt admin password
 const bcrypt = require("bcrypt");
 
-const cookieParser = require("cookie-parser");
-
 //connects to database
 const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.idqix.mongodb.net/harmony-farms`;
 
@@ -32,7 +30,6 @@ app.listen(port, () => {
 app.use(express.static(staticDir));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
 //create Admin class
 const Admin = mongoose.model("Admin", {
@@ -40,13 +37,14 @@ const Admin = mongoose.model("Admin", {
   password: { type: String, required: true },
 });
 
-//creates schema bones for animal info
+//creates schema for animal info
 const animalSchema = new mongoose.Schema({
   animalName: { type: String, required: true },
-  animalDescription: { type: String },
   imageLink: { type: String },
   donorBox: { type: String },
 });
+
+const Animal = mongoose.model("Animal", animalSchema);
 
 //schema for site images
 const imageSchema = new mongoose.Schema({
@@ -65,10 +63,9 @@ const Raffle = mongoose.model("Raffle", raffleSchema);
 
 //save raffle winner to database
 app.post("/storeRaffleWinner", async (req, res) => {
-  console.log(req.body);
   let newObj = new Raffle(req.body);
-  console.log(newObj);
   await newObj.save();
+  console.log(`raffle winner posted`);
   res.redirect("/admin");
 });
 
@@ -93,12 +90,17 @@ app.post("/imageEdit", async (req, res) => {
     { _id: targetId },
     { $set: { imageURL: req.body.imageURL } }
   );
-  console.log(`image URL changed`);
-
+  console.log(`${req.body.imageId} URL changed`);
   res.redirect("/admin");
 });
 
-const Animal = mongoose.model("Animal", animalSchema);
+//fetch for image links in database
+app.get("/api/images", async (req, res) => {
+  console.log(`image get`);
+  let target = await Image.find({});
+  // console.log(target);
+  res.send(target);
+});
 
 //writes new animal entries into the database
 app.post("/animalPost", async (req, res) => {
@@ -135,22 +137,24 @@ app.get("/api/animals", async (req, res) => {
 
 //removes animal entry from database
 app.post("/delete", async (req, res) => {
+  //finds animal by name
   let target = await Animal.find({ animalName: req.body.animalDelete });
+  //collects target animal's database id
   let targetId = target[0]._id;
+  //removes it from the database
   await Animal.deleteOne({ _id: targetId });
+  //refreshes page
   res.redirect("/admin");
 });
 
 //edits animal entry
 app.post("/edit", async (req, res) => {
+  //finds animal being edited
   let target = await Animal.find({ animalName: req.body.animalName });
+  //collects id of target animal
   let targetId = target[0]._id;
-  if (req.body.animalDescription !== "") {
-    await Animal.updateOne(
-      { _id: targetId },
-      { $set: { animalDescription: req.body.animalDescription } }
-    );
-  }
+  //checks for changes in input fields and updates only those fields
+
   if (req.body.imageLink !== "") {
     await Animal.updateOne(
       { _id: targetId },
@@ -163,9 +167,11 @@ app.post("/edit", async (req, res) => {
       { $set: { donorBox: req.body.donorBox } }
     );
   }
+  //refreshes page
   res.redirect("/admin");
 });
 
+//admin page login interaction
 app.post("/login", async (req, res) => {
   //redirects back to page if either entry field is empty
   if (req.body.username === "" || req.body.password === "") {
@@ -190,6 +196,6 @@ app.post("/login", async (req, res) => {
 });
 
 //404 catch
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.status(404).send("Page Not Found");
 });
