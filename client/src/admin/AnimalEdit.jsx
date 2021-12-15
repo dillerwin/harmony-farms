@@ -139,7 +139,7 @@ export default function AnimalEdit(props) {
         </form>
       </div>
       <div className="addAnimal">
-        <div>
+        <div className="addAnimalWrapper">
           {/* new animal entry */}
           <form
             //form for adding a new animal into the database
@@ -178,7 +178,7 @@ export default function AnimalEdit(props) {
             </label>
           </form>
         </div>
-        <div>
+        <div className="animalDisplayWrapper">
           {/* displays animal list */}
           <div className="animalDisplay">{animalList}</div>
         </div>
