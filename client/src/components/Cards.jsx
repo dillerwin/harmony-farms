@@ -12,7 +12,7 @@ function Cards() {
             <img
               className="card-image outside-card-image"
               src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_300,q_60/v1639420136/Website%20Content/Optimized%20Images/sheep-vermont-animal-sanctuary-harmony_psqdbk.jpg"
-              alt="Harmony Farms Animals at the Sanctuary"
+              alt="Three white sheep at Harmony Farm Sanctuary Vermont"
             />
 
             <div class="container">
@@ -49,7 +49,7 @@ function Cards() {
           <div class="card">
             <img
               className="card-image outside-card-image"
-              src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,w_640/v1639075512/Website%20Content/harmony-farms-raffle-prize-1_rm1gzd.png"
+              src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,w_300/v1639075512/Website%20Content/harmony-farms-raffle-prize-1_rm1gzd.png"
               alt="Raffle prize example for Harmony Farms Sanctuary Vermont"
             />
 

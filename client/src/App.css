@@ -169,13 +169,15 @@ h1 {
     max-height: 185px;
   }
 
-  #intro-image-container {
+  #intro-image-container,
+  #previous-raffle-container {
     flex-wrap: wrap;
   }
 }
 
 /* ---styling for intro images--- */
-#intro-image-container {
+#intro-image-container,
+#previous-raffle-container {
   width: 100%;
   max-height: fit-content;
   display: flex;
@@ -193,13 +195,14 @@ h1 {
   align-self: center;
 }
 
-.intro-image {
+.intro-image,
+.previous-prize-image {
   max-width: 1fr;
   min-width: 150px;
   max-height: 300px;
   border-radius: 10px;
   box-shadow: var(--bs);
-  margin: 0.5em 1.5em;
+  margin: 1em 1.5em;
 }
 
 .middle-image {
@@ -449,16 +452,6 @@ h1 {
   }
 }
 
-/* @media (min-width: 1025) {
-  .card-image {
-    max-width: 450px;
-  }
-
-  .card {
-    max-width: 450px;
-  }
-} */
-
 /* Styles for Footer */
 
 .footer-links {
@@ -509,7 +502,9 @@ a {
 /* Styles for donate page */
 
 .donate-header,
-.cash-donation-header {
+.cash-donation-header,
+.raffle-donation-header,
+.previous-prize-header {
   font-family: var(--ff-primary);
   font-size: var(--fs-h2);
   color: var(--clr-drk-green);
@@ -533,7 +528,9 @@ a {
 }
 
 .donate-text::before,
-.cash-donation-header::after {
+.cash-donation-header::after,
+.raffle-donation-header::after,
+.previous-prize-header::after {
   content: "";
   display: block;
   width: 4rem;
@@ -621,7 +618,6 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
   margin-top: 3em;
-  margin-bottom: 2em;
   justify-content: center;
   max-height: fit-content;
   background: var(--clr-yellow);
@@ -730,10 +726,16 @@ a {
 }
 
 .winner-display {
-  padding: 1em;
   font-family: var(--ff-primary);
   letter-spacing: 1.5px;
-  margin-top: -2em;
+}
+
+.winner-date-text {
+  letter-spacing: 1.5px;
+}
+
+#previous-raffle-container {
+  margin: 2em 0;
 }
 
 .raffle-images {
@@ -748,6 +750,7 @@ a {
   background-color: rgb(255, 241, 175, 0.7);
   padding: 0.5em;
   text-align: center;
+  font-family: var(--ff-tertiary);
   margin-top: 1.5em;
 }
 
@@ -757,6 +760,12 @@ a {
   text-align: center;
   font-size: 1em;
   text-shadow: 1px 1px var(--clr-text);
+}
+
+.donate-prize-text {
+  width: 80vw;
+  margin: 1em auto;
+  line-height: 1.5em;
 }
 
 .raffle-animal-images {
@@ -776,6 +785,7 @@ a {
   font-weight: bold;
   margin-bottom: 2em;
   text-shadow: none;
+  font-family: var(--ff-tertiary);
 }
 
 .winner-name {
@@ -785,6 +795,36 @@ a {
   letter-spacing: 0.2em;
   color: cornflowerblue;
   text-align: center;
+}
+
+.previous-prize-header {
+  margin-top: 1em;
+}
+
+.previous-prize-image {
+  margin: 1.5em;
+
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.raffle-contact-button {
+  margin: 0.5em 1em 1.5em;
+  font-size: 1.1em;
+  min-width: 325px;
+  max-width: 325px;
+}
+
+@media (min-width: 850px) {
+  .donate-prize-text {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 1250px) {
+  .hidden-image {
+    display: none;
+  }
 }
 
 /* Raffle Winner Styles for Admin Use */
