@@ -20,7 +20,7 @@
   --clr-drk-green: rgb(102, 128, 106);
   --clr-orange: rgb(255, 194, 134);
   --clr-yellow: rgb(255, 241, 175);
-  --clr-text: #303030;
+  --clr-text: rgb(26, 35, 9);
   --clr-white: rgb(247, 247, 247);
 
   /* Font sizes */
@@ -35,7 +35,7 @@
 }
 
 .adminPage {
-  background-color: var(--clr-drk-green);
+  background-color: var(--clr-light-green);
 }
 
 .adminBody {
@@ -44,7 +44,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: var(--clr-drk-green);
+  background-color: var(--clr-light-green);
 }
 
 .titleWrapper {

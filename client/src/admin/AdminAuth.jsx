@@ -23,6 +23,10 @@ export default function AdminAuth() {
     );
   } else {
     //if token is true displays admin portal
-    return <AdminPage token={token} setToken={setToken} />;
+    return (
+      <div className="adminPage">
+        <AdminPage token={token} setToken={setToken} />;
+      </div>
+    );
   }
 }
