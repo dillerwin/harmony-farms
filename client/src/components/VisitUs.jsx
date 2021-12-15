@@ -78,7 +78,7 @@ function VisitUs() {
           </p>
         </div>
         <div id="tour-button-container">
-          <Link to="/contact">
+          <Link to="/contact#anchor">
             <button className="button tour-button">Contact Us</button>
           </Link>
         </div>
@@ -107,7 +107,7 @@ function VisitUs() {
           />
         </div>
         <div id="volunteer-button-container">
-          <Link to="/volunteer">
+          <Link to="/volunteer#anchor">
             <button className="button volunteer-button">
               Volunteer Waiver
             </button>
