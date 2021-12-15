@@ -98,13 +98,13 @@ export default function AnimalEdit(props) {
       <div
         // edit modal that appears on button click in animal entry
         name="edit div"
-        className="editModal"
+        className="animalEditModal"
         style={{
           display: editView,
         }}
       >
         {/* edit animal form */}
-        <form className="editForm" action="/edit" method="post">
+        <form className="animalEditForm" action="/edit" method="post">
           <label>
             <p>Editing {animal}</p>
           </label>
@@ -130,7 +130,7 @@ export default function AnimalEdit(props) {
               placeholder="Enter link to animal's donorbox"
             />
           </label>
-          <p className="editButtons">
+          <p className="animalEditButtons">
             <button type="submit" name="editSubmit">
               Submit Edit
             </button>

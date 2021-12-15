@@ -96,9 +96,7 @@ app.post("/imageEdit", async (req, res) => {
 
 //fetch for image links in database
 app.get("/api/images", async (req, res) => {
-  console.log(`image get`);
   let target = await Image.find({});
-  // console.log(target);
   res.send(target);
 });
 
