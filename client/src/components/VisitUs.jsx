@@ -8,8 +8,7 @@ import Footer from "./Footer";
 import hipcamp3 from "../img/hipcamp3.jpg";
 import hipcamp2 from "../img/hipcamp2.jpg";
 import hipcamp1 from "../img/hipcamp1.jpg";
-import farmPigs from "../img/farm-pigs.jpg";
-import About from "../img/about-placeholder.jpg";
+
 
 function VisitUs() {
   return (
@@ -32,19 +31,19 @@ function VisitUs() {
           <img
             id="hipcamp1-img"
             src={hipcamp1}
-            alt="Glamping at the Sanctuary"
+            alt="Cows at pasture in the distance viewable from grill at campsite"
           />
           {/* Image */}
           <img
             id="hipcamp2-img"
             src={hipcamp2}
-            alt="Glamping at the Sanctuary"
+            alt="Glamping set up at the sanctuary featuring a fully outfitted tent, a seating area, and a dog"
           />
           {/* Image */}
           <img
             id="hipcamp3-img"
             src={hipcamp3}
-            alt="Glamping at the Sanctuary"
+            alt="Fire pit at the sanctuary glamping site featuring the Green Mountains of Vermont in the background"
           />
         </div>
         <figcaption id="glamping-img-caption">
@@ -68,7 +67,7 @@ function VisitUs() {
           <img
             id="tour-img"
             src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_600,q_60/v1639420183/Website%20Content/Optimized%20Images/snow-sunset-alpaca-vegan-harmony-farm-sanctuary_mkbduu.jpg"
-            alt="Pigs at the Sanctuary"
+            alt="Brown alpaca at the sanctuary in the snow with sunset in the background"
           />
           <p id="tour-text">
             We'd love to show you around! We do stay pretty busy taking care of
@@ -103,7 +102,7 @@ function VisitUs() {
           <img
             id="volunteer-img"
             src="https://res.cloudinary.com/dtbi27ygq/image/upload/c_scale,h_600,q_60/v1639419475/Website%20Content/Optimized%20Images/maramonie-alpaca-harmony-farm-vegan-sanctuary-vermont_ocbwdm.jpg"
-            alt="Pigs at the Sanctuary"
+            alt="Maramonie King snuggling next to a black cow with alpacas in the background at the sanctuary"
           />
         </div>
         <div id="volunteer-button-container">
