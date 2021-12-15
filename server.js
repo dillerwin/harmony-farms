@@ -153,7 +153,6 @@ app.post("/edit", async (req, res) => {
   //collects id of target animal
   let targetId = target[0]._id;
   //checks for changes in input fields and updates only those fields
-
   if (req.body.imageLink !== "") {
     await Animal.updateOne(
       { _id: targetId },

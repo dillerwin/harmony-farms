@@ -832,7 +832,7 @@ a {
 #raffle-container {
   display: flex;
   flex-direction: column;
-  margin-top: 4em;
+  margin-top: 2em;
   width: 55vw;
   background: rgb(206, 200, 200);
   font-size: 1.25em;

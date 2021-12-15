@@ -49,10 +49,10 @@ export default function AnimalEdit(props) {
             return (
               <ul className="animalBox">
                 <ul style={{ fontSize: "150%" }}>{item.animalName}</ul>
-                <ul>
+                {/* <ul>
                   <li>{item.imageLink}</li>
                   <li>{item.donorBox}</li>
-                </ul>
+                </ul> */}
                 <button
                   onClick={editHandle}
                   name="animalEdit"
@@ -178,10 +178,8 @@ export default function AnimalEdit(props) {
             </label>
           </form>
         </div>
-        <div className="animalDisplayWrapper">
           {/* displays animal list */}
           <div className="animalDisplay">{animalList}</div>
-        </div>
       </div>
     </div>
   );
