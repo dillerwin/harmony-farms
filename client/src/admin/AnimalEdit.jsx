@@ -49,10 +49,10 @@ export default function AnimalEdit(props) {
             return (
               <ul className="animalBox">
                 <ul style={{ fontSize: "150%" }}>{item.animalName}</ul>
-                <ul>
+                {/* <ul>
                   <li>{item.imageLink}</li>
                   <li>{item.donorBox}</li>
-                </ul>
+                </ul> */}
                 <button
                   onClick={editHandle}
                   name="animalEdit"
@@ -98,13 +98,13 @@ export default function AnimalEdit(props) {
       <div
         // edit modal that appears on button click in animal entry
         name="edit div"
-        className="editModal"
+        className="animalEditModal"
         style={{
           display: editView,
         }}
       >
         {/* edit animal form */}
-        <form className="editForm" action="/edit" method="post">
+        <form className="animalEditForm" action="/edit" method="post">
           <label>
             <p>Editing {animal}</p>
           </label>
@@ -130,7 +130,7 @@ export default function AnimalEdit(props) {
               placeholder="Enter link to animal's donorbox"
             />
           </label>
-          <p className="editButtons">
+          <p className="animalEditButtons">
             <button type="submit" name="editSubmit">
               Submit Edit
             </button>
@@ -178,10 +178,8 @@ export default function AnimalEdit(props) {
             </label>
           </form>
         </div>
-        <div className="animalDisplayWrapper">
           {/* displays animal list */}
           <div className="animalDisplay">{animalList}</div>
-        </div>
       </div>
     </div>
   );

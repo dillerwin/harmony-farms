@@ -83,6 +83,7 @@ app.post("/imageAdd", async (req, res) => {
   res.redirect("/admin");
 });
 
+//edits database entry for image URL
 app.post("/imageEdit", async (req, res) => {
   let target = await Image.find({ imageId: req.body.imageId });
   let targetId = target[0]._id;
@@ -96,9 +97,7 @@ app.post("/imageEdit", async (req, res) => {
 
 //fetch for image links in database
 app.get("/api/images", async (req, res) => {
-  console.log(`image get`);
   let target = await Image.find({});
-  // console.log(target);
   res.send(target);
 });
 
@@ -154,7 +153,6 @@ app.post("/edit", async (req, res) => {
   //collects id of target animal
   let targetId = target[0]._id;
   //checks for changes in input fields and updates only those fields
-
   if (req.body.imageLink !== "") {
     await Animal.updateOne(
       { _id: targetId },
