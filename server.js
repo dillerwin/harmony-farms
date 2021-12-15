@@ -83,6 +83,7 @@ app.post("/imageAdd", async (req, res) => {
   res.redirect("/admin");
 });
 
+//edits database entry for image URL
 app.post("/imageEdit", async (req, res) => {
   let target = await Image.find({ imageId: req.body.imageId });
   let targetId = target[0]._id;

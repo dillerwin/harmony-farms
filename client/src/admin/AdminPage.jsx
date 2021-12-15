@@ -3,6 +3,8 @@ import AnimalEdit from "./AnimalEdit";
 import ImageEdit from "./ImageEdit";
 import RaffleWinner from "../components/RaffleWinner";
 
+//need to add way for user to change password when logged in
+
 export default function AdminPage(props) {
   const [view, setView] = useState(false);
 
