@@ -57,6 +57,7 @@ export default function AnimalEdit(props) {
                   onClick={editHandle}
                   name="animalEdit"
                   value={item.animalName}
+                  className="admin-edit-button"
                 >
                   Edit
                 </button>
@@ -65,6 +66,7 @@ export default function AnimalEdit(props) {
                     type="submit"
                     name="animalDelete"
                     value={item.animalName}
+                    className="admin-edit-button"
                   >
                     Delete
                   </button>
@@ -88,10 +90,16 @@ export default function AnimalEdit(props) {
         className="navButtons"
         style={{ display: "flex", flexDirection: "row" }}
       >
-        <button className="imageRedirect" onClick={handleRedirect}>
+        <button
+          className="imageRedirect admin-edit-button"
+          onClick={handleRedirect}
+        >
           Edit Images
         </button>
-        <button className="homeRedirect" onClick={handleReturn}>
+        <button
+          className="homeRedirect admin-edit-button"
+          onClick={handleReturn}
+        >
           Exit Animal Edit
         </button>
       </div>
@@ -148,38 +156,41 @@ export default function AnimalEdit(props) {
             method="post"
           >
             <label>
-              <p>Animal Name</p>
+              <p className="admin-input-text">Animal Name</p>
               <input
                 type="text"
                 name="animalName"
                 placeholder="Enter the animal's name"
+                className="admin-edit-input"
               />
             </label>
             <label>
-              <p>Image Link</p>
+              <p className="admin-input-text">Image Link</p>
               <input
                 type="text"
                 name="imageLink"
                 placeholder="Enter link to image of the animal"
+                className="admin-edit-input"
               />
             </label>
             <label>
-              <p>Donor Box Link</p>
+              <p className="admin-input-text">Donor Box Link</p>
               <input
                 type="text"
                 name="donorBox"
                 placeholder="Enter link to animal's donorbox"
+                className="admin-edit-input"
               />
             </label>
             <label className="submitWrapper">
-              <button className="animalSubmit" type="submit">
+              <button className="animalSubmit admin-edit-button" type="submit">
                 Submit Animal
               </button>
             </label>
           </form>
         </div>
-          {/* displays animal list */}
-          <div className="animalDisplay">{animalList}</div>
+        {/* displays animal list */}
+        <div className="animalDisplay">{animalList}</div>
       </div>
     </div>
   );
