@@ -34,8 +34,22 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-button {
-  padding: 1%;
+.admin-login-text {
+  font-size: 2em;
+  margin: 0.25em;
+}
+
+.admin-login-input,
+.admin-edit-input {
+  font-size: 1em;
+  padding: 0.5em;
+  width: 15em;
+}
+
+.admin-login-button {
+  padding: 0.7em;
+  width: 8em;
+  margin-left: 0.5em;
 }
 
 .animalListWrapper {
@@ -81,6 +95,14 @@ button {
   height: 100%;
 }
 
+.admin-edit-button {
+  width: 8em;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: 0.2em;
+  font-size: 0.75em;
+}
+
 .animalEditModal {
   flex-direction: column;
   z-index: 1;
@@ -97,6 +119,11 @@ button {
   padding-right: 40px;
   background-color: var(--clr-orange);
   border-radius: 5%;
+}
+
+.admin-input-text {
+  font-size: 1.5em;
+  margin-top: 0.25em;
 }
 
 .animalEditButtons {

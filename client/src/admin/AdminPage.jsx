@@ -57,19 +57,31 @@ export default function AdminPage(props) {
             paddingBottom: "none",
           }}
         >
-          <button name="animal" onClick={handleClick}>
+          <button
+            className="admin-edit-button"
+            name="animal"
+            onClick={handleClick}
+          >
             Edit Animals
           </button>
-          <button name="images" onClick={handleClick}>
+          <button
+            className="admin-edit-button"
+            name="images"
+            onClick={handleClick}
+          >
             Edit Images
           </button>
-          <button name="logOut" onClick={logOut}>
+          <button className="admin-edit-button" name="logOut" onClick={logOut}>
             Log Out
           </button>
         </div>
         <RaffleWinner />
         <div style={{ paddingTop: "5vh" }}>
-          <button name="changePassword" onClick={changePassword}>
+          <button
+            className="admin-edit-button"
+            name="changePassword"
+            onClick={changePassword}
+          >
             Change Password
           </button>
         </div>

@@ -59,14 +59,26 @@ export default function Login(props) {
       <h1>Welcome in!</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          <p>Username</p>
-          <input type="test" name="username" onChange={handleUsername} />
+          <p className="admin-login-text">Username</p>
+          <input
+            className="admin-login-input"
+            type="test"
+            name="username"
+            onChange={handleUsername}
+          />
         </label>
         <label>
-          <p>Password</p>
-          <input type="password" name="password" onChange={handlePassword} />
+          <p className="admin-login-text">Password</p>
+          <input
+            className="admin-login-input"
+            type="password"
+            name="password"
+            onChange={handlePassword}
+          />
         </label>
-        <button type="submit">Log In</button>
+        <button className="admin-login-button" type="submit">
+          Log In
+        </button>
       </form>
     </div>
   );
