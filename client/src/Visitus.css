@@ -29,7 +29,6 @@
 #glamping-text {
   font-family: var(--ff-secondary);
   font-size: 1.5em;
-  font-weight: var(--fw-bold);
   margin-right: 150px;
   margin-left: 150px;
   text-align: center;
@@ -132,7 +131,6 @@
 #tour-text {
   max-width: 650px;
   text-align: center;
-  font-weight: var(--fw-bold);
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -193,7 +191,6 @@
 #volunteer-text {
   max-width: 650px;
   text-align: center;
-  font-weight: var(--fw-bold);
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
