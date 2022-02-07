@@ -19,8 +19,8 @@ import { useEffect, useState } from "react";
 //Function for the main app
 function App() {
   const [imageJson, setImageJson] = useState([]);
-  //fetch for images JSON
 
+  //fetch for images JSON
   useEffect(() => {
     fetch("/api/images")
       .then((res) => res.json())
