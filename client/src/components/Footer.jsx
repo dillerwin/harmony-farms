@@ -7,6 +7,7 @@ import Donate from "./Donate";
 import About from "./About";
 import Animals from "./Animals";
 import Contact from "./Contact";
+import AdminAuth from "../admin/AdminAuth";
 
 function Footer() {
   return (
@@ -33,6 +34,7 @@ function Footer() {
             <Link to="/about" component={About}>About Us</Link>
             <Link to="/animals" component={Animals}>Animals</Link>
             <Link to="/contact" component={Contact}>Contact Us</Link>
+            <Link to="/admin" component={AdminAuth}>Admin Portal</Link>
             {/* <a href="/#anchor">Home</a>
             <a href="/donate#anchor">Donate</a>
             <a href="/about#anchor">About Us</a>
