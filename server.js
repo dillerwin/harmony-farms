@@ -16,7 +16,7 @@ const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 const bcrypt = require("bcrypt");
 
 //connects to database
-const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.idqix.mongodb.net/harmony-farms`;
+const url = `mongodb+srv://${process.env.user}:${process.env.pass}@cluster0.idqix.mongodb.net/harmony-farms`;
 
 //initiates mongoose
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
