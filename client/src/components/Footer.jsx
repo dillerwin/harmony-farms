@@ -1,6 +1,12 @@
 import React from "react";
 
 import { SocialIcon } from "react-social-icons";
+import { Link } from "react-router-dom";
+import Home from "./Home";
+import Donate from "./Donate";
+import About from "./About";
+import Animals from "./Animals";
+import Contact from "./Contact";
 
 function Footer() {
   return (
@@ -22,11 +28,16 @@ function Footer() {
             />
           </div>
           <div className="footer-list-container">
-            <a href="/#anchor">Home</a>
+            <Link to="/" component={Home}>Home</Link>
+            <Link to="/donate" component={Donate}>Donate</Link>
+            <Link to="/about" component={About}>About Us</Link>
+            <Link to="/animals" component={Animals}>Animals</Link>
+            <Link to="/contact" component={Contact}>Contact Us</Link>
+            {/* <a href="/#anchor">Home</a>
             <a href="/donate#anchor">Donate</a>
             <a href="/about#anchor">About Us</a>
             <a href="/animals#anchor">OurAnimals</a>
-            <a href="/contact">Contact Us</a>
+            <a href="/contact">Contact Us</a> */}
           </div>
         </div>
       </div>
