@@ -1,13 +1,13 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function MeetButton() {
   return (
     <>
       <div className="meet-button-container ">
-        <a className="button meet-button " href="/animals#anchor">
+        <Link className="button meet-button " to="/animals" >
           Meet The Animals
-        </a>
+        </Link>
       </div>
     </>
   );
