@@ -142,9 +142,6 @@ export default function ImageEdit(props) {
           <div onClick={clickHandle} id="prizeImage4">
             Prize Image Four
           </div>
-          <div onClick={clickHandle} id="prizeImage5">
-            Prize Image Five
-          </div>
         </div>
         <div className="visitUsImages">
           <h4>Visit Us Images</h4>

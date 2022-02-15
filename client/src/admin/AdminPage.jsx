@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AnimalEdit from "./AnimalEdit";
 import ImageEdit from "./ImageEdit";
-import ChangePassword from "./ChangePassword";
+// import ChangePassword from "./ChangePassword";
 import RaffleWinner from "../components/RaffleWinner";
 
 //need to add way for user to change password when logged in
@@ -36,10 +36,10 @@ export default function AdminPage(props) {
     }
   }
 
-  function changePassword(event) {
-    event.preventDefault();
-    setView("changePassword");
-  }
+  // function changePassword(event) {
+  //   event.preventDefault();
+  //   setView("changePassword");
+  // }
 
   if (!view) {
     return (
@@ -76,7 +76,7 @@ export default function AdminPage(props) {
           </button>
         </div>
         <RaffleWinner />
-        <div style={{ paddingTop: "5vh" }}>
+        {/* <div style={{ paddingTop: "5vh" }}>
           <button
             className="admin-edit-button"
             name="changePassword"
@@ -84,7 +84,7 @@ export default function AdminPage(props) {
           >
             Change Password
           </button>
-        </div>
+        </div> */}
       </div>
     );
   } else if (view === "animal") {
@@ -99,11 +99,11 @@ export default function AdminPage(props) {
         <ImageEdit setView={setView} />
       </div>
     );
-  } else if (view === "changePassword") {
-    return (
-      <div className="adminPage">
-        <ChangePassword />
-      </div>
-    );
+  // } else if (view === "changePassword") {
+  //   return (
+  //     <div className="adminPage">
+  //       <ChangePassword />
+  //     </div>
+  //   );
   }
 }

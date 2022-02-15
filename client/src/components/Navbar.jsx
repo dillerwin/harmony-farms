@@ -1,21 +1,15 @@
 import React from "react";
-//import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import About from "./About";
 import Animals from "./Animals";
 import Contact from "./Contact";
-//import Donate from "./Donate";
 import Home from "./Home";
 import Raffle from "./Raffle";
 import VisitUs from "./VisitUs";
-import Events from "./Events";
-import DropDown from "./Dropdown";
-//import './app.css';
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
 import { NavButton } from "./NavButton";
-//import Logo from "./Logo";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -49,9 +43,10 @@ function Navbar() {
       <nav className="navbar" id="anchor">
         <div>
           <Link to="/" component={Home}>
+            {/* nav bar logo */}
             <img
               src={require("../img/harmony-farms-logo.png").default}
-              className="logo-image"
+              className="logo-image" alt="Harmony Farms Logo"
             />
           </Link>
         </div>
